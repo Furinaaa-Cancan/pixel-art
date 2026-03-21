@@ -1,118 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
-<!-- Claude 官方像素小动物 32x32 -->
-<!-- 方块身体 + 4条短腿 + 黑眼睛 + 小嘴 -->
-<!-- 调色盘:
-  主体: #D4845A
-  暗面: #BE7048
-  深暗: #A85E3D
-  亮面: #DF9468
-  高光: #E8A478
-  眼睛: #2B2B2B
-  嘴巴: #A85E3D
--->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" shape-rendering="crispEdges">
+<!-- Claude 官方小动物像素画 -->
+<!-- 扁平色块风格，参考官方像素图 -->
+<!-- 主色: #D4835B  暗色: #B86A45  深暗: #A05A38  眼睛: #2A2A2A -->
 
-<!-- === 身体主体 (cols 6-25, rows 6-18) === -->
+<!-- 身体 (宽18 高11, 从x3到x21, y2到y13) -->
+<rect x="3" y="2" width="18" height="9" fill="#D4835B"/>
+<rect x="3" y="11" width="18" height="2" fill="#B86A45"/>
 
-<!-- Row 6: 头顶，稍窄 -->
-<rect x="8" y="6" width="16" height="1" fill="#DF9468"/>
+<!-- 左眼 2x2 -->
+<rect x="6" y="5" width="2" height="2" fill="#2A2A2A"/>
 
-<!-- Row 7: 头顶展开 -->
-<rect x="7" y="7" width="1" height="1" fill="#DF9468"/>
-<rect x="8" y="7" width="16" height="1" fill="#E8A478"/>
-<rect x="24" y="7" width="1" height="1" fill="#D4845A"/>
+<!-- 右眼 2x2 -->
+<rect x="16" y="5" width="2" height="2" fill="#2A2A2A"/>
 
-<!-- Row 8 -->
-<rect x="6" y="8" width="1" height="1" fill="#DF9468"/>
-<rect x="7" y="8" width="1" height="1" fill="#E8A478"/>
-<rect x="8" y="8" width="16" height="1" fill="#E8A478"/>
-<rect x="24" y="8" width="1" height="1" fill="#D4845A"/>
-<rect x="25" y="8" width="1" height="1" fill="#D4845A"/>
+<!-- 嘴巴 小横线 -->
+<rect x="10" y="9" width="4" height="1" fill="#A05A38"/>
 
-<!-- Row 9 -->
-<rect x="6" y="9" width="1" height="1" fill="#DF9468"/>
-<rect x="7" y="9" width="18" height="1" fill="#D4845A"/>
-<rect x="25" y="9" width="1" height="1" fill="#BE7048"/>
+<!-- 4条腿，两两一组，中间有间隔 -->
+<!-- 左前腿 -->
+<rect x="4" y="13" width="3" height="4" fill="#B86A45"/>
+<rect x="4" y="16" width="3" height="1" fill="#A05A38"/>
 
-<!-- Row 10: 眼睛行 -->
-<rect x="6" y="10" width="1" height="1" fill="#DF9468"/>
-<rect x="7" y="10" width="4" height="1" fill="#D4845A"/>
-<!-- 左眼 -->
-<rect x="11" y="10" width="2" height="1" fill="#2B2B2B"/>
-<rect x="13" y="10" width="6" height="1" fill="#D4845A"/>
-<!-- 右眼 -->
-<rect x="19" y="10" width="2" height="1" fill="#2B2B2B"/>
-<rect x="21" y="10" width="4" height="1" fill="#D4845A"/>
-<rect x="25" y="10" width="1" height="1" fill="#BE7048"/>
+<!-- 左后腿 -->
+<rect x="8" y="13" width="3" height="4" fill="#B86A45"/>
+<rect x="8" y="16" width="3" height="1" fill="#A05A38"/>
 
-<!-- Row 11: 眼睛下 -->
-<rect x="6" y="11" width="1" height="1" fill="#DF9468"/>
-<rect x="7" y="11" width="4" height="1" fill="#D4845A"/>
-<!-- 左眼下半 -->
-<rect x="11" y="11" width="2" height="1" fill="#2B2B2B"/>
-<rect x="13" y="11" width="6" height="1" fill="#D4845A"/>
-<!-- 右眼下半 -->
-<rect x="19" y="11" width="2" height="1" fill="#2B2B2B"/>
-<rect x="21" y="11" width="4" height="1" fill="#D4845A"/>
-<rect x="25" y="11" width="1" height="1" fill="#BE7048"/>
+<!-- 右前腿 -->
+<rect x="13" y="13" width="3" height="4" fill="#B86A45"/>
+<rect x="13" y="16" width="3" height="1" fill="#A05A38"/>
 
-<!-- Row 12 -->
-<rect x="6" y="12" width="1" height="1" fill="#D4845A"/>
-<rect x="7" y="12" width="18" height="1" fill="#D4845A"/>
-<rect x="25" y="12" width="1" height="1" fill="#BE7048"/>
-
-<!-- Row 13 -->
-<rect x="6" y="13" width="1" height="1" fill="#D4845A"/>
-<rect x="7" y="13" width="18" height="1" fill="#D4845A"/>
-<rect x="25" y="13" width="1" height="1" fill="#BE7048"/>
-
-<!-- Row 14: 嘴巴行 -->
-<rect x="6" y="14" width="1" height="1" fill="#D4845A"/>
-<rect x="7" y="14" width="6" height="1" fill="#D4845A"/>
-<!-- 嘴巴 -->
-<rect x="13" y="14" width="1" height="1" fill="#A85E3D"/>
-<rect x="14" y="14" width="4" height="1" fill="#A85E3D"/>
-<rect x="18" y="14" width="1" height="1" fill="#A85E3D"/>
-<rect x="19" y="14" width="6" height="1" fill="#D4845A"/>
-<rect x="25" y="14" width="1" height="1" fill="#BE7048"/>
-
-<!-- Row 15 -->
-<rect x="6" y="15" width="1" height="1" fill="#D4845A"/>
-<rect x="7" y="15" width="18" height="1" fill="#D4845A"/>
-<rect x="25" y="15" width="1" height="1" fill="#BE7048"/>
-
-<!-- Row 16 -->
-<rect x="6" y="16" width="1" height="1" fill="#D4845A"/>
-<rect x="7" y="16" width="18" height="1" fill="#BE7048"/>
-<rect x="25" y="16" width="1" height="1" fill="#BE7048"/>
-
-<!-- Row 17: 身体底部 -->
-<rect x="6" y="17" width="1" height="1" fill="#BE7048"/>
-<rect x="7" y="17" width="18" height="1" fill="#BE7048"/>
-<rect x="25" y="17" width="1" height="1" fill="#A85E3D"/>
-
-<!-- === 4条小短腿 === -->
-<!-- 腿1: cols 7-9 -->
-<rect x="7" y="18" width="3" height="1" fill="#BE7048"/>
-<rect x="7" y="19" width="3" height="1" fill="#BE7048"/>
-<rect x="7" y="20" width="3" height="1" fill="#A85E3D"/>
-<rect x="7" y="21" width="3" height="1" fill="#A85E3D"/>
-
-<!-- 腿2: cols 12-14 -->
-<rect x="12" y="18" width="3" height="1" fill="#BE7048"/>
-<rect x="12" y="19" width="3" height="1" fill="#BE7048"/>
-<rect x="12" y="20" width="3" height="1" fill="#A85E3D"/>
-<rect x="12" y="21" width="3" height="1" fill="#A85E3D"/>
-
-<!-- 腿3: cols 17-19 -->
-<rect x="17" y="18" width="3" height="1" fill="#BE7048"/>
-<rect x="17" y="19" width="3" height="1" fill="#BE7048"/>
-<rect x="17" y="20" width="3" height="1" fill="#A85E3D"/>
-<rect x="17" y="21" width="3" height="1" fill="#A85E3D"/>
-
-<!-- 腿4: cols 22-24 -->
-<rect x="22" y="18" width="3" height="1" fill="#BE7048"/>
-<rect x="22" y="19" width="3" height="1" fill="#BE7048"/>
-<rect x="22" y="20" width="3" height="1" fill="#A85E3D"/>
-<rect x="22" y="21" width="3" height="1" fill="#A85E3D"/>
+<!-- 右后腿 -->
+<rect x="17" y="13" width="3" height="4" fill="#B86A45"/>
+<rect x="17" y="16" width="3" height="1" fill="#A05A38"/>
 
 </svg>
