@@ -1,8 +1,8 @@
 // ============================================================
-//  renderer.js — Canvas 渲染（运动插值 + 高级感）
+//  renderer.js — Canvas 渲染（Premium Snake 风格：简洁 fillRect）
 // ============================================================
 
-import { $, THEMES, COLS, ROWS, POWERUP_TYPES, state, getBest } from './config.js';
+import { $, THEMES, COLS, ROWS, state, getBest } from './config.js';
 
 const canvas = $('#game');
 const ctx = canvas.getContext('2d');
@@ -26,12 +26,45 @@ let _bgCacheH = 0;
 
 // ===== 食物颜色映射 =====
 const FOOD_COLORS = {
-  normal: null,  // 使用 accent
-  bonus: '#34d399',
-  gold: '#fbbf24',
-  shrink: '#f472b6',
-  speed_food: '#38bdf8',
+  normal: '#ff0033',
+  bonus: '#00ff88',
+  gold: '#ffd700',
+  shrink: '#ff69b4',
+  speed_food: '#00bfff',
 };
+
+// ===== 圆角矩形辅助 =====
+function roundRect(ctx, x, y, w, h, r) {
+  if (typeof ctx.roundRect === 'function') {
+    ctx.beginPath();
+    ctx.roundRect(x, y, w, h, r);
+  } else {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.lineTo(x + w - r, y);
+    ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+    ctx.lineTo(x + w, y + h - r);
+    ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    ctx.lineTo(x + r, y + h);
+    ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+    ctx.lineTo(x, y + r);
+    ctx.quadraticCurveTo(x, y, x + r, y);
+    ctx.closePath();
+  }
+}
+
+// ===== HSL 转 hex 辅助 =====
+function hslToHex(h, s, l) {
+  s /= 100;
+  l /= 100;
+  const a = s * Math.min(l, 1 - l);
+  const f = n => {
+    const k = (n + h / 30) % 12;
+    const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+    return Math.round(255 * color).toString(16).padStart(2, '0');
+  };
+  return `#${f(0)}${f(8)}${f(4)}`;
+}
 
 // ===== 导出函数 =====
 export function resetRendererState() {
@@ -74,7 +107,6 @@ function syncPrevSnake() {
   const snake = state.snake;
   const str = snake.map(s => s.x + ',' + s.y).join('|');
   if (str !== _lastSnakeStr) {
-    // 蛇位置变化了，保存旧位置
     _prevSnake = _lastSnakeStr
       ? _lastSnakeStr.split('|').map(p => { const [x, y] = p.split(','); return { x: +x, y: +y }; })
       : snake.map(s => ({ x: s.x, y: s.y }));
@@ -90,7 +122,6 @@ function getInterpolatedPositions() {
     const prev = _prevSnake[i] || snake[i];
     const dx = Math.abs(snake[i].x - prev.x);
     const dy = Math.abs(snake[i].y - prev.y);
-    // 穿墙时跳过插值（delta > 1格说明穿越了边界）
     if (dx > 1 || dy > 1) {
       result.push({ x: snake[i].x, y: snake[i].y });
     } else {
@@ -103,31 +134,37 @@ function getInterpolatedPositions() {
   return result;
 }
 
-// ===== 背景：纯色 + 微弱网格点 =====
+// ===== 背景：深色 + 淡色网格线（缓存到 offscreen canvas）=====
 function drawBackground() {
   const w = canvas.width, h = canvas.height;
   const GRID = state.GRID;
 
-  // 缓存到 offscreen canvas
   if (!_bgCache || _bgCacheW !== w || _bgCacheH !== h) {
     _bgCache = document.createElement('canvas');
     _bgCache.width = w;
     _bgCache.height = h;
     const bctx = _bgCache.getContext('2d');
 
-    // 纯色背景
-    bctx.fillStyle = '#0a0a0f';
+    // 深色背景
+    bctx.fillStyle = '#0d1117';
     bctx.fillRect(0, 0, w, h);
 
-    // 网格交叉点圆点
-    bctx.fillStyle = 'rgba(255,255,255,0.04)';
+    // 淡色网格线
+    bctx.strokeStyle = 'rgba(255,255,255,0.03)';
+    bctx.lineWidth = 0.5;
     for (let x = 0; x <= COLS; x++) {
-      for (let y = 0; y <= ROWS; y++) {
-        bctx.beginPath();
-        bctx.arc(x * GRID, y * GRID, 0.5, 0, Math.PI * 2);
-        bctx.fill();
-      }
+      bctx.beginPath();
+      bctx.moveTo(x * GRID, 0);
+      bctx.lineTo(x * GRID, h);
+      bctx.stroke();
     }
+    for (let y = 0; y <= ROWS; y++) {
+      bctx.beginPath();
+      bctx.moveTo(0, y * GRID);
+      bctx.lineTo(w, y * GRID);
+      bctx.stroke();
+    }
+
     _bgCacheW = w;
     _bgCacheH = h;
   }
@@ -139,27 +176,16 @@ function drawBackground() {
 function drawMaze() {
   if (!state.mazeWalls) return;
   const GRID = state.GRID;
+  const r = 3;
 
-  ctx.fillStyle = 'rgba(255,255,255,0.08)';
+  ctx.fillStyle = 'rgba(255,255,255,0.12)';
   for (const key of state.mazeWalls) {
     const wx = Math.floor(key / ROWS);
     const wy = key % ROWS;
     const x = wx * GRID + 1;
     const y = wy * GRID + 1;
     const s = GRID - 2;
-    const r = 2;
-
-    ctx.beginPath();
-    ctx.moveTo(x + r, y);
-    ctx.lineTo(x + s - r, y);
-    ctx.quadraticCurveTo(x + s, y, x + s, y + r);
-    ctx.lineTo(x + s, y + s - r);
-    ctx.quadraticCurveTo(x + s, y + s, x + s - r, y + s);
-    ctx.lineTo(x + r, y + s);
-    ctx.quadraticCurveTo(x, y + s, x, y + s - r);
-    ctx.lineTo(x, y + r);
-    ctx.quadraticCurveTo(x, y, x + r, y);
-    ctx.closePath();
+    roundRect(ctx, x, y, s, s, r);
     ctx.fill();
   }
 }
@@ -173,21 +199,10 @@ function drawFood(theme) {
   const fx = state.food.x * GRID + GRID / 2;
   const fy = state.food.y * GRID + GRID / 2;
 
-  // 脉冲：±0.5px，周期2秒
-  const pulse = Math.sin(_time * 0.00314) * 0.5; // 2π / 2000ms ≈ 0.00314
-  const baseR = GRID * 0.3 + pulse;
-  const isGold = type === 'gold';
-  const r = isGold ? baseR * 1.3 : baseR;
+  // 微弱脉冲：±1px，周期2秒
+  const pulse = Math.sin(_time * 0.00314) * 1;
+  const r = GRID / 2.5 + pulse;
 
-  // 光晕层（更大、半透明）
-  ctx.fillStyle = fColor;
-  ctx.globalAlpha = 0.08;
-  ctx.beginPath();
-  ctx.arc(fx, fy, r * 1.8, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.globalAlpha = 1;
-
-  // 主体
   ctx.fillStyle = fColor;
   ctx.beginPath();
   ctx.arc(fx, fy, r, 0, Math.PI * 2);
@@ -201,24 +216,16 @@ function drawBossFood() {
   const bx = state.bossFood.x * GRID + GRID / 2;
   const by = state.bossFood.y * GRID + GRID / 2;
   const hitsLeft = state.bossFood.hitsLeft;
+
+  // 1.5x 大圆，红色
   const r = GRID * 0.45;
-  const color = '#ef4444';
 
-  // 光晕
-  ctx.fillStyle = color;
-  ctx.globalAlpha = 0.08;
-  ctx.beginPath();
-  ctx.arc(bx, by, r * 2, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.globalAlpha = 1;
-
-  // 主体（1.5x大）
-  ctx.fillStyle = color;
+  ctx.fillStyle = '#ef4444';
   ctx.beginPath();
   ctx.arc(bx, by, r, 0, Math.PI * 2);
   ctx.fill();
 
-  // 数字
+  // 剩余次数
   ctx.fillStyle = '#fff';
   ctx.font = `bold ${GRID * 0.4}px sans-serif`;
   ctx.textAlign = 'center';
@@ -236,22 +243,13 @@ function drawPowerup() {
   const color = state.powerup.color;
   const r = GRID * 0.36;
 
-  // 光晕
-  ctx.fillStyle = color;
-  ctx.globalAlpha = 0.08;
-  ctx.beginPath();
-  ctx.arc(px, py, r * 1.8, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.globalAlpha = 1;
-
-  // 主体（1.2x）
+  // 圆形底
   ctx.fillStyle = color;
   ctx.beginPath();
   ctx.arc(px, py, r, 0, Math.PI * 2);
   ctx.fill();
 
   // Emoji 图标
-  ctx.fillStyle = '#fff';
   ctx.font = `${GRID * 0.38}px sans-serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
@@ -269,62 +267,45 @@ function drawSnake(theme) {
   const snakeHue = theme.snake[0];
   const snakeSat = theme.snake[1];
 
-  // 获取插值后的位置
   const positions = getInterpolatedPositions();
+  const gap = 1; // 段间间隙
+  const cornerR = 4; // 圆角半径
+  const segSize = GRID - gap * 2;
 
-  // === Pass 1: 柔和发光层（从尾到头）===
+  // 从尾到头绘制
   for (let i = snake.length - 1; i >= 0; i--) {
+    const pos = positions[i];
+    if (!pos) continue;
+    const x = pos.x * GRID + gap;
+    const y = pos.y * GRID + gap;
+
+    const isHead = i === 0;
     const t = i / Math.max(snake.length - 1, 1); // 0=头 1=尾
-    const pos = positions[i];
-    if (!pos) continue;
-    const x = pos.x * GRID + GRID / 2;
-    const y = pos.y * GRID + GRID / 2;
 
-    const headR = GRID * 0.42;
-    const tailR = GRID * 0.18;
-    const radius = headR + (tailR - headR) * t;
-    const glowR = radius * 1.4;
-
-    let hue;
+    let fillColor;
     if (isInvincible) {
-      hue = ((_time * 0.03) + i * 15) % 360;
+      // 彩虹色循环
+      const hue = ((_time * 0.1) + i * 25) % 360;
+      fillColor = `hsl(${hue}, 70%, 55%)`;
+    } else if (isHead) {
+      // 蛇头更亮
+      fillColor = hslToHex(snakeHue, snakeSat, 65);
     } else {
-      hue = snakeHue + t * 20;
+      // 蛇身稍暗，尾部更暗
+      const light = 45 - t * 10;
+      fillColor = hslToHex(snakeHue, snakeSat, light);
     }
-    const sat = isInvincible ? 70 : snakeSat;
-    const light = isInvincible ? 55 : (48 + (1 - t) * 14);
 
-    ctx.fillStyle = `hsla(${hue}, ${sat}%, ${light}%, 0.06)`;
-    ctx.beginPath();
-    ctx.arc(x, y, glowR, 0, Math.PI * 2);
+    // 填充圆角方块
+    ctx.fillStyle = fillColor;
+    roundRect(ctx, x, y, segSize, segSize, cornerR);
     ctx.fill();
-  }
 
-  // === Pass 2: 蛇身圆（从尾到头）===
-  for (let i = snake.length - 1; i >= 0; i--) {
-    const t = i / Math.max(snake.length - 1, 1);
-    const pos = positions[i];
-    if (!pos) continue;
-    const x = pos.x * GRID + GRID / 2;
-    const y = pos.y * GRID + GRID / 2;
-
-    const headR = GRID * 0.42;
-    const tailR = GRID * 0.18;
-    const radius = headR + (tailR - headR) * t;
-
-    let hue;
-    if (isInvincible) {
-      hue = ((_time * 0.03) + i * 15) % 360;
-    } else {
-      hue = snakeHue + t * 20;
-    }
-    const sat = isInvincible ? 70 : snakeSat;
-    const light = isInvincible ? 55 : (48 + (1 - t) * 14);
-
-    ctx.fillStyle = `hsl(${hue}, ${sat}%, ${light}%)`;
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI * 2);
-    ctx.fill();
+    // 边框用背景色，制造分隔感
+    ctx.strokeStyle = '#161b22';
+    ctx.lineWidth = 1;
+    roundRect(ctx, x, y, segSize, segSize, cornerR);
+    ctx.stroke();
   }
 
   // === 蛇头眼睛 ===
@@ -332,45 +313,34 @@ function drawSnake(theme) {
   if (headPos) {
     const hx = headPos.x * GRID + GRID / 2;
     const hy = headPos.y * GRID + GRID / 2;
-    const headR = GRID * 0.42;
     const dir = state.dir;
 
-    const eyeOffsetForward = headR * 0.35;
-    const eyeOffsetSide = headR * 0.35;
+    const eyeForward = GRID * 0.18;
+    const eyeSide = GRID * 0.16;
+    const eyeR = 2;
 
     let eye1x, eye1y, eye2x, eye2y;
     if (dir.x === 1) {
-      eye1x = hx + eyeOffsetForward; eye1y = hy - eyeOffsetSide;
-      eye2x = hx + eyeOffsetForward; eye2y = hy + eyeOffsetSide;
+      eye1x = hx + eyeForward; eye1y = hy - eyeSide;
+      eye2x = hx + eyeForward; eye2y = hy + eyeSide;
     } else if (dir.x === -1) {
-      eye1x = hx - eyeOffsetForward; eye1y = hy - eyeOffsetSide;
-      eye2x = hx - eyeOffsetForward; eye2y = hy + eyeOffsetSide;
+      eye1x = hx - eyeForward; eye1y = hy - eyeSide;
+      eye2x = hx - eyeForward; eye2y = hy + eyeSide;
     } else if (dir.y === -1) {
-      eye1x = hx - eyeOffsetSide; eye1y = hy - eyeOffsetForward;
-      eye2x = hx + eyeOffsetSide; eye2y = hy - eyeOffsetForward;
+      eye1x = hx - eyeSide; eye1y = hy - eyeForward;
+      eye2x = hx + eyeSide; eye2y = hy - eyeForward;
     } else {
-      eye1x = hx - eyeOffsetSide; eye1y = hy + eyeOffsetForward;
-      eye2x = hx + eyeOffsetSide; eye2y = hy + eyeOffsetForward;
+      eye1x = hx - eyeSide; eye1y = hy + eyeForward;
+      eye2x = hx + eyeSide; eye2y = hy + eyeForward;
     }
 
-    // 白色眼白 (2px)
+    // 白色眼睛
     ctx.fillStyle = '#fff';
     ctx.beginPath();
-    ctx.arc(eye1x, eye1y, 2, 0, Math.PI * 2);
+    ctx.arc(eye1x, eye1y, eyeR, 0, Math.PI * 2);
     ctx.fill();
     ctx.beginPath();
-    ctx.arc(eye2x, eye2y, 2, 0, Math.PI * 2);
-    ctx.fill();
-
-    // 黑色瞳孔 (1px)
-    const pupilDx = dir.x * 0.5;
-    const pupilDy = dir.y * 0.5;
-    ctx.fillStyle = '#000';
-    ctx.beginPath();
-    ctx.arc(eye1x + pupilDx, eye1y + pupilDy, 1, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.arc(eye2x + pupilDx, eye2y + pupilDy, 1, 0, Math.PI * 2);
+    ctx.arc(eye2x, eye2y, eyeR, 0, Math.PI * 2);
     ctx.fill();
   }
 }
@@ -394,17 +364,20 @@ function drawGhostSnake(theme) {
   const GRID = state.GRID;
   const snakeHue = theme.snake[0];
   const snakeSat = theme.snake[1];
+  const gap = 1;
+  const segSize = GRID - gap * 2;
+  const cornerR = 4;
 
-  ctx.globalAlpha = 0.12;
+  ctx.globalAlpha = 0.15;
+  const color = hslToHex(snakeHue, snakeSat, 45);
+
   for (let i = state.ghostSnake.length - 1; i >= 0; i--) {
     const seg = state.ghostSnake[i];
-    const t = i / Math.max(state.ghostSnake.length - 1, 1);
-    const headR = GRID * 0.42;
-    const tailR = GRID * 0.18;
-    const r = headR + (tailR - headR) * t;
-    ctx.fillStyle = `hsl(${snakeHue}, ${snakeSat}%, 50%)`;
-    ctx.beginPath();
-    ctx.arc(seg.x * GRID + GRID / 2, seg.y * GRID + GRID / 2, r, 0, Math.PI * 2);
+    const x = seg.x * GRID + gap;
+    const y = seg.y * GRID + gap;
+
+    ctx.fillStyle = color;
+    roundRect(ctx, x, y, segSize, segSize, cornerR);
     ctx.fill();
   }
   ctx.globalAlpha = 1;
@@ -415,14 +388,13 @@ function drawEvolutionEffects() {
   if (!state.snakeEvolution || state.snakeEvolution < 1 || state.snake.length === 0) return;
   const GRID = state.GRID;
 
-  // 使用插值位置
   const positions = getInterpolatedPositions();
   const headPos = positions[0];
   if (!headPos) return;
   const hx = headPos.x * GRID + GRID / 2;
   const hy = headPos.y * GRID;
 
-  // 进化1+: 皇冠 emoji
+  // 皇冠 emoji
   ctx.font = `${GRID * 0.4}px sans-serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
@@ -478,14 +450,14 @@ function drawGameOver() {
   const cx = canvas.width / 2;
   const cy = canvas.height / 2;
 
-  // 分数（大号）
+  // 分数
   ctx.fillStyle = '#fff';
   ctx.font = 'bold 42px sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText(state.score.toString(), cx, cy - 10);
 
-  // 提示（小字）
+  // 提示
   ctx.fillStyle = '#666';
   ctx.font = '200 13px sans-serif';
   ctx.fillText('R\u91CD\u5F00 \u00B7 ESC\u83DC\u5355', cx, cy + 25);
@@ -496,7 +468,6 @@ function drawGameOver() {
 export function draw() {
   _time = Date.now();
 
-  // 同步插值状态
   syncPrevSnake();
 
   ctx.save();

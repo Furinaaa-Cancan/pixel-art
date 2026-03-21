@@ -1,20 +1,34 @@
 /* ============================================================
-   style.css — Monument Valley / Alto's Odyssey 级极简风格
+   style.css — Premium Snake 视觉风格
+   深蓝渐变 + 暗色容器 + 现代简洁
    ============================================================ */
 
 /* ===== 主题变量 ===== */
 :root {
-  --accent: #4ade80;
-  --bg: #0a0a0f;
-  --text: rgba(255, 255, 255, 0.85);
-  --text-dim: rgba(255, 255, 255, 0.3);
-  --text-muted: rgba(255, 255, 255, 0.12);
-  --surface: rgba(255, 255, 255, 0.04);
+  --accent: #00ff88;
+  --accent-rgb: 0, 255, 136;
+  --bg-start: #1e3c72;
+  --bg-end: #2a5298;
+  --surface: #0d1117;
+  --surface-end: #161b22;
+  --text: rgba(255, 255, 255, 0.9);
+  --text-dim: rgba(255, 255, 255, 0.45);
+  --text-muted: rgba(255, 255, 255, 0.18);
+  --border: rgba(255, 255, 255, 0.08);
 }
 
-body.theme-neon  { --accent: #67e8f9; }
-body.theme-retro { --accent: #fb923c; }
-body.theme-cyber { --accent: #c084fc; }
+body.theme-neon {
+  --accent: #00d4ff;
+  --accent-rgb: 0, 212, 255;
+}
+body.theme-retro {
+  --accent: #ff6b35;
+  --accent-rgb: 255, 107, 53;
+}
+body.theme-cyber {
+  --accent: #bf5fff;
+  --accent-rgb: 191, 95, 255;
+}
 
 /* ===== 重置 ===== */
 *, *::before, *::after {
@@ -24,19 +38,18 @@ body.theme-cyber { --accent: #c084fc; }
 }
 
 body {
-  background: var(--bg);
+  background: radial-gradient(ellipse at center, var(--bg-start), var(--bg-end));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   color: var(--text);
   overflow: hidden;
   touch-action: none;
   user-select: none;
   font-size: 14px;
-  font-weight: 400;
   letter-spacing: 0.3px;
 }
 
@@ -46,36 +59,36 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
   z-index: 20;
-  max-width: 360px;
+  max-width: 380px;
   width: 90%;
-  padding: 48px 40px;
-  background: rgba(10, 10, 15, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px 36px;
+  background: linear-gradient(135deg, var(--surface), var(--surface-end));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5),
+              0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  transition: opacity 0.25s ease, transform 0.25s ease;
   opacity: 1;
   transform: scale(1) translateY(0);
 }
 
 #menu[style*="display: none"] {
   opacity: 0;
-  transform: scale(0.98) translateY(6px);
-}
-
-.menu-header {
-  text-align: center;
+  transform: scale(0.96) translateY(8px);
 }
 
 #menu h1 {
-  font-size: 72px;
-  font-weight: 200;
-  letter-spacing: 12px;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 10px;
   color: #fff;
   line-height: 1;
+  text-shadow: 0 0 30px rgba(var(--accent-rgb), 0.3);
 }
+
+.menu-header { text-align: center; }
 
 .menu-subtitle {
   display: none;
@@ -85,7 +98,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
 }
 
@@ -95,97 +108,99 @@ body {
 
 .btn-row {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 /* ===== 按钮 ===== */
 .btn {
-  padding: 6px 14px;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 1px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   border: none;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text-dim);
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-              background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  transition: all 0.2s ease;
+  font-family: inherit;
   position: relative;
   overflow: hidden;
 }
 
 .btn:hover {
+  background: rgba(255, 255, 255, 0.1);
   color: var(--text);
 }
 
 .btn.active {
-  color: var(--accent);
-  background: rgba(74, 222, 128, 0.08);
+  color: #fff;
+  background: rgba(var(--accent-rgb), 0.15);
+  box-shadow: 0 0 0 1px rgba(var(--accent-rgb), 0.3) inset;
 }
-
-body.theme-neon .btn.active  { background: rgba(103, 232, 249, 0.08); }
-body.theme-retro .btn.active { background: rgba(251, 146, 60, 0.08); }
-body.theme-cyber .btn.active { background: rgba(192, 132, 252, 0.08); }
 
 /* 主题圆点 */
 .theme-dots {
   gap: 16px;
+  margin-top: 4px;
 }
 
 .btn.theme-dot {
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   padding: 0;
   border-radius: 50%;
   background: var(--dot-color);
   opacity: 0.3;
-  border: none;
+  border: 2px solid transparent;
   font-size: 0;
-  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
+  box-shadow: none;
 }
 
 .btn.theme-dot:hover {
   opacity: 0.6;
+  transform: scale(1.1);
 }
 
 .btn.theme-dot.active {
   opacity: 1;
   background: var(--dot-color);
-  transform: scale(1.3);
+  transform: scale(1.25);
+  box-shadow: 0 0 12px var(--dot-color);
 }
 
 /* 开始按钮 */
 .btn-start {
-  padding: 16px 48px;
+  padding: 14px 52px;
   font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 8px;
+  font-weight: 600;
+  letter-spacing: 6px;
   border: none;
-  background: transparent;
-  color: var(--text-dim);
-  border-radius: 4px;
+  background: var(--accent);
+  color: var(--surface);
+  border-radius: 10px;
   cursor: pointer;
-  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  margin-top: 8px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  margin-top: 6px;
+  box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.3);
 }
 
 .btn-start:hover {
-  color: var(--accent);
+  transform: scale(1.04);
+  box-shadow: 0 6px 25px rgba(var(--accent-rgb), 0.4);
 }
 
 .btn-start:active {
-  color: var(--accent);
+  transform: scale(0.98);
 }
 
 .menu-best {
-  font-size: 11px;
-  font-weight: 300;
+  font-size: 12px;
+  font-weight: 400;
   color: var(--text-dim);
   letter-spacing: 1px;
 }
@@ -193,8 +208,8 @@ body.theme-cyber .btn.active { background: rgba(192, 132, 252, 0.08); }
 .menu-footer {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 12px;
+  gap: 14px;
+  margin-top: 8px;
 }
 
 .menu-footer-sep {
@@ -202,11 +217,11 @@ body.theme-cyber .btn.active { background: rgba(192, 132, 252, 0.08); }
 }
 
 .menu-achievements {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   color: var(--text-muted);
   cursor: pointer;
-  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.2s ease;
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -222,39 +237,42 @@ body.theme-cyber .btn.active { background: rgba(192, 132, 252, 0.08); }
   width: 100%;
   max-width: 600px;
   justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 8px;
+  align-items: center;
+  margin-bottom: 10px;
   padding: 0 4px;
 }
 
 #hud-left {
   display: flex;
-  gap: 16px;
-  align-items: baseline;
+  gap: 14px;
+  align-items: center;
 }
 
 #score {
   display: inline-block;
-  font-size: 32px;
-  font-weight: 200;
-  letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 16px;
+  border-radius: 8px;
 }
 
 #score.score-pop {
-  animation: scorePulse 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: scorePulse 0.3s ease;
 }
 
 @keyframes scorePulse {
-  0%   { color: rgba(255, 255, 255, 0.5); transform: scale(1); }
-  50%  { color: var(--accent); transform: scale(1.06); }
-  100% { color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+  0%   { transform: scale(1); }
+  50%  { color: var(--accent); transform: scale(1.08); }
+  100% { transform: scale(1); }
 }
 
-/* combo & powerup — 隐藏但保留在DOM中 */
+/* combo & powerup */
 #combo-display {
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   color: var(--accent);
   opacity: 0;
   visibility: hidden;
@@ -263,22 +281,25 @@ body.theme-cyber .btn.active { background: rgba(192, 132, 252, 0.08); }
 
 #combo-display.visible {
   visibility: visible;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 #powerup-display {
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   color: var(--accent);
   opacity: 0;
   visibility: hidden;
 }
 
 .best-score {
-  font-size: 11px;
-  font-weight: 300;
+  font-size: 12px;
+  font-weight: 400;
   color: var(--text-dim);
   letter-spacing: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 12px;
+  border-radius: 6px;
   opacity: 0;
   visibility: hidden;
 }
@@ -287,18 +308,22 @@ body.theme-cyber .btn.active { background: rgba(192, 132, 252, 0.08); }
 #game-wrap {
   position: relative;
   display: none;
-  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, var(--surface), var(--surface-end));
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.25s ease;
 }
 
 canvas#game {
   display: block;
   border: none;
   border-radius: 0;
-  background: var(--bg);
+  background: transparent;
 }
 
 #game-wrap.shake {
-  animation: shake 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: shake 0.3s ease;
 }
 
 @keyframes shake {
@@ -310,20 +335,20 @@ canvas#game {
 }
 
 #msg {
-  margin-top: 16px;
-  font-size: 12px;
-  font-weight: 300;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 400;
   color: var(--text-dim);
   height: 20px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 #controls-hint {
-  margin-top: 10px;
-  font-size: 10px;
+  margin-top: 8px;
+  font-size: 11px;
   font-weight: 300;
   color: var(--text-muted);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 /* ===== 触屏方向键 ===== */
@@ -339,8 +364,8 @@ canvas#game {
   position: absolute;
   width: 48px;
   height: 48px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  background: transparent;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text-muted);
   font-size: 16px;
   border-radius: 50%;
@@ -348,14 +373,14 @@ canvas#game {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  transition: all 0.2s ease;
+  font-family: inherit;
 }
 
 #touch-pad button:active {
-  background: var(--surface);
-  border-color: rgba(255, 255, 255, 0.06);
-  color: var(--text-dim);
+  background: rgba(var(--accent-rgb), 0.12);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  color: var(--accent);
 }
 
 .tp-up    { top: 0;    left: 50%; transform: translateX(-50%); }
@@ -380,18 +405,19 @@ canvas#game {
   top: 24px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(10, 10, 15, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 4px;
+  background: linear-gradient(135deg, var(--surface), var(--surface-end));
+  border: 1px solid var(--border);
+  border-radius: 10px;
   padding: 14px 24px;
   z-index: 30;
   display: none;
   text-align: center;
-  animation: popSlide 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  animation: popSlide 0.25s ease;
 }
 
 @keyframes popSlide {
-  from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+  from { opacity: 0; transform: translateX(-50%) translateY(-12px); }
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
@@ -402,40 +428,41 @@ canvas#game {
 
 #achievement-popup .ach-title {
   color: var(--accent);
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 13px;
   letter-spacing: 2px;
 }
 
 #achievement-popup .ach-desc {
   color: var(--text-dim);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 300;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 /* ===== 成就列表面板 ===== */
 #achievements-panel {
   position: absolute;
   z-index: 25;
-  background: rgba(10, 10, 15, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
+  background: linear-gradient(135deg, var(--surface), var(--surface-end));
+  border: 1px solid var(--border);
+  border-radius: 16px;
   padding: 32px 24px;
-  max-width: 360px;
+  max-width: 380px;
   width: 90%;
   max-height: 70vh;
   overflow-y: auto;
   display: none;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
 #achievements-panel h2 {
   text-align: center;
   margin-bottom: 20px;
   color: var(--text);
-  font-size: 14px;
-  font-weight: 200;
-  letter-spacing: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 4px;
   text-transform: uppercase;
 }
 
@@ -443,9 +470,10 @@ canvas#game {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border);
+  border-radius: 6px;
+  transition: background 0.2s ease;
 }
 
 .ach-item:last-child {
@@ -453,11 +481,11 @@ canvas#game {
 }
 
 .ach-item:hover {
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .ach-item.locked {
-  opacity: 0.2;
+  opacity: 0.25;
 }
 
 .ach-item .ach-i {
@@ -471,13 +499,13 @@ canvas#game {
 }
 
 .ach-item .ach-name {
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .ach-item .ach-d {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 300;
   color: var(--text-dim);
   margin-top: 2px;
@@ -490,10 +518,10 @@ canvas#game {
   background: none;
   border: none;
   color: var(--text-dim);
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  transition: color 0.2s ease;
   line-height: 1;
 }
 
@@ -505,31 +533,32 @@ canvas#game {
 #stats-panel {
   position: absolute;
   z-index: 25;
-  background: rgba(10, 10, 15, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
+  background: linear-gradient(135deg, var(--surface), var(--surface-end));
+  border: 1px solid var(--border);
+  border-radius: 16px;
   padding: 32px 24px;
-  max-width: 360px;
+  max-width: 380px;
   width: 90%;
   display: none;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
 #stats-panel h2 {
   text-align: center;
   margin-bottom: 20px;
   color: var(--text);
-  font-size: 14px;
-  font-weight: 200;
-  letter-spacing: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 4px;
   text-transform: uppercase;
 }
 
 #stats-content {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
   line-height: 2.2;
   color: var(--text-dim);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 #close-stats {
@@ -539,10 +568,10 @@ canvas#game {
   background: none;
   border: none;
   color: var(--text-dim);
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  transition: color 0.2s ease;
   line-height: 1;
 }
 
@@ -556,26 +585,25 @@ canvas#game {
   top: 20px;
   right: 20px;
   z-index: 20;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   color: var(--text-muted);
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   cursor: pointer;
   font-size: 0;
-  background: var(--text-muted);
-  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.2s ease;
   padding: 0;
 }
 
 #music-toggle:hover {
-  background: var(--text-dim);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* ===== 滚动条 ===== */
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -583,10 +611,10 @@ canvas#game {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.15);
 }
