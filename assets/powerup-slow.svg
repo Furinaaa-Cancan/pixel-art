@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- Turtle - cute pixel art -->
+  <!-- Head -->
+  <rect x="11" y="4" width="1" height="1" fill="#00ff88"/>
+  <rect x="12" y="4" width="1" height="1" fill="#00ff88"/>
+  <rect x="11" y="5" width="1" height="1" fill="#00ff88"/>
+  <rect x="12" y="5" width="1" height="1" fill="#66ffbb"/>
+  <rect x="13" y="5" width="1" height="1" fill="#00ff88"/>
+  <rect x="11" y="6" width="1" height="1" fill="#00ff88"/>
+  <rect x="12" y="6" width="1" height="1" fill="#66ffbb"/>
+  <rect x="13" y="6" width="1" height="1" fill="#00ff88"/>
+  <rect x="14" y="6" width="1" height="1" fill="#00ff88"/>
+  <!-- Eye -->
+  <rect x="13" y="5" width="1" height="1" fill="#1a1a1a"/>
+  <!-- Shell top -->
+  <rect x="4" y="3" width="1" height="1" fill="#00cc66"/>
+  <rect x="5" y="3" width="1" height="1" fill="#00cc66"/>
+  <rect x="6" y="3" width="1" height="1" fill="#00cc66"/>
+  <rect x="7" y="3" width="1" height="1" fill="#00cc66"/>
+  <rect x="8" y="3" width="1" height="1" fill="#00cc66"/>
+  <rect x="9" y="3" width="1" height="1" fill="#00cc66"/>
+  <!-- Shell row 2 -->
+  <rect x="3" y="4" width="1" height="1" fill="#00cc66"/>
+  <rect x="4" y="4" width="1" height="1" fill="#00ff88"/>
+  <rect x="5" y="4" width="1" height="1" fill="#66ffbb"/>
+  <rect x="6" y="4" width="1" height="1" fill="#00ff88"/>
+  <rect x="7" y="4" width="1" height="1" fill="#00ff88"/>
+  <rect x="8" y="4" width="1" height="1" fill="#66ffbb"/>
+  <rect x="9" y="4" width="1" height="1" fill="#00ff88"/>
+  <rect x="10" y="4" width="1" height="1" fill="#00cc66"/>
+  <!-- Shell row 3 -->
+  <rect x="2" y="5" width="1" height="1" fill="#00cc66"/>
+  <rect x="3" y="5" width="1" height="1" fill="#00ff88"/>
+  <rect x="4" y="5" width="1" height="1" fill="#00ff88"/>
+  <rect x="5" y="5" width="1" height="1" fill="#00cc66"/>
+  <rect x="6" y="5" width="1" height="1" fill="#00ff88"/>
+  <rect x="7" y="5" width="1" height="1" fill="#00cc66"/>
+  <rect x="8" y="5" width="1" height="1" fill="#00ff88"/>
+  <rect x="9" y="5" width="1" height="1" fill="#00cc66"/>
+  <rect x="10" y="5" width="1" height="1" fill="#00ff88"/>
+  <!-- Shell row 4 -->
+  <rect x="2" y="6" width="1" height="1" fill="#00cc66"/>
+  <rect x="3" y="6" width="1" height="1" fill="#00ff88"/>
+  <rect x="4" y="6" width="1" height="1" fill="#66ffbb"/>
+  <rect x="5" y="6" width="1" height="1" fill="#00ff88"/>
+  <rect x="6" y="6" width="1" height="1" fill="#00ff88"/>
+  <rect x="7" y="6" width="1" height="1" fill="#66ffbb"/>
+  <rect x="8" y="6" width="1" height="1" fill="#00ff88"/>
+  <rect x="9" y="6" width="1" height="1" fill="#00ff88"/>
+  <rect x="10" y="6" width="1" height="1" fill="#00cc66"/>
+  <!-- Shell row 5 -->
+  <rect x="2" y="7" width="1" height="1" fill="#009955"/>
+  <rect x="3" y="7" width="1" height="1" fill="#00cc66"/>
+  <rect x="4" y="7" width="1" height="1" fill="#00ff88"/>
+  <rect x="5" y="7" width="1" height="1" fill="#00cc66"/>
+  <rect x="6" y="7" width="1" height="1" fill="#00ff88"/>
+  <rect x="7" y="7" width="1" height="1" fill="#00cc66"/>
+  <rect x="8" y="7" width="1" height="1" fill="#00ff88"/>
+  <rect x="9" y="7" width="1" height="1" fill="#00cc66"/>
+  <rect x="10" y="7" width="1" height="1" fill="#009955"/>
+  <!-- Shell bottom -->
+  <rect x="3" y="8" width="1" height="1" fill="#009955"/>
+  <rect x="4" y="8" width="1" height="1" fill="#00cc66"/>
+  <rect x="5" y="8" width="1" height="1" fill="#00cc66"/>
+  <rect x="6" y="8" width="1" height="1" fill="#00cc66"/>
+  <rect x="7" y="8" width="1" height="1" fill="#00cc66"/>
+  <rect x="8" y="8" width="1" height="1" fill="#00cc66"/>
+  <rect x="9" y="8" width="1" height="1" fill="#009955"/>
+  <!-- Belly -->
+  <rect x="4" y="9" width="1" height="1" fill="#86efac"/>
+  <rect x="5" y="9" width="1" height="1" fill="#86efac"/>
+  <rect x="6" y="9" width="1" height="1" fill="#86efac"/>
+  <rect x="7" y="9" width="1" height="1" fill="#86efac"/>
+  <rect x="8" y="9" width="1" height="1" fill="#86efac"/>
+  <rect x="9" y="9" width="1" height="1" fill="#86efac"/>
+  <rect x="10" y="9" width="1" height="1" fill="#86efac"/>
+  <!-- Legs front -->
+  <rect x="10" y="8" width="1" height="1" fill="#00ff88"/>
+  <rect x="11" y="8" width="1" height="1" fill="#00ff88"/>
+  <rect x="11" y="9" width="1" height="1" fill="#00ff88"/>
+  <rect x="12" y="9" width="1" height="1" fill="#00cc66"/>
+  <!-- Legs back -->
+  <rect x="2" y="8" width="1" height="1" fill="#00ff88"/>
+  <rect x="1" y="9" width="1" height="1" fill="#00ff88"/>
+  <rect x="2" y="9" width="1" height="1" fill="#00ff88"/>
+  <rect x="3" y="9" width="1" height="1" fill="#00cc66"/>
+  <!-- Tail -->
+  <rect x="1" y="7" width="1" height="1" fill="#00ff88"/>
+  <rect x="0" y="6" width="1" height="1" fill="#00cc66"/>
+  <!-- Feet -->
+  <rect x="1" y="10" width="1" height="1" fill="#00cc66"/>
+  <rect x="2" y="10" width="1" height="1" fill="#00cc66"/>
+  <rect x="12" y="10" width="1" height="1" fill="#00cc66"/>
+  <rect x="13" y="10" width="1" height="1" fill="#00cc66"/>
+</svg>

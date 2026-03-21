@@ -8,7 +8,7 @@
 </head>
 <body>
 <canvas id="particles"></canvas>
-<button id="music-toggle" title="背景音乐">&#9834;</button>
+<button id="music-toggle" title="背景音乐">BGM</button>
 
 <!-- 成就弹窗 -->
 <div id="achievement-popup"><div class="ach-icon"></div><div class="ach-title"></div><div class="ach-desc"></div></div>
@@ -17,15 +17,16 @@
 <div id="achievements-panel"><button id="close-ach">&times;</button><h2>成就</h2><div id="ach-list"></div></div>
 
 <!-- 统计面板 -->
-<div id="stats-panel" style="position:absolute;z-index:25;background:rgba(10,10,30,.97);border:2px solid var(--accent);border-radius:12px;padding:20px;max-width:380px;width:90%;display:none">
-  <button id="close-stats" style="position:absolute;top:8px;right:12px;background:none;border:none;color:#eee;font-size:20px;cursor:pointer">&times;</button>
-  <h2 style="text-align:center;margin-bottom:12px;color:var(--accent)">游戏统计</h2>
-  <div id="stats-content" style="font-size:14px;line-height:2;color:#ccc"></div>
+<div id="stats-panel" style="position:absolute;z-index:25;background:rgba(15,23,42,.97);border:3px solid var(--accent);border-radius:0;padding:20px;max-width:380px;width:90%;display:none;box-shadow:4px 4px 0 rgba(0,0,0,.5)">
+  <button id="close-stats" style="position:absolute;top:8px;right:12px;background:none;border:none;color:#eee;font-size:16px;cursor:pointer;font-family:'Press Start 2P',monospace">&times;</button>
+  <h2 style="text-align:center;margin-bottom:12px;color:var(--accent);font-size:14px;text-shadow:2px 2px 0 #000">游戏统计</h2>
+  <div id="stats-content" style="font-size:9px;line-height:2.5;color:#ccc"></div>
 </div>
 
 <!-- 菜单 -->
 <div id="menu">
-  <h1>贪吃蛇</h1>
+  <h1>SNAKE</h1>
+  <p style="font-size:10px;color:#4ade80;letter-spacing:3px">贪 吃 蛇</p>
   <div class="menu-best" id="menu-best"></div>
 
   <div class="menu-section"><label>游戏模式</label>
@@ -49,7 +50,7 @@
 
   <div class="menu-section"><label>主题</label>
     <div class="btn-row" id="theme-btns">
-      <button class="btn active" data-theme="default">霓虹红</button>
+      <button class="btn active" data-theme="default">像素绿</button>
       <button class="btn" data-theme="neon">赛博青</button>
       <button class="btn" data-theme="retro">复古橙</button>
       <button class="btn" data-theme="cyber">幻紫</button>
@@ -57,7 +58,7 @@
   </div>
 
   <button class="btn-start" id="start-btn">开始游戏</button>
-  <button class="btn-start" id="daily-btn" style="padding:10px 30px;font-size:16px;background:transparent;border:2px solid #f0a500;color:#f0a500;margin-top:-8px">每日挑战</button>
+  <button class="btn-start" id="daily-btn" style="padding:8px 24px;font-size:10px;background:transparent;border:3px solid #f0a500;border-top-color:color-mix(in srgb, #f0a500 60%, #fff);border-left-color:color-mix(in srgb, #f0a500 60%, #fff);border-bottom-color:color-mix(in srgb, #f0a500 60%, #000);border-right-color:color-mix(in srgb, #f0a500 60%, #000);color:#f0a500;margin-top:-4px;border-radius:0">每日挑战</button>
   <div class="menu-achievements" id="show-ach-btn">查看成就</div>
   <div class="menu-achievements" id="show-stats-btn">游戏统计</div>
 </div>
