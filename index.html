@@ -23,7 +23,7 @@ body{background:#0a0a1a;display:flex;flex-direction:column;align-items:center;ju
 .menu-achievements{font-size:13px;color:#888;cursor:pointer;text-decoration:underline}
 
 /* ===== HUD ===== */
-#hud{display:none;width:400px;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:16px;padding:0 4px}
+#hud{display:none;width:100%;max-width:600px;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:16px;padding:0 4px}
 #hud-left{display:flex;gap:16px;align-items:center}
 #combo-display{color:#f0a500;font-weight:bold;opacity:0;transition:opacity .3s}
 #combo-display.visible{opacity:1}
@@ -133,7 +133,7 @@ canvas#game{border-color:var(--accent);background:var(--grid-bg)}
   <span id="powerup-display"></span>
   <span class="best-score" id="best-display"></span>
 </div>
-<div id="game-wrap"><canvas id="game" width="400" height="400"></canvas></div>
+<div id="game-wrap"><canvas id="game"></canvas></div>
 <div id="msg"></div>
 <div id="controls-hint">方向键/WASD 移动 · 空格暂停 · R重开 · ESC菜单</div>
 
@@ -151,6 +151,7 @@ canvas#game{border-color:var(--accent);background:var(--grid-bg)}
 
 const $ = s => document.querySelector(s);
 const $$ = s => document.querySelectorAll(s);
+const msgEl = $('#msg');
 
 // ===== 主题 =====
 const THEMES = {
@@ -224,7 +225,7 @@ function startBGM() {
 function stopBGM() {
   bgmPlaying = false;
   $('#music-toggle').textContent = '♪';
-  clearInterval(bgmInterval);
+  if (bgmInterval) { clearInterval(bgmInterval); bgmInterval = null; }
 }
 
 $('#music-toggle').addEventListener('click', () => {
@@ -335,7 +336,20 @@ $('#close-ach').addEventListener('click', () => { $('#achievements-panel').style
 // ===== 游戏核心 =====
 const canvas = $('#game');
 const ctx = canvas.getContext('2d');
-const GRID = 20, COLS = 20, ROWS = 20;
+const COLS = 20, ROWS = 20;
+let GRID = 20;
+
+function resizeCanvas() {
+  const maxW = Math.min(window.innerWidth * 0.92, 600);
+  const maxH = window.innerHeight * 0.55;
+  const maxSize = Math.min(maxW, maxH);
+  GRID = Math.floor(maxSize / COLS);
+  canvas.width = GRID * COLS;
+  canvas.height = GRID * ROWS;
+  $('#hud').style.width = canvas.width + 'px';
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
 
 const DIFF = {
   easy:   { speed: 150, accel: 1, min: 85 },
@@ -391,25 +405,24 @@ function showBest() {
 
 // Maze generation
 function generateMaze() {
-  const walls = [];
+  const wallSet = new Set();
+  const add = (x, y) => wallSet.add(x * ROWS + y);
   const patterns = [
     // 中心十字
-    () => { for (let i = 6; i < 14; i++) { walls.push({x:10,y:i},{x:i,y:10}); }},
+    () => { for (let i = 6; i < 14; i++) { add(10, i); add(i, 10); }},
     // 四角方块
-    () => { for (let i = 3; i < 7; i++) for (let j = 3; j < 7; j++) { walls.push({x:i,y:j},{x:COLS-1-i,y:j},{x:i,y:ROWS-1-j},{x:COLS-1-i,y:ROWS-1-j}); }},
+    () => { for (let i = 3; i < 7; i++) for (let j = 3; j < 7; j++) { add(i, j); add(COLS-1-i, j); add(i, ROWS-1-j); add(COLS-1-i, ROWS-1-j); }},
     // 回字形
-    () => { for (let i = 4; i < 16; i++) { walls.push({x:i,y:5},{x:i,y:14},{x:5,y:i},{x:14,y:i}); } for (let i = 5; i < 15; i++) { walls.push({x:i,y:5},{x:i,y:14}); }},
+    () => { for (let i = 4; i < 16; i++) { add(i, 5); add(i, 14); add(5, i); add(14, i); }},
     // 随机散布
-    () => { for (let i = 0; i < 30; i++) { const x = 2 + Math.floor(Math.random()*(COLS-4)); const y = 2 + Math.floor(Math.random()*(ROWS-4)); if (Math.abs(x-10) > 2 || Math.abs(y-10) > 2) walls.push({x,y}); }},
+    () => { for (let i = 0; i < 30; i++) { const x = 2 + Math.floor(Math.random()*(COLS-4)); const y = 2 + Math.floor(Math.random()*(ROWS-4)); if (Math.abs(x-10) > 2 || Math.abs(y-10) > 2) add(x, y); }},
   ];
   patterns[Math.floor(Math.random() * patterns.length)]();
-  // 去重
-  const set = new Set(walls.map(w => `${w.x},${w.y}`));
-  return [...set].map(s => { const [x,y] = s.split(',').map(Number); return {x,y}; });
+  return wallSet;
 }
 
 function isWall(x, y) {
-  return mazeWalls && mazeWalls.some(w => w.x === x && w.y === y);
+  return mazeWalls && mazeWalls.has(x * ROWS + y);
 }
 
 function canvasToScreen(gx, gy) {
@@ -548,8 +561,10 @@ function draw() {
     ctx.fillStyle = 'rgba(255,255,255,0.15)';
     ctx.shadowColor = theme.accent;
     ctx.shadowBlur = 4;
-    for (const w of mazeWalls) {
-      ctx.fillRect(w.x * GRID, w.y * GRID, GRID, GRID);
+    for (const key of mazeWalls) {
+      const wx = Math.floor(key / ROWS);
+      const wy = key % ROWS;
+      ctx.fillRect(wx * GRID, wy * GRID, GRID, GRID);
     }
     ctx.shadowBlur = 0;
   }
