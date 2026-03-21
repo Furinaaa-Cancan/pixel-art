@@ -1,36 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" shape-rendering="crispEdges">
-<!-- Claude 官方小动物像素画 -->
-<!-- 扁平色块风格，参考官方像素图 -->
-<!-- 主色: #D4835B  暗色: #B86A45  深暗: #A05A38  眼睛: #2A2A2A -->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" shape-rendering="crispEdges">
+<!-- Claude 小动物 24x24 — pixelarticons 风格 path 合并 -->
 
-<!-- 身体 (宽18 高11, 从x3到x21, y2到y13) -->
-<rect x="3" y="2" width="18" height="9" fill="#D4835B"/>
-<rect x="3" y="11" width="18" height="2" fill="#B86A45"/>
+<!-- 身体 #D4835B (x3-20, y3-12) -->
+<path fill="#D4835B" d="M3 3h18v9H3z"/>
 
-<!-- 左眼 2x2 -->
-<rect x="6" y="5" width="2" height="2" fill="#2A2A2A"/>
+<!-- 身体底部暗色带 #B86A45 (y12-14) -->
+<path fill="#B86A45" d="M3 12h18v2H3z"/>
 
-<!-- 右眼 2x2 -->
-<rect x="16" y="5" width="2" height="2" fill="#2A2A2A"/>
+<!-- 4条腿 #B86A45 (y14-18, 各3px宽, 间隔1px) -->
+<!-- 腿1: x4-6, 腿2: x8-10, 腿3: x14-16, 腿4: x18-20 -->
+<path fill="#B86A45" d="
+  M4 14h3v4H4z
+  M8 14h3v4H8z
+  M14 14h3v4h-3z
+  M18 14h3v4h-3z
+"/>
 
-<!-- 嘴巴 小横线 -->
-<rect x="10" y="9" width="4" height="1" fill="#A05A38"/>
+<!-- 脚底 #9A5535 -->
+<path fill="#9A5535" d="
+  M4 17h3v1H4z
+  M8 17h3v1H8z
+  M14 17h3v1h-3z
+  M18 17h3v1h-3z
+"/>
 
-<!-- 4条腿，两两一组，中间有间隔 -->
-<!-- 左前腿 -->
-<rect x="4" y="13" width="3" height="4" fill="#B86A45"/>
-<rect x="4" y="16" width="3" height="1" fill="#A05A38"/>
+<!-- 眼睛 #2A2A2A (2x2) -->
+<path fill="#2A2A2A" d="M6 6h2v2H6zM16 6h2v2h-2z"/>
 
-<!-- 左后腿 -->
-<rect x="8" y="13" width="3" height="4" fill="#B86A45"/>
-<rect x="8" y="16" width="3" height="1" fill="#A05A38"/>
-
-<!-- 右前腿 -->
-<rect x="13" y="13" width="3" height="4" fill="#B86A45"/>
-<rect x="13" y="16" width="3" height="1" fill="#A05A38"/>
-
-<!-- 右后腿 -->
-<rect x="17" y="13" width="3" height="4" fill="#B86A45"/>
-<rect x="17" y="16" width="3" height="1" fill="#A05A38"/>
+<!-- 嘴 #9A5535 -->
+<path fill="#9A5535" d="M10 10h4v1h-4z"/>
 
 </svg>
