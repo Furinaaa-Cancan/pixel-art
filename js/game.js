@@ -524,6 +524,10 @@ function triggerDeath() {
 export function update() {
   if (state.paused || state.gameOver) return;
 
+  // 保存当前位置作为插值起点
+  state.prevSnake = state.snake.map(s => ({x: s.x, y: s.y}));
+  state.lerpT = 0;
+
   // Consume direction from input queue
   if (state.dirQueue && state.dirQueue.length > 0) {
     const next = state.dirQueue.shift();
@@ -844,6 +848,11 @@ export function init(dailyConfig) {
   // Direction indicator (for input.js touch gesture feedback)
   state.dirIndicator = null;
 
+  // 运动插值
+  state.lerpT = 1;
+  state.prevSnake = [];
+  state._lastFrameTime = 0;
+
   resetRendererState();
   $('#score').textContent = '0';
   showBest();
@@ -866,6 +875,16 @@ export function init(dailyConfig) {
 
 // ===== 动画循环 =====
 export function animLoop() {
+  const now = performance.now();
+  const dt = now - (state._lastFrameTime || now);
+  state._lastFrameTime = now;
+
+  // 插值进度递增
+  if (state.lerpT < 1) {
+    state.lerpT += dt / state.speed;
+    if (state.lerpT > 1) state.lerpT = 1;
+  }
+
   // Poll gamepad (stored on state by input.js to avoid circular import)
   if (state._pollGamepad) state._pollGamepad();
 

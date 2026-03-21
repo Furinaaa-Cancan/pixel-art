@@ -1,5 +1,5 @@
 // ============================================================
-//  renderer.js — Canvas 渲染（slither.io 风格）
+//  renderer.js — Canvas 渲染（运动插值 + 高级感）
 // ============================================================
 
 import { $, THEMES, COLS, ROWS, POWERUP_TYPES, state, getBest } from './config.js';
@@ -11,26 +11,37 @@ const ctx = canvas.getContext('2d');
 let _time = 0;
 let _deathTime = 0;
 let _deathFade = 0;
-let _deathZoom = 1;
 let _scorePop = 0;
 let _prevScore = 0;
 let _foodEaten = 0;
-let _deathExploded = false;
 
-// ===== 缓存 =====
-let _bgGradientCache = null;
+// ===== 运动插值 =====
+let _prevSnake = [];
+let _lastSnakeStr = '';
+
+// ===== 背景缓存 =====
+let _bgCache = null;
 let _bgCacheW = 0;
 let _bgCacheH = 0;
+
+// ===== 食物颜色映射 =====
+const FOOD_COLORS = {
+  normal: null,  // 使用 accent
+  bonus: '#34d399',
+  gold: '#fbbf24',
+  shrink: '#f472b6',
+  speed_food: '#38bdf8',
+};
 
 // ===== 导出函数 =====
 export function resetRendererState() {
   _foodEaten = 0;
   _deathTime = 0;
   _deathFade = 0;
-  _deathZoom = 1;
-  _deathExploded = false;
   _prevScore = 0;
   _scorePop = 0;
+  _prevSnake = [];
+  _lastSnakeStr = '';
 }
 
 export function notifyFoodEaten() {
@@ -55,54 +66,88 @@ export function resizeCanvas() {
   canvas.height = state.GRID * ROWS;
   ctx.imageSmoothingEnabled = true;
   $('#hud').style.width = canvas.width + 'px';
-  // 清除背景缓存以便重建
-  _bgGradientCache = null;
+  _bgCache = null;
 }
 
-// ===== 背景：纯深色 + 微弱径向渐变 + 微弱网格点 =====
+// ===== 运动插值核心 =====
+function syncPrevSnake() {
+  const snake = state.snake;
+  const str = snake.map(s => s.x + ',' + s.y).join('|');
+  if (str !== _lastSnakeStr) {
+    // 蛇位置变化了，保存旧位置
+    _prevSnake = _lastSnakeStr
+      ? _lastSnakeStr.split('|').map(p => { const [x, y] = p.split(','); return { x: +x, y: +y }; })
+      : snake.map(s => ({ x: s.x, y: s.y }));
+    _lastSnakeStr = str;
+  }
+}
+
+function getInterpolatedPositions() {
+  const t = state.lerpT != null ? state.lerpT : 1;
+  const snake = state.snake;
+  const result = [];
+  for (let i = 0; i < snake.length; i++) {
+    const prev = _prevSnake[i] || snake[i];
+    const dx = Math.abs(snake[i].x - prev.x);
+    const dy = Math.abs(snake[i].y - prev.y);
+    // 穿墙时跳过插值（delta > 1格说明穿越了边界）
+    if (dx > 1 || dy > 1) {
+      result.push({ x: snake[i].x, y: snake[i].y });
+    } else {
+      result.push({
+        x: prev.x + (snake[i].x - prev.x) * t,
+        y: prev.y + (snake[i].y - prev.y) * t,
+      });
+    }
+  }
+  return result;
+}
+
+// ===== 背景：纯色 + 微弱网格点 =====
 function drawBackground() {
   const w = canvas.width, h = canvas.height;
   const GRID = state.GRID;
 
-  // 缓存径向渐变
-  if (!_bgGradientCache || _bgCacheW !== w || _bgCacheH !== h) {
-    _bgGradientCache = ctx.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, w * 0.7);
-    _bgGradientCache.addColorStop(0, '#1a1a2e');
-    _bgGradientCache.addColorStop(1, '#0f0f1a');
+  // 缓存到 offscreen canvas
+  if (!_bgCache || _bgCacheW !== w || _bgCacheH !== h) {
+    _bgCache = document.createElement('canvas');
+    _bgCache.width = w;
+    _bgCache.height = h;
+    const bctx = _bgCache.getContext('2d');
+
+    // 纯色背景
+    bctx.fillStyle = '#0a0a0f';
+    bctx.fillRect(0, 0, w, h);
+
+    // 网格交叉点圆点
+    bctx.fillStyle = 'rgba(255,255,255,0.04)';
+    for (let x = 0; x <= COLS; x++) {
+      for (let y = 0; y <= ROWS; y++) {
+        bctx.beginPath();
+        bctx.arc(x * GRID, y * GRID, 0.5, 0, Math.PI * 2);
+        bctx.fill();
+      }
+    }
     _bgCacheW = w;
     _bgCacheH = h;
   }
 
-  ctx.fillStyle = _bgGradientCache;
-  ctx.fillRect(0, 0, w, h);
-
-  // 微弱网格点（在每个格子交叉点画小圆点）
-  ctx.fillStyle = 'rgba(255,255,255,0.05)';
-  for (let x = 0; x <= COLS; x++) {
-    for (let y = 0; y <= ROWS; y++) {
-      ctx.beginPath();
-      ctx.arc(x * GRID, y * GRID, 0.8, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
+  ctx.drawImage(_bgCache, 0, 0);
 }
 
-// ===== 迷宫墙壁：圆角小方块 + 微弱发光 =====
-function drawMaze(theme) {
+// ===== 迷宫墙壁 =====
+function drawMaze() {
   if (!state.mazeWalls) return;
   const GRID = state.GRID;
-  const r = GRID * 0.15; // 圆角半径
 
-  ctx.shadowColor = 'rgba(255,255,255,0.4)';
-  ctx.shadowBlur = 6;
-  ctx.fillStyle = 'rgba(255,255,255,0.1)';
-
+  ctx.fillStyle = 'rgba(255,255,255,0.08)';
   for (const key of state.mazeWalls) {
     const wx = Math.floor(key / ROWS);
     const wy = key % ROWS;
     const x = wx * GRID + 1;
     const y = wy * GRID + 1;
     const s = GRID - 2;
+    const r = 2;
 
     ctx.beginPath();
     ctx.moveTo(x + r, y);
@@ -117,137 +162,104 @@ function drawMaze(theme) {
     ctx.closePath();
     ctx.fill();
   }
-  ctx.shadowBlur = 0;
 }
 
-// ===== 食物：发光圆球 =====
+// ===== 食物 =====
 function drawFood(theme) {
   if (!state.food) return;
   const GRID = state.GRID;
-  state.foodPulse += 0.05;
-
-  const fColor = state.foodType.color || theme.food;
+  const type = state.foodType.type;
+  const fColor = FOOD_COLORS[type] || theme.accent;
   const fx = state.food.x * GRID + GRID / 2;
   const fy = state.food.y * GRID + GRID / 2;
-  const type = state.foodType.type;
 
-  // 微弱脉冲：半径 ±1px
-  const pulse = Math.sin(state.foodPulse) * 1;
+  // 脉冲：±0.5px，周期2秒
+  const pulse = Math.sin(_time * 0.00314) * 0.5; // 2π / 2000ms ≈ 0.00314
   const baseR = GRID * 0.3 + pulse;
   const isGold = type === 'gold';
   const r = isGold ? baseR * 1.3 : baseR;
 
-  // 光晕
-  ctx.shadowColor = fColor;
-  ctx.shadowBlur = isGold ? 16 : 10;
+  // 光晕层（更大、半透明）
+  ctx.fillStyle = fColor;
+  ctx.globalAlpha = 0.08;
+  ctx.beginPath();
+  ctx.arc(fx, fy, r * 1.8, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.globalAlpha = 1;
 
-  // 内部渐变球
-  const grad = ctx.createRadialGradient(fx - r * 0.2, fy - r * 0.2, r * 0.1, fx, fy, r);
-  grad.addColorStop(0, '#fff');
-  grad.addColorStop(0.3, fColor);
-  grad.addColorStop(1, fColor);
-  ctx.fillStyle = grad;
-
+  // 主体
+  ctx.fillStyle = fColor;
   ctx.beginPath();
   ctx.arc(fx, fy, r, 0, Math.PI * 2);
   ctx.fill();
-  ctx.shadowBlur = 0;
 }
 
-// ===== Boss 食物：大发光球 + 脉冲光环 =====
-function drawBossFood(theme) {
+// ===== Boss 食物 =====
+function drawBossFood() {
   if (!state.bossFood) return;
   const GRID = state.GRID;
   const bx = state.bossFood.x * GRID + GRID / 2;
   const by = state.bossFood.y * GRID + GRID / 2;
   const hitsLeft = state.bossFood.hitsLeft;
-  const maxHits = state.bossFood.maxHits;
-  const progress = 1 - hitsLeft / maxHits;
+  const r = GRID * 0.45;
+  const color = '#ef4444';
 
-  const pulse = Math.sin(_time * 0.005) * 2;
-  const baseR = GRID * 0.5;
-
-  // 脉冲光环
-  const ringPhase = (_time * 0.003) % 1;
-  ctx.strokeStyle = '#ff4500';
-  ctx.lineWidth = 2;
-  ctx.globalAlpha = 1 - ringPhase;
+  // 光晕
+  ctx.fillStyle = color;
+  ctx.globalAlpha = 0.08;
   ctx.beginPath();
-  ctx.arc(bx, by, baseR + ringPhase * 20, 0, Math.PI * 2);
-  ctx.stroke();
+  ctx.arc(bx, by, r * 2, 0, Math.PI * 2);
+  ctx.fill();
   ctx.globalAlpha = 1;
 
-  // 进度环
-  ctx.strokeStyle = 'rgba(255,69,0,0.5)';
-  ctx.lineWidth = 2.5;
+  // 主体（1.5x大）
+  ctx.fillStyle = color;
   ctx.beginPath();
-  ctx.arc(bx, by, baseR + 6 + pulse, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (1 - progress));
-  ctx.stroke();
-
-  // 主体发光球
-  ctx.shadowColor = '#ff4500';
-  ctx.shadowBlur = 18 + pulse;
-  const grad = ctx.createRadialGradient(bx - baseR * 0.15, by - baseR * 0.15, baseR * 0.1, bx, by, baseR);
-  grad.addColorStop(0, '#fff');
-  grad.addColorStop(0.3, '#ff6633');
-  grad.addColorStop(1, '#ff4500');
-  ctx.fillStyle = grad;
-  ctx.beginPath();
-  ctx.arc(bx, by, baseR, 0, Math.PI * 2);
+  ctx.arc(bx, by, r, 0, Math.PI * 2);
   ctx.fill();
-  ctx.shadowBlur = 0;
 
-  // 剩余次数
+  // 数字
   ctx.fillStyle = '#fff';
-  ctx.font = `bold ${GRID * 0.45}px sans-serif`;
+  ctx.font = `bold ${GRID * 0.4}px sans-serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText(hitsLeft.toString(), bx, by);
   ctx.textBaseline = 'alphabetic';
 }
 
-// ===== 道具：发光圆球 + emoji 图标 =====
+// ===== 道具 =====
 function drawPowerup() {
   if (!state.powerup) return;
   const GRID = state.GRID;
   const px = state.powerup.x * GRID + GRID / 2;
   const py = state.powerup.y * GRID + GRID / 2;
   const color = state.powerup.color;
-  const r = GRID * 0.38;
+  const r = GRID * 0.36;
 
-  // 外圈脉冲光晕
-  const pulse = Math.sin(_time * 0.004) * 2;
-  ctx.strokeStyle = color;
-  ctx.lineWidth = 1.5;
-  ctx.globalAlpha = 0.3 + 0.2 * Math.sin(_time * 0.005);
+  // 光晕
+  ctx.fillStyle = color;
+  ctx.globalAlpha = 0.08;
   ctx.beginPath();
-  ctx.arc(px, py, r + 6 + pulse, 0, Math.PI * 2);
-  ctx.stroke();
+  ctx.arc(px, py, r * 1.8, 0, Math.PI * 2);
+  ctx.fill();
   ctx.globalAlpha = 1;
 
-  // 主体发光球
-  ctx.shadowColor = color;
-  ctx.shadowBlur = 14;
-  const grad = ctx.createRadialGradient(px - r * 0.2, py - r * 0.2, r * 0.1, px, py, r);
-  grad.addColorStop(0, '#fff');
-  grad.addColorStop(0.35, color);
-  grad.addColorStop(1, color);
-  ctx.fillStyle = grad;
+  // 主体（1.2x）
+  ctx.fillStyle = color;
   ctx.beginPath();
   ctx.arc(px, py, r, 0, Math.PI * 2);
   ctx.fill();
-  ctx.shadowBlur = 0;
 
-  // 中心 emoji 图标
-  ctx.fillStyle = '#000';
-  ctx.font = `${GRID * 0.4}px sans-serif`;
+  // Emoji 图标
+  ctx.fillStyle = '#fff';
+  ctx.font = `${GRID * 0.38}px sans-serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText(state.powerup.icon, px, py);
   ctx.textBaseline = 'alphabetic';
 }
 
-// ===== 蛇：slither.io 风格重叠圆 =====
+// ===== 蛇 =====
 function drawSnake(theme) {
   const GRID = state.GRID;
   const snake = state.snake;
@@ -257,139 +269,140 @@ function drawSnake(theme) {
   const snakeHue = theme.snake[0];
   const snakeSat = theme.snake[1];
 
-  // 从尾到头绘制（头在最上层）
+  // 获取插值后的位置
+  const positions = getInterpolatedPositions();
+
+  // === Pass 1: 柔和发光层（从尾到头）===
   for (let i = snake.length - 1; i >= 0; i--) {
     const t = i / Math.max(snake.length - 1, 1); // 0=头 1=尾
-    const seg = snake[i];
-    const x = seg.x * GRID + GRID / 2;
-    const y = seg.y * GRID + GRID / 2;
+    const pos = positions[i];
+    if (!pos) continue;
+    const x = pos.x * GRID + GRID / 2;
+    const y = pos.y * GRID + GRID / 2;
 
-    // 半径：头大尾小
-    const radius = GRID * 0.45 * (1 - t * 0.35);
+    const headR = GRID * 0.42;
+    const tailR = GRID * 0.18;
+    const radius = headR + (tailR - headR) * t;
+    const glowR = radius * 1.4;
 
-    // 颜色
-    let hue, sat, light;
+    let hue;
     if (isInvincible) {
-      // 柔和彩虹色缓慢过渡
-      hue = ((_time * 0.05) + i * 12) % 360;
-      sat = 70;
-      light = 55;
+      hue = ((_time * 0.03) + i * 15) % 360;
     } else {
       hue = snakeHue + t * 20;
-      sat = snakeSat;
-      light = 48 + (1 - t) * 12;
     }
+    const sat = isInvincible ? 70 : snakeSat;
+    const light = isInvincible ? 55 : (48 + (1 - t) * 14);
 
-    const bodyColor = `hsl(${hue}, ${sat}%, ${light}%)`;
-    const glowColor = `hsla(${hue}, ${sat}%, ${light + 15}%, 0.6)`;
+    ctx.fillStyle = `hsla(${hue}, ${sat}%, ${light}%, 0.06)`;
+    ctx.beginPath();
+    ctx.arc(x, y, glowR, 0, Math.PI * 2);
+    ctx.fill();
+  }
 
-    // 外发光（越靠近头越亮）
-    ctx.shadowColor = glowColor;
-    ctx.shadowBlur = 7 * (1 - t * 0.5);
+  // === Pass 2: 蛇身圆（从尾到头）===
+  for (let i = snake.length - 1; i >= 0; i--) {
+    const t = i / Math.max(snake.length - 1, 1);
+    const pos = positions[i];
+    if (!pos) continue;
+    const x = pos.x * GRID + GRID / 2;
+    const y = pos.y * GRID + GRID / 2;
 
-    // 身体圆：渐变球
-    const grad = ctx.createRadialGradient(
-      x - radius * 0.2, y - radius * 0.2, radius * 0.05,
-      x, y, radius
-    );
-    const lightColor = `hsl(${hue}, ${sat}%, ${light + 12}%)`;
-    grad.addColorStop(0, lightColor);
-    grad.addColorStop(0.7, bodyColor);
-    grad.addColorStop(1, `hsl(${hue}, ${sat}%, ${light - 8}%)`);
-    ctx.fillStyle = grad;
+    const headR = GRID * 0.42;
+    const tailR = GRID * 0.18;
+    const radius = headR + (tailR - headR) * t;
 
+    let hue;
+    if (isInvincible) {
+      hue = ((_time * 0.03) + i * 15) % 360;
+    } else {
+      hue = snakeHue + t * 20;
+    }
+    const sat = isInvincible ? 70 : snakeSat;
+    const light = isInvincible ? 55 : (48 + (1 - t) * 14);
+
+    ctx.fillStyle = `hsl(${hue}, ${sat}%, ${light}%)`;
     ctx.beginPath();
     ctx.arc(x, y, radius, 0, Math.PI * 2);
     ctx.fill();
-    ctx.shadowBlur = 0;
   }
 
-  // 蛇头眼睛
-  if (snake.length > 0) {
-    const head = snake[0];
-    const hx = head.x * GRID + GRID / 2;
-    const hy = head.y * GRID + GRID / 2;
-    const headR = GRID * 0.45;
+  // === 蛇头眼睛 ===
+  const headPos = positions[0];
+  if (headPos) {
+    const hx = headPos.x * GRID + GRID / 2;
+    const hy = headPos.y * GRID + GRID / 2;
+    const headR = GRID * 0.42;
     const dir = state.dir;
 
-    // 计算眼睛位置（根据方向偏移）
-    const eyeOffsetForward = headR * 0.3;
+    const eyeOffsetForward = headR * 0.35;
     const eyeOffsetSide = headR * 0.35;
-    const eyeR = headR * 0.22;
-    const pupilR = eyeR * 0.55;
 
     let eye1x, eye1y, eye2x, eye2y;
-    let pupilDx = dir.x * pupilR * 0.3;
-    let pupilDy = dir.y * pupilR * 0.3;
-
-    if (dir.x === 1) { // 右
+    if (dir.x === 1) {
       eye1x = hx + eyeOffsetForward; eye1y = hy - eyeOffsetSide;
       eye2x = hx + eyeOffsetForward; eye2y = hy + eyeOffsetSide;
-    } else if (dir.x === -1) { // 左
+    } else if (dir.x === -1) {
       eye1x = hx - eyeOffsetForward; eye1y = hy - eyeOffsetSide;
       eye2x = hx - eyeOffsetForward; eye2y = hy + eyeOffsetSide;
-    } else if (dir.y === -1) { // 上
+    } else if (dir.y === -1) {
       eye1x = hx - eyeOffsetSide; eye1y = hy - eyeOffsetForward;
       eye2x = hx + eyeOffsetSide; eye2y = hy - eyeOffsetForward;
-    } else { // 下或默认
+    } else {
       eye1x = hx - eyeOffsetSide; eye1y = hy + eyeOffsetForward;
       eye2x = hx + eyeOffsetSide; eye2y = hy + eyeOffsetForward;
     }
 
-    // 白色眼白
+    // 白色眼白 (2px)
     ctx.fillStyle = '#fff';
     ctx.beginPath();
-    ctx.arc(eye1x, eye1y, eyeR, 0, Math.PI * 2);
+    ctx.arc(eye1x, eye1y, 2, 0, Math.PI * 2);
     ctx.fill();
     ctx.beginPath();
-    ctx.arc(eye2x, eye2y, eyeR, 0, Math.PI * 2);
+    ctx.arc(eye2x, eye2y, 2, 0, Math.PI * 2);
     ctx.fill();
 
-    // 黑色瞳孔
-    ctx.fillStyle = '#111';
+    // 黑色瞳孔 (1px)
+    const pupilDx = dir.x * 0.5;
+    const pupilDy = dir.y * 0.5;
+    ctx.fillStyle = '#000';
     ctx.beginPath();
-    ctx.arc(eye1x + pupilDx, eye1y + pupilDy, pupilR, 0, Math.PI * 2);
+    ctx.arc(eye1x + pupilDx, eye1y + pupilDy, 1, 0, Math.PI * 2);
     ctx.fill();
     ctx.beginPath();
-    ctx.arc(eye2x + pupilDx, eye2y + pupilDy, pupilR, 0, Math.PI * 2);
+    ctx.arc(eye2x + pupilDx, eye2y + pupilDy, 1, 0, Math.PI * 2);
     ctx.fill();
   }
 }
 
-// ===== 缩圈警告线（生存模式） =====
+// ===== 缩圈边界（survival 模式）=====
 function drawShrinkBounds() {
   if (!state.shrinkBounds || state.selectedMode !== 'survival') return;
   const GRID = state.GRID;
   const b = state.shrinkBounds;
 
-  ctx.strokeStyle = 'rgba(255,100,100,0.4)';
-  ctx.lineWidth = 2;
+  ctx.strokeStyle = 'rgba(255,100,100,0.3)';
+  ctx.lineWidth = 1.5;
   ctx.setLineDash([6, 4]);
   ctx.strokeRect(b.left * GRID, b.top * GRID, (b.right - b.left) * GRID, (b.bottom - b.top) * GRID);
   ctx.setLineDash([]);
-
-  if (state.shrinkWarning) {
-    const w = state.shrinkWarning;
-    const flash = Math.sin(_time * 0.01) > 0;
-    if (flash) {
-      ctx.strokeStyle = 'rgba(255,0,0,0.7)';
-      ctx.lineWidth = 3;
-      ctx.strokeRect(w.left * GRID, w.top * GRID, (w.right - w.left) * GRID, (w.bottom - w.top) * GRID);
-    }
-  }
 }
 
 // ===== 幽灵蛇 =====
 function drawGhostSnake(theme) {
   if (!state.ghostSnake || state.ghostSnake.length === 0) return;
   const GRID = state.GRID;
-  ctx.globalAlpha = 0.15;
+  const snakeHue = theme.snake[0];
+  const snakeSat = theme.snake[1];
 
+  ctx.globalAlpha = 0.12;
   for (let i = state.ghostSnake.length - 1; i >= 0; i--) {
     const seg = state.ghostSnake[i];
     const t = i / Math.max(state.ghostSnake.length - 1, 1);
-    const r = GRID * 0.35 * (1 - t * 0.3);
-    ctx.fillStyle = `hsl(${theme.snake[0]}, ${theme.snake[1]}%, 50%)`;
+    const headR = GRID * 0.42;
+    const tailR = GRID * 0.18;
+    const r = headR + (tailR - headR) * t;
+    ctx.fillStyle = `hsl(${snakeHue}, ${snakeSat}%, 50%)`;
     ctx.beginPath();
     ctx.arc(seg.x * GRID + GRID / 2, seg.y * GRID + GRID / 2, r, 0, Math.PI * 2);
     ctx.fill();
@@ -398,146 +411,95 @@ function drawGhostSnake(theme) {
 }
 
 // ===== 蛇进化特效 =====
-function drawEvolutionEffects(theme) {
+function drawEvolutionEffects() {
   if (!state.snakeEvolution || state.snakeEvolution < 1 || state.snake.length === 0) return;
   const GRID = state.GRID;
-  const head = state.snake[0];
-  const hx = head.x * GRID + GRID / 2;
-  const hy = head.y * GRID;
 
-  // 进化1: 皇冠 emoji
-  if (state.snakeEvolution >= 1) {
-    ctx.font = `${GRID * 0.45}px sans-serif`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText('\u{1F451}', hx, hy - GRID * 0.1);
-    ctx.textBaseline = 'alphabetic';
-  }
+  // 使用插值位置
+  const positions = getInterpolatedPositions();
+  const headPos = positions[0];
+  if (!headPos) return;
+  const hx = headPos.x * GRID + GRID / 2;
+  const hy = headPos.y * GRID;
 
-  // 进化3: 光环
-  if (state.snakeEvolution >= 3) {
-    ctx.strokeStyle = `hsla(${theme.snake[0]}, 80%, 65%, ${0.25 + 0.15 * Math.sin(_time * 0.003)})`;
-    ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    ctx.arc(hx, hy + GRID / 2, GRID * 0.7, 0, Math.PI * 2);
-    ctx.stroke();
-  }
+  // 进化1+: 皇冠 emoji
+  ctx.font = `${GRID * 0.4}px sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('\u{1F451}', hx, hy - GRID * 0.15);
+  ctx.textBaseline = 'alphabetic';
 }
 
-// ===== 模式专属 HUD =====
-function drawModeHUD(theme) {
+// ===== 禅模式计时器 =====
+function drawModeHUD() {
   if (state.selectedMode === 'zen' && state.zenTimeLeft > 0 && state.running && !state.gameOver) {
     const min = Math.floor(state.zenTimeLeft / 60);
     const sec = state.zenTimeLeft % 60;
+    ctx.globalAlpha = 0.5;
     ctx.fillStyle = state.zenTimeLeft <= 10 ? '#ff4444' : '#aaa';
-    ctx.font = 'bold 16px sans-serif';
+    ctx.font = '200 14px sans-serif';
     ctx.textAlign = 'right';
-    ctx.fillText(`${min}:${sec.toString().padStart(2, '0')}`, canvas.width - 8, 20);
+    ctx.fillText(`${min}:${sec.toString().padStart(2, '0')}`, canvas.width - 10, 18);
     ctx.textAlign = 'center';
-  }
-
-  if (state.selectedMode === 'survival' && state.shrinkBounds && state.running && !state.gameOver) {
-    const b = state.shrinkBounds;
-    const size = `${b.right - b.left}x${b.bottom - b.top}`;
-    ctx.fillStyle = '#ff6666';
-    ctx.font = '13px sans-serif';
-    ctx.textAlign = 'right';
-    ctx.fillText(`区域: ${size}`, canvas.width - 8, 20);
-    ctx.textAlign = 'center';
+    ctx.globalAlpha = 1;
   }
 }
 
-// ===== 暂停画面 =====
+// ===== 暂停覆层 =====
 function drawPaused() {
   if (!state.paused || state.gameOver) return;
-  ctx.fillStyle = 'rgba(0,0,0,0.6)';
-  ctx.fillRect(-10, -10, canvas.width + 20, canvas.height + 20);
 
-  ctx.fillStyle = '#f0a500';
-  ctx.font = 'bold 40px sans-serif';
+  ctx.fillStyle = 'rgba(0,0,0,0.5)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = '#fff';
+  ctx.font = '200 28px sans-serif';
+  ctx.letterSpacing = '6px';
   ctx.textAlign = 'center';
-  ctx.fillText('暂停', canvas.width / 2, canvas.height / 2 - 10);
-
-  ctx.font = '16px sans-serif';
-  ctx.fillStyle = '#888';
-  ctx.fillText('按空格继续', canvas.width / 2, canvas.height / 2 + 25);
+  ctx.textBaseline = 'middle';
+  ctx.fillText('PAUSED', canvas.width / 2, canvas.height / 2);
+  ctx.letterSpacing = '0px';
+  ctx.textBaseline = 'alphabetic';
 }
 
-// ===== 游戏结束画面 =====
-function drawGameOver(theme) {
+// ===== 游戏结束 =====
+function drawGameOver() {
   if (!state.gameOver) return;
 
   if (_deathTime === 0) _deathTime = Date.now();
   const elapsed = Date.now() - _deathTime;
-  _deathFade = Math.min(elapsed / 600, 1);
-  if (elapsed < 200) {
-    _deathZoom = 1 - (elapsed / 200) * 0.03;
-  } else if (elapsed < 500) {
-    _deathZoom = 0.97 + ((elapsed - 200) / 300) * 0.03;
-  } else {
-    _deathZoom = 1;
-  }
+  _deathFade = Math.min(elapsed / 400, 1);
 
-  if (_deathFade < 1) {
-    ctx.save();
-    const cw = canvas.width, ch = canvas.height;
-    ctx.translate(cw / 2, ch / 2);
-    ctx.scale(_deathZoom, _deathZoom);
-    ctx.translate(-cw / 2, -ch / 2);
-    ctx.fillStyle = `rgba(0,0,0,${_deathFade * 0.7})`;
-    ctx.fillRect(-10, -10, cw + 20, ch + 20);
-    ctx.restore();
-    return;
-  }
+  ctx.fillStyle = `rgba(0,0,0,${0.6 * _deathFade})`;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  ctx.fillStyle = 'rgba(0,0,0,0.6)';
-  ctx.fillRect(-10, -10, canvas.width + 20, canvas.height + 20);
+  if (_deathFade < 1) return;
 
   const cx = canvas.width / 2;
   const cy = canvas.height / 2;
 
-  ctx.fillStyle = '#eee';
-  ctx.font = 'bold 38px sans-serif';
-  ctx.textAlign = 'center';
-  ctx.fillText('游戏结束', cx, cy - 55);
-
-  ctx.strokeStyle = 'rgba(255,255,255,0.15)';
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(cx - 80, cy - 35);
-  ctx.lineTo(cx + 80, cy - 35);
-  ctx.stroke();
-
+  // 分数（大号）
   ctx.fillStyle = '#fff';
-  ctx.font = 'bold 28px sans-serif';
-  ctx.fillText(`${state.score} 分`, cx, cy - 5);
+  ctx.font = 'bold 42px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(state.score.toString(), cx, cy - 10);
 
-  const alive = state.startTime ? Math.floor(((_deathTime || Date.now()) - state.startTime) / 1000) : 0;
-  const min = Math.floor(alive / 60);
-  const sec = alive % 60;
-  ctx.font = '15px sans-serif';
-  ctx.fillStyle = '#aaa';
-  ctx.fillText(`存活 ${min > 0 ? min + '分' : ''}${sec}秒  ·  吃到 ${_foodEaten} 个食物`, cx, cy + 25);
-
-  ctx.fillText(`最终长度: ${state.snake.length}`, cx, cy + 47);
-
-  if (state.score > 0 && state.score >= getBest()) {
-    ctx.fillStyle = '#f0a500';
-    ctx.font = 'bold 20px sans-serif';
-    ctx.fillText('\u{1F3C6} 新纪录！', cx, cy + 75);
-  }
-
-  ctx.font = '13px sans-serif';
+  // 提示（小字）
   ctx.fillStyle = '#666';
-  ctx.fillText('R 重开 · ESC 菜单', cx, cy + 100);
+  ctx.font = '200 13px sans-serif';
+  ctx.fillText('R\u91CD\u5F00 \u00B7 ESC\u83DC\u5355', cx, cy + 25);
+  ctx.textBaseline = 'alphabetic';
 }
 
 // ===== 主绘制函数 =====
 export function draw() {
   _time = Date.now();
-  ctx.save();
 
-  ctx.imageSmoothingEnabled = true;
+  // 同步插值状态
+  syncPrevSnake();
+
+  ctx.save();
 
   if (state.score !== _prevScore) {
     if (state.score > _prevScore && _prevScore >= 0) {
@@ -549,8 +511,6 @@ export function draw() {
   if (!state.gameOver) {
     _deathTime = 0;
     _deathFade = 0;
-    _deathZoom = 1;
-    _deathExploded = false;
   }
 
   if (state.screenShake > 0) {
@@ -566,37 +526,24 @@ export function draw() {
   const theme = THEMES[state.currentTheme];
 
   drawBackground();
-  drawMaze(theme);
-  drawPowerup();
-  drawBossFood(theme);
-  drawFood(theme);
+  drawMaze();
   drawShrinkBounds();
+  drawPowerup();
+  drawBossFood();
+  drawFood(theme);
   drawGhostSnake(theme);
   drawSnake(theme);
-  drawEvolutionEffects(theme);
-  drawModeHUD(theme);
+  drawEvolutionEffects();
+  drawModeHUD();
   drawPaused();
-  drawGameOver(theme);
+  drawGameOver();
 
   ctx.restore();
 }
 
 export function updateHUD() {
-  const comboEl = $('#combo-display');
-  if (state.combo >= 2) {
-    const mult = state.combo < 5 ? 1.5 : state.combo < 10 ? 2 : 3;
-    comboEl.textContent = `${state.combo}连击 x${mult}`;
-    comboEl.classList.add('visible');
-  } else {
-    comboEl.classList.remove('visible');
-  }
-
-  const pwEl = $('#powerup-display');
-  const active = Object.entries(state.activePowerups).filter(([k, v]) => v).map(([k]) => {
-    const pw = POWERUP_TYPES.find(p => p.type === k);
-    return pw ? pw.icon : '';
-  });
-  pwEl.textContent = active.join(' ');
+  const scoreEl = $('#score');
+  if (scoreEl) scoreEl.textContent = state.score;
 }
 
 export function getCanvas() { return canvas; }

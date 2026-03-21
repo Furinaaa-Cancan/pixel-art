@@ -3,14 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>贪吃蛇</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<title>SNAKE</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <canvas id="particles"></canvas>
-<button id="music-toggle" title="背景音乐">♫</button>
+<button id="music-toggle">&middot;</button>
 
 <!-- 成就弹窗 -->
 <div id="achievement-popup"><div class="ach-icon"></div><div class="ach-title"></div><div class="ach-desc"></div></div>
@@ -33,7 +31,7 @@
 <div id="menu">
   <div class="menu-header">
     <h1>SNAKE</h1>
-    <p class="menu-subtitle">贪吃蛇</p>
+    <p class="menu-subtitle"></p>
   </div>
 
   <div class="menu-best" id="menu-best"></div>
@@ -60,18 +58,18 @@
   <div class="menu-section">
     <div class="btn-row theme-dots" id="theme-btns">
       <button class="btn theme-dot active" data-theme="default" style="--dot-color:#4ade80" title="绿"></button>
-      <button class="btn theme-dot" data-theme="neon" style="--dot-color:#22d3ee" title="青"></button>
-      <button class="btn theme-dot" data-theme="retro" style="--dot-color:#f97316" title="橙"></button>
-      <button class="btn theme-dot" data-theme="cyber" style="--dot-color:#a78bfa" title="紫"></button>
+      <button class="btn theme-dot" data-theme="neon" style="--dot-color:#67e8f9" title="青"></button>
+      <button class="btn theme-dot" data-theme="retro" style="--dot-color:#fb923c" title="橙"></button>
+      <button class="btn theme-dot" data-theme="cyber" style="--dot-color:#c084fc" title="紫"></button>
     </div>
   </div>
 
-  <button class="btn-start" id="start-btn">开始游戏</button>
-  <button class="btn-start" id="daily-btn" style="display:none">每日挑战</button>
+  <button class="btn-start" id="start-btn">START</button>
+  <button class="btn-start" id="daily-btn" style="display:none">DAILY</button>
 
   <div class="menu-footer">
     <span class="menu-achievements" id="show-ach-btn">成就</span>
-    <span class="menu-footer-sep">·</span>
+    <span class="menu-footer-sep">&middot;</span>
     <span class="menu-achievements" id="show-stats-btn">统计</span>
   </div>
 </div>
