@@ -1,136 +1,670 @@
 /* ============================================================
-   style.css — 像素风格样式
+   style.css — 极简高级风格
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0f172a;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:'Press Start 2P',monospace;color:#eee;overflow:hidden;touch-action:none;user-select:none;font-size:12px}
+/* ===== 字体 ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 /* ===== 主题变量 ===== */
-:root{--accent:#4ade80;--bg:#0f172a;--grid-bg:#1e293b;--grid-line:rgba(255,255,255,.03)}
-body.theme-neon{--accent:#22d3ee;--bg:#0c1524;--grid-bg:#162032;--grid-line:rgba(34,211,238,.04)}
-body.theme-retro{--accent:#fb923c;--bg:#1a1308;--grid-bg:#2a1f10;--grid-line:rgba(251,146,60,.05)}
-body.theme-cyber{--accent:#c084fc;--bg:#120a20;--grid-bg:#1a1030;--grid-line:rgba(192,132,252,.04)}
+:root {
+  --accent: #4ade80;
+  --accent-dim: rgba(74, 222, 128, 0.15);
+  --accent-glow: rgba(74, 222, 128, 0.08);
+  --bg: #08080f;
+  --surface: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e0e0e0;
+  --text-dim: #666;
+  --grid-bg: #0c0c14;
+  --grid-line: rgba(255, 255, 255, 0.02);
+}
 
-/* 微弱点阵背景 */
-body::before{
-  content:'';
-  position:fixed;top:0;left:0;width:100%;height:100%;
-  background-image:radial-gradient(rgba(255,255,255,.03) 1px, transparent 1px);
-  background-size:16px 16px;
-  pointer-events:none;
-  z-index:0
+body.theme-neon {
+  --accent: #22d3ee;
+  --accent-dim: rgba(34, 211, 238, 0.15);
+  --accent-glow: rgba(34, 211, 238, 0.08);
+  --grid-bg: #0a0e14;
+  --grid-line: rgba(34, 211, 238, 0.03);
+}
+
+body.theme-retro {
+  --accent: #f97316;
+  --accent-dim: rgba(249, 115, 22, 0.15);
+  --accent-glow: rgba(249, 115, 22, 0.08);
+  --grid-bg: #0f0c08;
+  --grid-line: rgba(249, 115, 22, 0.03);
+}
+
+body.theme-cyber {
+  --accent: #a78bfa;
+  --accent-dim: rgba(167, 139, 250, 0.15);
+  --accent-glow: rgba(167, 139, 250, 0.08);
+  --grid-bg: #0c0a14;
+  --grid-line: rgba(167, 139, 250, 0.03);
+}
+
+/* ===== 重置 ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+/* 微弱径向渐变背景 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 50% 40%, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* ===== 菜单 ===== */
-#menu{position:absolute;display:flex;flex-direction:column;align-items:center;gap:14px;z-index:20;max-width:420px;width:90%;
-  transition:opacity .2s, transform .2s;
-  opacity:1;transform:scale(1) translateY(0);
-  background:rgba(15,23,42,.92);
-  border:4px solid var(--accent);
-  border-top-color:color-mix(in srgb, var(--accent) 70%, #fff);
-  border-left-color:color-mix(in srgb, var(--accent) 70%, #fff);
-  border-bottom-color:color-mix(in srgb, var(--accent) 70%, #000);
-  border-right-color:color-mix(in srgb, var(--accent) 70%, #000);
-  padding:24px 20px;
-  image-rendering:pixelated}
-#menu[style*="display: none"]{opacity:0;transform:scale(0.95) translateY(10px)}
-#menu h1{font-size:32px;letter-spacing:4px;color:#4ade80;text-shadow:3px 3px 0 #000}
-.menu-section{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;
-  animation:fadeSlideIn .3s ease both}
-.menu-section:nth-child(2){animation-delay:.05s}
-.menu-section:nth-child(3){animation-delay:.1s}
-.menu-section:nth-child(4){animation-delay:.15s}
-@keyframes fadeSlideIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.menu-section label{font-size:9px;color:#888;text-transform:uppercase;letter-spacing:2px}
-.btn-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+#menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  z-index: 20;
+  max-width: 400px;
+  width: 90%;
+  padding: 48px 36px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+#menu[style*="display: none"] {
+  opacity: 0;
+  transform: scale(0.97) translateY(8px);
+}
+
+.menu-header {
+  text-align: center;
+}
+
+#menu h1 {
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.menu-subtitle {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 6px;
+  opacity: 0.7;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  animation: fadeIn 0.4s ease both;
+}
+
+.menu-section:nth-child(3) { animation-delay: 0.05s; }
+.menu-section:nth-child(4) { animation-delay: 0.1s; }
+.menu-section:nth-child(5) { animation-delay: 0.15s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-section label {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 /* ===== 按钮 ===== */
-.btn{padding:8px 16px;font-size:10px;border:3px solid;border-top-color:#aaa;border-left-color:#aaa;border-bottom-color:#555;border-right-color:#555;background:#1e293b;color:#eee;border-radius:0;cursor:pointer;transition:all .1s;font-family:'Press Start 2P',monospace;position:relative;overflow:hidden}
-.btn:hover{border-top-color:#555;border-left-color:#555;border-bottom-color:#aaa;border-right-color:#aaa;background:#2d3a4f}
-.btn:hover,.btn.active{background:var(--accent);color:#000;border-top-color:color-mix(in srgb, var(--accent) 60%, #fff);border-left-color:color-mix(in srgb, var(--accent) 60%, #fff);border-bottom-color:color-mix(in srgb, var(--accent) 60%, #000);border-right-color:color-mix(in srgb, var(--accent) 60%, #000)}
-.btn-start{padding:12px 40px;font-size:14px;background:var(--accent);color:#000;border:3px solid;border-top-color:color-mix(in srgb, var(--accent) 60%, #fff);border-left-color:color-mix(in srgb, var(--accent) 60%, #fff);border-bottom-color:color-mix(in srgb, var(--accent) 60%, #000);border-right-color:color-mix(in srgb, var(--accent) 60%, #000);border-radius:0;cursor:pointer;transition:all .1s;font-family:'Press Start 2P',monospace;font-weight:bold;letter-spacing:2px;position:relative;overflow:hidden}
-.btn-start:hover{border-top-color:color-mix(in srgb, var(--accent) 60%, #000);border-left-color:color-mix(in srgb, var(--accent) 60%, #000);border-bottom-color:color-mix(in srgb, var(--accent) 60%, #fff);border-right-color:color-mix(in srgb, var(--accent) 60%, #fff);transform:translate(2px,2px)}
-.menu-best{font-size:10px;color:#f0a500}
-.menu-achievements{font-size:9px;color:#888;cursor:pointer;text-decoration:underline;transition:color .1s}
-.menu-achievements:hover{color:var(--accent)}
+.btn {
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* 主题圆点 */
+.theme-dots {
+  gap: 14px;
+}
+
+.btn.theme-dot {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--dot-color);
+  opacity: 0.4;
+  border: 2px solid transparent;
+  font-size: 0;
+  transition: all 0.25s ease;
+}
+
+.btn.theme-dot:hover {
+  opacity: 0.7;
+  border-color: transparent;
+}
+
+.btn.theme-dot.active {
+  opacity: 1;
+  border-color: #fff;
+  background: var(--dot-color);
+  box-shadow: 0 0 14px var(--dot-color), 0 0 28px rgba(255, 255, 255, 0.05);
+  transform: scale(1.1);
+}
+
+/* 开始按钮 */
+.btn-start {
+  padding: 14px 56px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  box-shadow: 0 0 20px var(--accent-glow), inset 0 0 20px var(--accent-glow);
+}
+
+.btn-start:hover {
+  background: var(--accent-dim);
+  box-shadow: 0 0 30px var(--accent-dim), inset 0 0 30px var(--accent-glow);
+  transform: translateY(-1px);
+}
+
+.btn-start:active {
+  transform: translateY(0);
+}
+
+.menu-best {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.menu-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-footer-sep {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.menu-achievements {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color 0.25s ease;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.menu-achievements:hover {
+  color: var(--accent);
+}
 
 /* ===== HUD ===== */
-#hud{display:none;width:100%;max-width:600px;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:11px;padding:0 4px}
-#hud-left{display:flex;gap:16px;align-items:center}
-
-/* 分数闪烁动画 */
-#score{display:inline-block}
-#score.score-pop{animation:scoreBlink .3s step-end}
-@keyframes scoreBlink{
-  0%{color:#fff}
-  33%{color:var(--accent)}
-  66%{color:#fff}
-  100%{color:var(--accent)}
+#hud {
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+  padding: 0 4px;
 }
 
-/* Combo 文字动画 */
-#combo-display{color:#f0a500;font-weight:bold;opacity:0;transition:opacity .1s;display:inline-block;font-size:10px}
-#combo-display.visible{opacity:1;animation:comboBlink .4s step-end}
-@keyframes comboBlink{
-  0%{color:#ff0}
-  50%{color:#f0a500}
-  100%{color:#ff0}
+#hud-left {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
 }
 
-#powerup-display{font-size:9px;color:#0ff}
-.best-score{color:#f0a500;font-size:10px}
+#score {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+
+#score.score-pop {
+  animation: scorePulse 0.3s ease;
+}
+
+@keyframes scorePulse {
+  0% { color: var(--text); transform: scale(1); }
+  50% { color: var(--accent); transform: scale(1.08); }
+  100% { color: var(--text); transform: scale(1); }
+}
+
+/* combo & powerup — 隐藏但保留在DOM中 */
+#combo-display {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  display: inline-block;
+}
+
+#combo-display.visible {
+  opacity: 0.7;
+  animation: comboFade 0.4s ease;
+}
+
+@keyframes comboFade {
+  0% { opacity: 0; transform: translateY(4px); }
+  100% { opacity: 0.7; transform: translateY(0); }
+}
+
+#powerup-display {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+.best-score {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
 
 /* ===== Canvas ===== */
-#game-wrap{position:relative;display:none;
-  transition:opacity .2s, transform .2s}
-canvas#game{border:3px solid var(--accent);border-radius:0;display:block;background:var(--grid-bg);
-  image-rendering:pixelated;
-  image-rendering:crisp-edges;
-  box-shadow:6px 6px 0 rgba(0,0,0,.5)}
+#game-wrap {
+  position: relative;
+  display: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-/* 去掉CRT扫描线 */
-#game-wrap::after{display:none}
+canvas#game {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: block;
+  background: var(--grid-bg);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3), 0 0 80px var(--accent-glow);
+}
 
-#game-wrap.shake{animation:shake .3s}
-@keyframes shake{0%,100%{transform:translate(0)}20%{transform:translate(-4px,2px)}40%{transform:translate(4px,-2px)}60%{transform:translate(-2px,4px)}80%{transform:translate(2px,-4px)}}
+#game-wrap.shake {
+  animation: shake 0.3s ease;
+}
 
-#msg{margin-top:12px;font-size:10px;color:var(--accent);height:22px}
-#controls-hint{margin-top:8px;font-size:8px;color:#555}
+@keyframes shake {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-3px, 1px); }
+  40% { transform: translate(3px, -1px); }
+  60% { transform: translate(-1px, 3px); }
+  80% { transform: translate(1px, -3px); }
+}
 
-/* ===== 触屏 ===== */
-#touch-pad{display:none;margin-top:16px;width:160px;height:160px;position:relative}
-#touch-pad button{position:absolute;width:50px;height:50px;border:3px solid;border-top-color:#aaa;border-left-color:#aaa;border-bottom-color:#555;border-right-color:#555;background:rgba(255,255,255,.08);color:#eee;font-size:20px;border-radius:0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:none;font-family:'Press Start 2P',monospace}
-#touch-pad button:active{border-top-color:#555;border-left-color:#555;border-bottom-color:#aaa;border-right-color:#aaa;background:rgba(255,255,255,.2);transform:translate(2px,2px)}
-.tp-up{top:0;left:50%;transform:translateX(-50%)}.tp-down{bottom:0;left:50%;transform:translateX(-50%)}
-.tp-left{top:50%;left:0;transform:translateY(-50%)}.tp-right{top:50%;right:0;transform:translateY(-50%)}
+#msg {
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--accent);
+  height: 22px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+#controls-hint {
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.5px;
+}
+
+/* ===== 触屏方向键 ===== */
+#touch-pad {
+  display: none;
+  margin-top: 20px;
+  width: 170px;
+  height: 170px;
+  position: relative;
+}
+
+#touch-pad button {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-family: 'Inter', system-ui, sans-serif;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#touch-pad button:active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.tp-up { top: 0; left: 50%; transform: translateX(-50%); }
+.tp-down { bottom: 0; left: 50%; transform: translateX(-50%); }
+.tp-left { top: 50%; left: 0; transform: translateY(-50%); }
+.tp-right { top: 50%; right: 0; transform: translateY(-50%); }
 
 /* ===== 粒子 ===== */
-#particles{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:15}
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 15;
+}
 
 /* ===== 成就弹窗 ===== */
-#achievement-popup{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:rgba(15,23,42,.97);border:3px solid #f0a500;border-radius:0;padding:12px 24px;z-index:30;display:none;text-align:center;animation:popIn .2s step-end;
-  box-shadow:4px 4px 0 rgba(0,0,0,.5)}
-@keyframes popIn{from{opacity:0;transform:translateX(-50%) translateY(-10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
-#achievement-popup .ach-icon{font-size:24px}
-#achievement-popup .ach-title{color:#f0a500;font-weight:bold;font-size:10px}
-#achievement-popup .ach-desc{color:#aaa;font-size:8px}
+#achievement-popup {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(12, 12, 20, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 28px;
+  z-index: 30;
+  display: none;
+  text-align: center;
+  animation: popSlide 0.3s ease;
+}
+
+@keyframes popSlide {
+  from { opacity: 0; transform: translateX(-50%) translateY(-12px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+#achievement-popup .ach-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+#achievement-popup .ach-title {
+  color: var(--accent);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+#achievement-popup .ach-desc {
+  color: var(--text-dim);
+  font-size: 11px;
+  font-weight: 300;
+  margin-top: 2px;
+}
 
 /* ===== 成就列表面板 ===== */
-#achievements-panel{position:absolute;z-index:25;background:rgba(15,23,42,.97);border:3px solid var(--accent);border-top-color:color-mix(in srgb, var(--accent) 70%, #fff);border-left-color:color-mix(in srgb, var(--accent) 70%, #fff);border-bottom-color:color-mix(in srgb, var(--accent) 70%, #000);border-right-color:color-mix(in srgb, var(--accent) 70%, #000);border-radius:0;padding:20px;max-width:380px;width:90%;max-height:70vh;overflow-y:auto;display:none;
-  box-shadow:4px 4px 0 rgba(0,0,0,.5);
-  animation:fadeSlideIn .2s ease}
-#achievements-panel h2{text-align:center;margin-bottom:12px;color:var(--accent);font-size:14px;text-shadow:2px 2px 0 #000}
-.ach-item{display:flex;align-items:center;gap:10px;padding:8px;border-bottom:2px solid rgba(255,255,255,.05)}
-.ach-item.locked{opacity:.4}
-.ach-item .ach-i{font-size:20px;width:36px;text-align:center}
-.ach-item .ach-info{flex:1}
-.ach-item .ach-name{font-size:9px;font-weight:bold}
-.ach-item .ach-d{font-size:7px;color:#888}
-#close-ach{position:absolute;top:8px;right:12px;background:none;border:none;color:#eee;font-size:16px;cursor:pointer;font-family:'Press Start 2P',monospace}
-#close-ach:hover{color:var(--accent)}
+#achievements-panel {
+  position: absolute;
+  z-index: 25;
+  background: rgba(12, 12, 20, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  max-width: 400px;
+  width: 90%;
+  max-height: 70vh;
+  overflow-y: auto;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+#achievements-panel h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+.ach-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s ease;
+}
+
+.ach-item:last-child {
+  border-bottom: none;
+}
+
+.ach-item:hover {
+  background: var(--surface);
+}
+
+.ach-item.locked {
+  opacity: 0.3;
+}
+
+.ach-item .ach-i {
+  font-size: 20px;
+  width: 36px;
+  text-align: center;
+}
+
+.ach-item .ach-info {
+  flex: 1;
+}
+
+.ach-item .ach-name {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.ach-item .ach-d {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+#close-ach {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: color 0.2s ease;
+  line-height: 1;
+}
+
+#close-ach:hover {
+  color: var(--text);
+}
+
+/* ===== 统计面板 ===== */
+#stats-panel {
+  position: absolute;
+  z-index: 25;
+  background: rgba(12, 12, 20, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  max-width: 400px;
+  width: 90%;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+#stats-panel h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+#stats-content {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 2.2;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+}
+
+#close-stats {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: color 0.2s ease;
+  line-height: 1;
+}
+
+#close-stats:hover {
+  color: var(--text);
+}
 
 /* ===== 音乐按钮 ===== */
-#music-toggle{position:fixed;top:12px;right:12px;z-index:20;background:rgba(30,41,59,.9);border:3px solid;border-top-color:#aaa;border-left-color:#aaa;border-bottom-color:#555;border-right-color:#555;color:#eee;width:36px;height:36px;border-radius:0;cursor:pointer;font-size:10px;display:flex;align-items:center;justify-content:center;font-family:'Press Start 2P',monospace}
-#music-toggle:hover{border-top-color:#555;border-left-color:#555;border-bottom-color:#aaa;border-right-color:#aaa;background:rgba(30,41,59,1)}
+#music-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: all 0.25s ease;
+}
+
+#music-toggle:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* ===== 滚动条 ===== */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

@@ -1,5 +1,5 @@
 // ============================================================
-//  particles.js — 粒子系统（升级版：对象池 + 新粒子类型 + 物理）
+//  particles.js — 粒子系统（精简版：少即是多，柔和发光）
 // ============================================================
 
 import { $ } from './config.js';
@@ -12,27 +12,18 @@ const POOL_SIZE = 300;
 const pool = new Array(POOL_SIZE);
 let activeCount = 0;
 
-// 粒子属性：
-// type: 'normal' | 'text' | 'trail' | 'ripple' | 'spark'
-// x, y, vx, vy, life, decay, size, color
-// text (for text type), radius/maxRadius (for ripple), gravity, drag
-// active: boolean
-
 for (let i = 0; i < POOL_SIZE; i++) {
   pool[i] = {
-    active: false,
-    type: 'normal',
+    active: false, type: 'normal',
     x: 0, y: 0, vx: 0, vy: 0,
     life: 0, decay: 0, size: 0,
-    color: '#fff',
-    text: '',
+    color: '#fff', text: '',
     radius: 0, maxRadius: 0, lineWidth: 2,
     gravity: 0, drag: 1
   };
 }
 
 function acquire() {
-  // 找一个空闲粒子
   for (let i = 0; i < POOL_SIZE; i++) {
     if (!pool[i].active) {
       pool[i].active = true;
@@ -40,7 +31,6 @@ function acquire() {
       return pool[i];
     }
   }
-  // 池满则复用最老的（life 最低的）
   let minLife = Infinity, minIdx = 0;
   for (let i = 0; i < POOL_SIZE; i++) {
     if (pool[i].life < minLife) {
@@ -58,8 +48,8 @@ function release(p) {
   }
 }
 
-// ===== 导出：生成普通粒子 =====
-export function spawnP(x, y, color, count, sizeRange = [2, 5], speedRange = [1, 4]) {
+// ===== spawnP — 基础爆发粒子 =====
+export function spawnP(x, y, color, count, sizeRange = [1, 3], speedRange = [1, 3]) {
   for (let i = 0; i < count; i++) {
     const p = acquire();
     const a = Math.random() * Math.PI * 2;
@@ -69,22 +59,22 @@ export function spawnP(x, y, color, count, sizeRange = [2, 5], speedRange = [1, 
     p.vx = Math.cos(a) * spd;
     p.vy = Math.sin(a) * spd;
     p.life = 1;
-    p.decay = 0.015 + Math.random() * 0.025;
+    p.decay = 0.018 + Math.random() * 0.022;
     p.size = sizeRange[0] + Math.random() * (sizeRange[1] - sizeRange[0]);
     p.color = color;
-    p.gravity = 0.03 + Math.random() * 0.02; // 轻微重力
-    p.drag = 0.98; // 阻力
+    p.gravity = 0.02;
+    p.drag = 0.96;
   }
 }
 
-// ===== 导出：生成文字粒子 =====
+// ===== spawnText — 上浮文字 =====
 export function spawnText(x, y, text, color) {
   const p = acquire();
   p.type = 'text';
   p.x = x; p.y = y;
-  p.vx = 0; p.vy = -1.5;
+  p.vx = 0; p.vy = -1;
   p.life = 1;
-  p.decay = 0.018;
+  p.decay = 0.015;
   p.size = 0;
   p.color = color;
   p.text = text;
@@ -92,60 +82,34 @@ export function spawnText(x, y, text, color) {
   p.drag = 1;
 }
 
-// ===== 导出：生成拖尾粒子 =====
+// ===== spawnTrail — 已废弃，保留签名 =====
 export function spawnTrail(x, y, color) {
-  const p = acquire();
-  p.type = 'normal'; // 普通渲染即可
-  p.x = x + (Math.random() - 0.5) * 4;
-  p.y = y + (Math.random() - 0.5) * 4;
-  p.vx = (Math.random() - 0.5) * 0.3;
-  p.vy = (Math.random() - 0.5) * 0.3;
-  p.life = 0.6 + Math.random() * 0.3;
-  p.decay = 0.03 + Math.random() * 0.02;
-  p.size = 1.5 + Math.random() * 2;
-  p.color = color;
-  p.gravity = 0;
-  p.drag = 0.99;
+  // 不再生成粒子，拖尾效果由 renderer 直接绘制
 }
 
-// ===== 导出：生成涟漪粒子（圆环扩散） =====
+// ===== spawnRipple — 圆环扩散 =====
 export function spawnRipple(x, y, color, maxRadius = 40) {
   const p = acquire();
   p.type = 'ripple';
   p.x = x; p.y = y;
   p.vx = 0; p.vy = 0;
   p.life = 1;
-  p.decay = 0.025;
+  p.decay = 0.02;
   p.size = 0;
   p.color = color;
   p.radius = 0;
   p.maxRadius = maxRadius;
-  p.lineWidth = 2.5;
+  p.lineWidth = 2;
   p.gravity = 0;
   p.drag = 1;
 }
 
-// ===== 导出：生成火花粒子（对角线运动，用于 combo） =====
+// ===== spawnSparks — 映射为少量基础粒子 =====
 export function spawnSparks(x, y, color, count = 8) {
-  for (let i = 0; i < count; i++) {
-    const p = acquire();
-    p.type = 'spark';
-    // 对角线方向
-    const angle = (i / count) * Math.PI * 2 + Math.random() * 0.3;
-    const spd = 2 + Math.random() * 3;
-    p.x = x; p.y = y;
-    p.vx = Math.cos(angle) * spd;
-    p.vy = Math.sin(angle) * spd;
-    p.life = 1;
-    p.decay = 0.02 + Math.random() * 0.015;
-    p.size = 1 + Math.random() * 2;
-    p.color = color;
-    p.gravity = 0.06; // 重力让火花下落
-    p.drag = 0.97;
-  }
+  spawnP(x, y, color, Math.min(count, 4), [1, 3], [1, 2]);
 }
 
-// ===== 粒子 resize =====
+// ===== resize =====
 function resizeP() {
   pCanvas.width = innerWidth;
   pCanvas.height = innerHeight;
@@ -161,7 +125,7 @@ function updateP() {
     const p = pool[i];
     if (!p.active) continue;
 
-    // 物理更新
+    // 物理
     p.vx *= p.drag;
     p.vy *= p.drag;
     p.vy += p.gravity;
@@ -174,47 +138,47 @@ function updateP() {
       continue;
     }
 
-    pCtx.globalAlpha = Math.max(0, p.life);
+    // 平滑淡出：生命值后30%加速衰减透明度
+    const alpha = p.life < 0.3 ? p.life / 0.3 * p.life : p.life;
+    pCtx.globalAlpha = Math.max(0, alpha);
 
     if (p.type === 'text') {
-      pCtx.fillStyle = p.color;
-      pCtx.font = 'bold 18px sans-serif';
+      // 轻盈上浮文字
+      pCtx.font = '300 16px "Inter", system-ui, sans-serif';
       pCtx.textAlign = 'center';
-      // 文字稍微放大然后缩回
-      const scale = p.life > 0.8 ? 1 + (1 - p.life) * 3 : 1;
-      pCtx.save();
-      pCtx.translate(p.x, p.y);
-      pCtx.scale(scale, scale);
-      pCtx.fillText(p.text, 0, 0);
-      pCtx.restore();
+      pCtx.shadowColor = p.color;
+      pCtx.shadowBlur = 4;
+      pCtx.fillStyle = p.color;
+      pCtx.fillText(p.text, p.x, p.y);
+      pCtx.shadowBlur = 0;
+
     } else if (p.type === 'ripple') {
       // 圆环扩散
       const progress = 1 - p.life;
       p.radius = progress * p.maxRadius;
+      const lw = 2 - progress * 1.5; // 2 -> 0.5
       pCtx.strokeStyle = p.color;
-      pCtx.lineWidth = p.lineWidth * p.life;
+      pCtx.lineWidth = Math.max(0.5, lw);
+      pCtx.lineCap = 'round';
       pCtx.beginPath();
       pCtx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
       pCtx.stroke();
-    } else if (p.type === 'spark') {
-      // 火花：画一条短线（运动方向的尾迹）
-      pCtx.strokeStyle = p.color;
-      pCtx.lineWidth = p.size * p.life;
-      pCtx.lineCap = 'round';
-      pCtx.beginPath();
-      pCtx.moveTo(p.x, p.y);
-      pCtx.lineTo(p.x - p.vx * 3, p.y - p.vy * 3);
-      pCtx.stroke();
+
     } else {
-      // 普通粒子
+      // 发光圆点粒子
+      const r = Math.max(0.5, p.size * p.life);
+      pCtx.shadowColor = p.color;
+      pCtx.shadowBlur = 4;
       pCtx.fillStyle = p.color;
       pCtx.beginPath();
-      pCtx.arc(p.x, p.y, Math.max(0.5, p.size * p.life), 0, Math.PI * 2);
+      pCtx.arc(p.x, p.y, r, 0, Math.PI * 2);
       pCtx.fill();
+      pCtx.shadowBlur = 0;
     }
   }
 
   pCtx.globalAlpha = 1;
+  pCtx.shadowBlur = 0;
   requestAnimationFrame(updateP);
 }
 updateP();
