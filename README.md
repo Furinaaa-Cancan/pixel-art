@@ -9,7 +9,7 @@
 <br>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![Assets](https://img.shields.io/badge/assets-106-ff6480?style=flat-square)](#gallery)
+[![Assets](https://img.shields.io/badge/assets-124-ff6480?style=flat-square)](#gallery)
 [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette)
 [![Grid](https://img.shields.io/badge/grid-16×16%20%7C%2032×32-ffd93d?style=flat-square)](#gallery)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -427,6 +427,52 @@
     <td align="center"><img src="assets/umbrella.svg" width="80" alt="Umbrella"><br><sub><b>Umbrella</b><br>雨伞</sub></td>
     <td align="center"><img src="assets/teapot.svg" width="80" alt="Teapot"><br><sub><b>Teapot</b><br>茶壶</sub></td>
     <td align="center"><img src="assets/book-stack.svg" width="80" alt="Book Stack"><br><sub><b>Book Stack</b><br>书堆</sub></td>
+  </tr>
+</table>
+
+## 🏮 Chinese Culture · 中国文化
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/chinese-dragon.svg" width="80" alt="Chinese Dragon"><br><sub><b>Dragon</b><br>中国龙</sub></td>
+    <td align="center"><img src="assets/red-envelope.svg" width="80" alt="Red Envelope"><br><sub><b>Red Envelope</b><br>红包</sub></td>
+    <td align="center"><img src="assets/panda-bamboo.svg" width="80" alt="Panda"><br><sub><b>Panda</b><br>熊猫竹林</sub></td>
+    <td align="center"><img src="assets/paper-fan.svg" width="80" alt="Paper Fan"><br><sub><b>Paper Fan</b><br>折扇</sub></td>
+    <td align="center"><img src="assets/mooncake.svg" width="80" alt="Mooncake"><br><sub><b>Mooncake</b><br>月饼</sub></td>
+    <td align="center"><img src="assets/tang-suit.svg" width="80" alt="Tang Suit"><br><sub><b>Tang Suit</b><br>唐装</sub></td>
+  </tr>
+</table>
+
+## 🏺 Ancient Egypt · 古埃及
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/pyramid.svg" width="80" alt="Pyramid"><br><sub><b>Pyramid</b><br>金字塔</sub></td>
+    <td align="center"><img src="assets/sphinx.svg" width="80" alt="Sphinx"><br><sub><b>Sphinx</b><br>狮身人面</sub></td>
+    <td align="center"><img src="assets/ankh.svg" width="80" alt="Ankh"><br><sub><b>Ankh</b><br>生命之符</sub></td>
+    <td align="center"><img src="assets/pharaoh.svg" width="80" alt="Pharaoh"><br><sub><b>Pharaoh</b><br>法老</sub></td>
+    <td align="center"><img src="assets/scarab.svg" width="80" alt="Scarab"><br><sub><b>Scarab</b><br>圣甲虫</sub></td>
+    <td align="center"><img src="assets/eye-of-horus.svg" width="80" alt="Eye of Horus"><br><sub><b>Eye of Horus</b><br>荷鲁斯之眼</sub></td>
+  </tr>
+</table>
+
+## 🌮 Mexican Culture · 墨西哥文化
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/sugar-skull.svg" width="80" alt="Sugar Skull"><br><sub><b>Sugar Skull</b><br>糖骷髅</sub></td>
+    <td align="center"><img src="assets/cactus-sombrero.svg" width="80" alt="Cactus Sombrero"><br><sub><b>Cactus</b><br>戴帽仙人掌</sub></td>
+    <td align="center"><img src="assets/pinata.svg" width="80" alt="Piñata"><br><sub><b>Piñata</b><br>皮纳塔</sub></td>
+  </tr>
+</table>
+
+## ⚔️ Norse & Viking · 北欧维京
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/viking-helmet.svg" width="80" alt="Viking Helmet"><br><sub><b>Viking Helmet</b><br>维京盔</sub></td>
+    <td align="center"><img src="assets/rune-stone.svg" width="80" alt="Rune Stone"><br><sub><b>Rune Stone</b><br>符文石</sub></td>
+    <td align="center"><img src="assets/longship.svg" width="80" alt="Longship"><br><sub><b>Longship</b><br>维京船</sub></td>
   </tr>
 </table>
 
