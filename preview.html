@@ -4,63 +4,45 @@
 <meta charset="UTF-8">
 <title>Pixel Art Collection</title>
 <style>
-  * { margin: 0; box-sizing: border-box; }
-  body { background: #0a0a0f; color: #ccc; font-family: system-ui; padding: 32px; min-height: 100vh; }
-  h1 { font-weight: 200; font-size: 24px; letter-spacing: 4px; margin-bottom: 32px; color: #D97757; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
-  .card { background: #111; border-radius: 8px; padding: 20px; text-align: center; }
-  .card:hover { background: #161616; }
-  .card h3 { font-size: 11px; font-weight: 400; color: #555; margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase; }
-  .preview { display: flex; align-items: center; justify-content: center; gap: 16px; }
-  img { image-rendering: pixelated; image-rendering: crisp-edges; }
-  .sm { opacity: 0.6; }
+  *{margin:0;box-sizing:border-box}
+  body{background:#0a0a0f;color:#ccc;font-family:system-ui;padding:32px}
+  h1{font-weight:200;font-size:24px;letter-spacing:6px;margin-bottom:8px;color:#ef7d57}
+  .sub{font-size:11px;color:#444;margin-bottom:32px;letter-spacing:2px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+  .card{background:#111;border-radius:8px;padding:20px;text-align:center;transition:background .2s}
+  .card:hover{background:#181818}
+  .card h3{font-size:11px;font-weight:400;color:#555;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase}
+  .preview{display:flex;align-items:center;justify-content:center;gap:16px}
+  img{image-rendering:pixelated;image-rendering:crisp-edges}
+  hr{border:none;border-top:1px solid #1a1a1a;margin:24px 0}
+  .section{font-size:12px;color:#333;letter-spacing:3px;margin-bottom:16px;text-transform:uppercase}
 </style>
 </head>
 <body>
 <h1>PIXEL ART</h1>
+<p class="sub">ALGORITHMIC SVG COLLECTION</p>
+
+<div class="section">32×32 — HIGH DETAIL</div>
 <div class="grid">
-  <div class="card">
-    <h3>Heart</h3>
-    <div class="preview">
-      <img src="assets/heart.svg" width="32" class="sm">
-      <img src="assets/heart.svg" width="128">
-    </div>
-  </div>
-  <div class="card">
-    <h3>Gem</h3>
-    <div class="preview">
-      <img src="assets/gem.svg" width="32" class="sm">
-      <img src="assets/gem.svg" width="128">
-    </div>
-  </div>
-  <div class="card">
-    <h3>Star</h3>
-    <div class="preview">
-      <img src="assets/star.svg" width="32" class="sm">
-      <img src="assets/star.svg" width="128">
-    </div>
-  </div>
-  <div class="card">
-    <h3>Tree</h3>
-    <div class="preview">
-      <img src="assets/tree.svg" width="32" class="sm">
-      <img src="assets/tree.svg" width="128">
-    </div>
-  </div>
-  <div class="card">
-    <h3>Mushroom</h3>
-    <div class="preview">
-      <img src="assets/mushroom.svg" width="32" class="sm">
-      <img src="assets/mushroom.svg" width="128">
-    </div>
-  </div>
-  <div class="card">
-    <h3>Ghost</h3>
-    <div class="preview">
-      <img src="assets/ghost.svg" width="32" class="sm">
-      <img src="assets/ghost.svg" width="128">
-    </div>
-  </div>
+  <div class="card"><h3>Potion</h3><div class="preview"><img src="assets/potion.svg" width="32"><img src="assets/potion.svg" width="128"><img src="assets/potion.svg" width="192"></div></div>
+  <div class="card"><h3>Sword</h3><div class="preview"><img src="assets/sword.svg" width="32"><img src="assets/sword.svg" width="128"><img src="assets/sword.svg" width="192"></div></div>
+  <div class="card"><h3>Crystal Ball</h3><div class="preview"><img src="assets/crystal-ball.svg" width="32"><img src="assets/crystal-ball.svg" width="128"><img src="assets/crystal-ball.svg" width="192"></div></div>
+  <div class="card"><h3>Flame</h3><div class="preview"><img src="assets/flame.svg" width="32"><img src="assets/flame.svg" width="128"><img src="assets/flame.svg" width="192"></div></div>
+  <div class="card"><h3>Moon Scene</h3><div class="preview"><img src="assets/moon-scene.svg" width="32"><img src="assets/moon-scene.svg" width="128"><img src="assets/moon-scene.svg" width="192"></div></div>
+  <div class="card"><h3>Sunrise</h3><div class="preview"><img src="assets/sunrise.svg" width="32"><img src="assets/sunrise.svg" width="128"><img src="assets/sunrise.svg" width="192"></div></div>
+  <div class="card"><h3>Cat</h3><div class="preview"><img src="assets/cat.svg" width="32"><img src="assets/cat.svg" width="128"><img src="assets/cat.svg" width="192"></div></div>
+  <div class="card"><h3>Sakura</h3><div class="preview"><img src="assets/sakura.svg" width="32"><img src="assets/sakura.svg" width="128"><img src="assets/sakura.svg" width="192"></div></div>
+</div>
+
+<hr>
+<div class="section">16×16 — COMPACT</div>
+<div class="grid">
+  <div class="card"><h3>Heart</h3><div class="preview"><img src="assets/heart.svg" width="32"><img src="assets/heart.svg" width="128"><img src="assets/heart.svg" width="192"></div></div>
+  <div class="card"><h3>Gem</h3><div class="preview"><img src="assets/gem.svg" width="32"><img src="assets/gem.svg" width="128"><img src="assets/gem.svg" width="192"></div></div>
+  <div class="card"><h3>Star</h3><div class="preview"><img src="assets/star.svg" width="32"><img src="assets/star.svg" width="128"><img src="assets/star.svg" width="192"></div></div>
+  <div class="card"><h3>Tree</h3><div class="preview"><img src="assets/tree.svg" width="32"><img src="assets/tree.svg" width="128"><img src="assets/tree.svg" width="192"></div></div>
+  <div class="card"><h3>Mushroom</h3><div class="preview"><img src="assets/mushroom.svg" width="32"><img src="assets/mushroom.svg" width="128"><img src="assets/mushroom.svg" width="192"></div></div>
+  <div class="card"><h3>Ghost</h3><div class="preview"><img src="assets/ghost.svg" width="32"><img src="assets/ghost.svg" width="128"><img src="assets/ghost.svg" width="192"></div></div>
 </div>
 </body>
 </html>
