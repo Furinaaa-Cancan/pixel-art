@@ -9,7 +9,7 @@
 <br>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![Assets](https://img.shields.io/badge/assets-46-ff6480?style=flat-square)](#gallery)
+[![Assets](https://img.shields.io/badge/assets-58-ff6480?style=flat-square)](#gallery)
 [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette)
 [![Grid](https://img.shields.io/badge/grid-16×16%20%7C%2032×32-ffd93d?style=flat-square)](#gallery)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -224,6 +224,68 @@
     <td align="center">
       <img src="assets/galaxy.svg" width="80" alt="Galaxy"><br>
       <sub><b>Galaxy</b><br>银河</sub>
+    </td>
+  </tr>
+</table>
+
+## 🐙 Ocean Life · 海洋生物
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/whale.svg" width="80" alt="Whale"><br>
+      <sub><b>Whale</b><br>鲸鱼</sub>
+    </td>
+    <td align="center">
+      <img src="assets/octopus.svg" width="80" alt="Octopus"><br>
+      <sub><b>Octopus</b><br>章鱼</sub>
+    </td>
+    <td align="center">
+      <img src="assets/jellyfish.svg" width="80" alt="Jellyfish"><br>
+      <sub><b>Jellyfish</b><br>水母</sub>
+    </td>
+    <td align="center">
+      <img src="assets/tropical-fish.svg" width="80" alt="Tropical Fish"><br>
+      <sub><b>Tropical Fish</b><br>热带鱼</sub>
+    </td>
+    <td align="center">
+      <img src="assets/seahorse.svg" width="80" alt="Seahorse"><br>
+      <sub><b>Seahorse</b><br>海马</sub>
+    </td>
+    <td align="center">
+      <img src="assets/crab.svg" width="80" alt="Crab"><br>
+      <sub><b>Crab</b><br>螃蟹</sub>
+    </td>
+  </tr>
+</table>
+
+## 🔮 Space & Magic · 太空魔法
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/planet.svg" width="80" alt="Planet"><br>
+      <sub><b>Planet</b><br>星球</sub>
+    </td>
+    <td align="center">
+      <img src="assets/ufo.svg" width="80" alt="UFO"><br>
+      <sub><b>UFO</b><br>飞碟</sub>
+    </td>
+    <td align="center">
+      <img src="assets/wizard-hat.svg" width="80" alt="Wizard Hat"><br>
+      <sub><b>Wizard Hat</b><br>巫师帽</sub>
+    </td>
+    <td align="center">
+      <img src="assets/fairy.svg" width="80" alt="Fairy"><br>
+      <sub><b>Fairy</b><br>小仙子</sub>
+    </td>
+    <td align="center">
+      <img src="assets/potion-set.svg" width="80" alt="Potion Set"><br>
+      <sub><b>Potion Set</b><br>药水组</sub>
+    </td>
+    <td align="center">
+      <img src="assets/treasure-map.svg" width="80" alt="Treasure Map"><br>
+      <sub><b>Treasure Map</b><br>藏宝图</sub>
     </td>
   </tr>
 </table>
