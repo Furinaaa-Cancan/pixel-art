@@ -9,7 +9,7 @@
 <br>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![Assets](https://img.shields.io/badge/assets-88-ff6480?style=flat-square)](#gallery)
+[![Assets](https://img.shields.io/badge/assets-106-ff6480?style=flat-square)](#gallery)
 [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette)
 [![Grid](https://img.shields.io/badge/grid-16×16%20%7C%2032×32-ffd93d?style=flat-square)](#gallery)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -388,6 +388,45 @@
     <td align="center"><img src="assets/duckling.svg" width="80" alt="Duckling"><br><sub><b>Duckling</b><br>小黄鸭</sub></td>
     <td align="center"><img src="assets/bear.svg" width="80" alt="Bear"><br><sub><b>Bear</b><br>小熊</sub></td>
     <td align="center"><img src="assets/butterfly.svg" width="80" alt="Butterfly"><br><sub><b>Butterfly</b><br>蝴蝶</sub></td>
+  </tr>
+</table>
+
+## 🏯 Japanese Culture · 日本文化
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/maneki-neko.svg" width="80" alt="Maneki Neko"><br><sub><b>Maneki Neko</b><br>招财猫</sub></td>
+    <td align="center"><img src="assets/torii.svg" width="80" alt="Torii"><br><sub><b>Torii</b><br>鸟居</sub></td>
+    <td align="center"><img src="assets/daruma.svg" width="80" alt="Daruma"><br><sub><b>Daruma</b><br>达摩</sub></td>
+    <td align="center"><img src="assets/onigiri.svg" width="80" alt="Onigiri"><br><sub><b>Onigiri</b><br>饭团</sub></td>
+    <td align="center"><img src="assets/koi-fish.svg" width="80" alt="Koi Fish"><br><sub><b>Koi Fish</b><br>锦鲤</sub></td>
+    <td align="center"><img src="assets/bento.svg" width="80" alt="Bento"><br><sub><b>Bento</b><br>便当</sub></td>
+  </tr>
+</table>
+
+## 🦄 Fantasy & Fairy Tale · 童话幻想
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/unicorn.svg" width="80" alt="Unicorn"><br><sub><b>Unicorn</b><br>独角兽</sub></td>
+    <td align="center"><img src="assets/crown.svg" width="80" alt="Crown"><br><sub><b>Crown</b><br>皇冠</sub></td>
+    <td align="center"><img src="assets/magic-wand.svg" width="80" alt="Magic Wand"><br><sub><b>Magic Wand</b><br>魔法棒</sub></td>
+    <td align="center"><img src="assets/mermaid.svg" width="80" alt="Mermaid"><br><sub><b>Mermaid</b><br>美人鱼</sub></td>
+    <td align="center"><img src="assets/mushroom-house.svg" width="80" alt="Mushroom House"><br><sub><b>Mushroom House</b><br>蘑菇屋</sub></td>
+    <td align="center"><img src="assets/crystal.svg" width="80" alt="Crystal"><br><sub><b>Crystal</b><br>水晶</sub></td>
+  </tr>
+</table>
+
+## 🌙 Cozy Life · 温馨日常
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/moon-rabbit.svg" width="80" alt="Moon Rabbit"><br><sub><b>Moon Rabbit</b><br>月兔</sub></td>
+    <td align="center"><img src="assets/camera.svg" width="80" alt="Camera"><br><sub><b>Camera</b><br>相机</sub></td>
+    <td align="center"><img src="assets/alarm-clock.svg" width="80" alt="Alarm Clock"><br><sub><b>Alarm Clock</b><br>闹钟</sub></td>
+    <td align="center"><img src="assets/umbrella.svg" width="80" alt="Umbrella"><br><sub><b>Umbrella</b><br>雨伞</sub></td>
+    <td align="center"><img src="assets/teapot.svg" width="80" alt="Teapot"><br><sub><b>Teapot</b><br>茶壶</sub></td>
+    <td align="center"><img src="assets/book-stack.svg" width="80" alt="Book Stack"><br><sub><b>Book Stack</b><br>书堆</sub></td>
   </tr>
 </table>
 
