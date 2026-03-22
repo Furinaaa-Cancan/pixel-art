@@ -9,7 +9,7 @@
 <br>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![Assets](https://img.shields.io/badge/assets-70-ff6480?style=flat-square)](#gallery)
+[![Assets](https://img.shields.io/badge/assets-88-ff6480?style=flat-square)](#gallery)
 [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette)
 [![Grid](https://img.shields.io/badge/grid-16×16%20%7C%2032×32-ffd93d?style=flat-square)](#gallery)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -349,6 +349,45 @@
       <img src="assets/party-hat.svg" width="80" alt="Party Hat"><br>
       <sub><b>Party Hat</b><br>派对帽</sub>
     </td>
+  </tr>
+</table>
+
+## 🌸 Flowers & Plants · 花卉植物
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/sunflower.svg" width="80" alt="Sunflower"><br><sub><b>Sunflower</b><br>向日葵</sub></td>
+    <td align="center"><img src="assets/tulip.svg" width="80" alt="Tulip"><br><sub><b>Tulip</b><br>郁金香</sub></td>
+    <td align="center"><img src="assets/rose.svg" width="80" alt="Rose"><br><sub><b>Rose</b><br>玫瑰</sub></td>
+    <td align="center"><img src="assets/lotus.svg" width="80" alt="Lotus"><br><sub><b>Lotus</b><br>莲花</sub></td>
+    <td align="center"><img src="assets/potted-plant.svg" width="80" alt="Potted Plant"><br><sub><b>Potted Plant</b><br>多肉盆栽</sub></td>
+    <td align="center"><img src="assets/clover.svg" width="80" alt="Clover"><br><sub><b>Clover</b><br>四叶草</sub></td>
+  </tr>
+</table>
+
+## 🧁 Sweets & Drinks · 甜品饮料
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/cupcake.svg" width="80" alt="Cupcake"><br><sub><b>Cupcake</b><br>杯子蛋糕</sub></td>
+    <td align="center"><img src="assets/candy.svg" width="80" alt="Candy"><br><sub><b>Candy</b><br>棒棒糖</sub></td>
+    <td align="center"><img src="assets/juice-box.svg" width="80" alt="Juice Box"><br><sub><b>Juice Box</b><br>果汁盒</sub></td>
+    <td align="center"><img src="assets/cookie.svg" width="80" alt="Cookie"><br><sub><b>Cookie</b><br>曲奇</sub></td>
+    <td align="center"><img src="assets/milkshake.svg" width="80" alt="Milkshake"><br><sub><b>Milkshake</b><br>奶昔</sub></td>
+    <td align="center"><img src="assets/pudding.svg" width="80" alt="Pudding"><br><sub><b>Pudding</b><br>布丁</sub></td>
+  </tr>
+</table>
+
+## 🐧 More Animals · 更多动物
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/penguin.svg" width="80" alt="Penguin"><br><sub><b>Penguin</b><br>企鹅</sub></td>
+    <td align="center"><img src="assets/panda.svg" width="80" alt="Panda"><br><sub><b>Panda</b><br>熊猫</sub></td>
+    <td align="center"><img src="assets/hamster.svg" width="80" alt="Hamster"><br><sub><b>Hamster</b><br>仓鼠</sub></td>
+    <td align="center"><img src="assets/duckling.svg" width="80" alt="Duckling"><br><sub><b>Duckling</b><br>小黄鸭</sub></td>
+    <td align="center"><img src="assets/bear.svg" width="80" alt="Bear"><br><sub><b>Bear</b><br>小熊</sub></td>
+    <td align="center"><img src="assets/butterfly.svg" width="80" alt="Butterfly"><br><sub><b>Butterfly</b><br>蝴蝶</sub></td>
   </tr>
 </table>
 
