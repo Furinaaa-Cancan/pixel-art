@@ -1,13 +1,6 @@
 <div align="center">
 
-```
-██████╗ ██╗██╗  ██╗███████╗██╗          █████╗ ██████╗ ████████╗
-██╔══██╗██║╚██╗██╔╝██╔════╝██║         ██╔══██╗██╔══██╗╚══██╔══╝
-██████╔╝██║ ╚███╔╝ █████╗  ██║         ███████║██████╔╝   ██║
-██╔═══╝ ██║ ██╔██╗ ██╔══╝  ██║         ██╔══██║██╔══██╗   ██║
-██║     ██║██╔╝ ██╗███████╗███████╗    ██║  ██║██║  ██║   ██║
-╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝    ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝
-```
+# 🎮 Pixel Art Collection
 
 **A handcrafted collection of pixel-art SVG assets — crisp at any size.**
 
@@ -25,144 +18,126 @@
 
 ---
 
-## Gallery
+<a id="gallery"></a>
 
-### Icons · 图标 `16×16`
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="assets/heart.svg" width="64" alt="Heart"><br>
-      <sub><b>Heart</b><br>爱心</sub>
-    </td>
-    <td align="center">
-      <img src="assets/star.svg" width="64" alt="Star"><br>
-      <sub><b>Star</b><br>星星</sub>
-    </td>
-    <td align="center">
-      <img src="assets/gem.svg" width="64" alt="Gem"><br>
-      <sub><b>Gem</b><br>宝石</sub>
-    </td>
-    <td align="center">
-      <img src="assets/mushroom.svg" width="64" alt="Mushroom"><br>
-      <sub><b>Mushroom</b><br>蘑菇</sub>
-    </td>
-    <td align="center">
-      <img src="assets/ghost.svg" width="64" alt="Ghost"><br>
-      <sub><b>Ghost</b><br>幽灵</sub>
-    </td>
-    <td align="center">
-      <img src="assets/tree.svg" width="64" alt="Tree"><br>
-      <sub><b>Tree</b><br>树木</sub>
-    </td>
-  </tr>
-</table>
-
-### Characters & Creatures · 角色 `32×32`
+## 🐾 Cute Characters · 可爱角色
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/cat.svg" width="96" alt="Cat"><br>
+      <img src="assets/cat.svg" width="80" alt="Cat"><br>
       <sub><b>Cat</b><br>猫咪</sub>
     </td>
     <td align="center">
-      <img src="assets/ghost.svg" width="96" alt="Ghost"><br>
+      <img src="assets/dragon.svg" width="80" alt="Dragon"><br>
+      <sub><b>Dragon</b><br>龙</sub>
+    </td>
+    <td align="center">
+      <img src="assets/robot.svg" width="80" alt="Robot"><br>
+      <sub><b>Robot</b><br>机器人</sub>
+    </td>
+    <td align="center">
+      <img src="assets/phoenix.svg" width="80" alt="Phoenix"><br>
+      <sub><b>Phoenix</b><br>凤凰</sub>
+    </td>
+    <td align="center">
+      <img src="assets/ghost.svg" width="48" alt="Ghost"><br>
       <sub><b>Ghost</b><br>幽灵</sub>
-    </td>
-    <td align="center">
-      <img src="assets/dragon.svg" width="96" alt="Dragon"><br>
-      <sub><b>Dragon</b><br>龙 🔜</sub>
-    </td>
-    <td align="center">
-      <img src="assets/phoenix.svg" width="96" alt="Phoenix"><br>
-      <sub><b>Phoenix</b><br>凤凰 🔜</sub>
-    </td>
-    <td align="center">
-      <img src="assets/robot.svg" width="96" alt="Robot"><br>
-      <sub><b>Robot</b><br>机器人 🔜</sub>
     </td>
   </tr>
 </table>
 
-### Items & Objects · 物品 `32×32`
+## 🗡️ Items & Objects · 物品道具
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/sword.svg" width="96" alt="Sword"><br>
+      <img src="assets/sword.svg" width="80" alt="Sword"><br>
       <sub><b>Sword</b><br>宝剑</sub>
     </td>
     <td align="center">
-      <img src="assets/potion.svg" width="96" alt="Potion"><br>
+      <img src="assets/potion.svg" width="80" alt="Potion"><br>
       <sub><b>Potion</b><br>药水</sub>
     </td>
     <td align="center">
-      <img src="assets/crystal-ball.svg" width="96" alt="Crystal Ball"><br>
+      <img src="assets/crystal-ball.svg" width="80" alt="Crystal Ball"><br>
       <sub><b>Crystal Ball</b><br>水晶球</sub>
     </td>
     <td align="center">
-      <img src="assets/treasure-chest.svg" width="96" alt="Treasure Chest"><br>
-      <sub><b>Treasure Chest</b><br>宝箱 🔜</sub>
+      <img src="assets/treasure-chest.svg" width="80" alt="Treasure Chest"><br>
+      <sub><b>Treasure Chest</b><br>宝箱</sub>
     </td>
     <td align="center">
-      <img src="assets/diamond-ring.svg" width="96" alt="Diamond Ring"><br>
-      <sub><b>Diamond Ring</b><br>钻戒 🔜</sub>
+      <img src="assets/diamond-ring.svg" width="80" alt="Diamond Ring"><br>
+      <sub><b>Diamond Ring</b><br>钻戒</sub>
     </td>
     <td align="center">
-      <img src="assets/lantern.svg" width="96" alt="Lantern"><br>
-      <sub><b>Lantern</b><br>灯笼 🔜</sub>
+      <img src="assets/lantern.svg" width="80" alt="Lantern"><br>
+      <sub><b>Lantern</b><br>灯笼</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/heart.svg" width="48" alt="Heart"><br>
+      <sub><b>Heart</b><br>爱心</sub>
+    </td>
+    <td align="center">
+      <img src="assets/gem.svg" width="48" alt="Gem"><br>
+      <sub><b>Gem</b><br>宝石</sub>
+    </td>
+    <td align="center">
+      <img src="assets/star.svg" width="48" alt="Star"><br>
+      <sub><b>Star</b><br>星星</sub>
     </td>
   </tr>
 </table>
 
-### Scenes & Nature · 场景 `32×32`
+## 🌿 Nature & Scenes · 自然场景
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/sakura.svg" width="96" alt="Sakura"><br>
+      <img src="assets/sakura.svg" width="80" alt="Sakura"><br>
       <sub><b>Sakura</b><br>樱花</sub>
     </td>
     <td align="center">
-      <img src="assets/flame.svg" width="96" alt="Flame"><br>
+      <img src="assets/flame.svg" width="80" alt="Flame"><br>
       <sub><b>Flame</b><br>火焰</sub>
     </td>
     <td align="center">
-      <img src="assets/moon-scene.svg" width="96" alt="Moon Scene"><br>
+      <img src="assets/moon-scene.svg" width="80" alt="Moon Scene"><br>
       <sub><b>Moon Scene</b><br>月夜</sub>
     </td>
     <td align="center">
-      <img src="assets/sunrise.svg" width="96" alt="Sunrise"><br>
+      <img src="assets/sunrise.svg" width="80" alt="Sunrise"><br>
       <sub><b>Sunrise</b><br>日出</sub>
     </td>
     <td align="center">
-      <img src="assets/castle.svg" width="96" alt="Castle"><br>
-      <sub><b>Castle</b><br>城堡 🔜</sub>
+      <img src="assets/castle.svg" width="80" alt="Castle"><br>
+      <sub><b>Castle</b><br>城堡</sub>
     </td>
     <td align="center">
-      <img src="assets/ocean-wave.svg" width="96" alt="Ocean Wave"><br>
-      <sub><b>Ocean Wave</b><br>海浪 🔜</sub>
+      <img src="assets/ocean-wave.svg" width="80" alt="Ocean Wave"><br>
+      <sub><b>Ocean Wave</b><br>海浪</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/tree.svg" width="48" alt="Tree"><br>
+      <sub><b>Tree</b><br>树木</sub>
+    </td>
+    <td align="center">
+      <img src="assets/mushroom.svg" width="48" alt="Mushroom"><br>
+      <sub><b>Mushroom</b><br>蘑菇</sub>
     </td>
   </tr>
 </table>
 
 ---
 
-## Features · 特性
-
-| | Feature | Description |
-|---|---|---|
-| **∞** | **Infinite Scaling · 无限缩放** | Pure SVG — scales from 16px favicon to billboard without blur. 纯 SVG 矢量，从图标到海报都清晰。 |
-| **🎨** | **SWEETIE-16 Palette · 专业调色盘** | Curated 16-color palette for authentic retro aesthetics. 精选 16 色调色盘，还原复古美学。 |
-| **📐** | **Mathematically Precise · 数学精确** | Every pixel is a `<rect>` — algorithmically generated, no hand-wobble. 每个像素都是精确的矩形，算法生成。 |
-| **🔳** | **Crisp Edges · 像素锐利** | `shape-rendering: crispEdges` ensures pixel-perfect rendering at any DPI. 像素边缘始终锐利，不模糊。 |
-
----
-
-## Palette · 调色盘
-
 <a id="palette"></a>
+
+## 🎨 Palette · 调色盘
 
 All assets use the **[SWEETIE-16](https://lospec.com/palette-list/sweetie-16)** palette:
 
@@ -191,87 +166,34 @@ All assets use the **[SWEETIE-16](https://lospec.com/palette-list/sweetie-16)** 
 
 ---
 
-## Usage · 使用方式
+## 📦 Usage · 使用
 
-**HTML**
 ```html
-<!-- Inline -->
-<img src="assets/heart.svg" width="64" alt="Pixel Heart">
-
-<!-- As background -->
-<div style="
-  width: 128px; height: 128px;
-  background: url('assets/cat.svg') no-repeat center/contain;
-  image-rendering: pixelated;
-"></div>
+<img src="assets/heart.svg" width="64" style="image-rendering: pixelated" alt="Pixel Heart">
 ```
 
-**CSS**
-```css
-.icon {
-  background-image: url('assets/star.svg');
-  background-size: contain;
-  image-rendering: pixelated;     /* Chrome, Edge */
-  image-rendering: crisp-edges;   /* Firefox */
-}
-```
-
-**React / Vue**
-```jsx
-// Direct import
-import heartSvg from './assets/heart.svg';
-
-<img src={heartSvg} width={64} style={{ imageRendering: 'pixelated' }} />
-```
-
-**Download all assets · 下载全部素材**
 ```bash
 git clone https://github.com/Furinaaa-Cancan/pixel-art.git
 ```
 
 ---
 
-## Structure · 项目结构
+## 📄 License · 许可证
 
-```
-pixel-art/
-├── assets/
-│   ├── heart.svg        # 16×16 icons
-│   ├── star.svg
-│   ├── gem.svg
-│   ├── tree.svg
-│   ├── mushroom.svg
-│   ├── ghost.svg
-│   ├── cat.svg          # 32×32 detailed sprites
-│   ├── crystal-ball.svg
-│   ├── flame.svg
-│   ├── moon-scene.svg
-│   ├── potion.svg
-│   ├── sakura.svg
-│   ├── sunrise.svg
-│   └── sword.svg
-├── preview.html         # Local preview page
-└── README.md
-```
-
----
-
-## License · 许可证
-
-[MIT](LICENSE) — Free for personal and commercial use.
-
-自由使用，包括个人和商业项目。
+[MIT](LICENSE) — Free for personal and commercial use. 自由使用，包括个人和商业项目。
 
 ---
 
 <div align="center">
 
+⭐ If you like this collection, give it a star!
+
+⭐ 喜欢的话请点个 Star！
+
+<br>
+
 <sub>Built with <a href="https://claude.ai/claude-code">Claude Code</a> · Every pixel placed by algorithm, every color chosen with care.</sub>
 
 <sub>每一个像素由算法安放，每一种颜色经精心挑选。</sub>
-
-<br><br>
-
-**[⬆ Back to Top](#)**
 
 </div>
