@@ -9,7 +9,7 @@
 <br>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![Assets](https://img.shields.io/badge/assets-58-ff6480?style=flat-square)](#gallery)
+[![Assets](https://img.shields.io/badge/assets-70-ff6480?style=flat-square)](#gallery)
 [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette)
 [![Grid](https://img.shields.io/badge/grid-16×16%20%7C%2032×32-ffd93d?style=flat-square)](#gallery)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -286,6 +286,68 @@
     <td align="center">
       <img src="assets/treasure-map.svg" width="80" alt="Treasure Map"><br>
       <sub><b>Treasure Map</b><br>藏宝图</sub>
+    </td>
+  </tr>
+</table>
+
+## 🎵 Music & Instruments · 音乐乐器
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/guitar.svg" width="80" alt="Guitar"><br>
+      <sub><b>Guitar</b><br>吉他</sub>
+    </td>
+    <td align="center">
+      <img src="assets/piano-keys.svg" width="80" alt="Piano"><br>
+      <sub><b>Piano</b><br>钢琴</sub>
+    </td>
+    <td align="center">
+      <img src="assets/headphones.svg" width="80" alt="Headphones"><br>
+      <sub><b>Headphones</b><br>耳机</sub>
+    </td>
+    <td align="center">
+      <img src="assets/vinyl.svg" width="80" alt="Vinyl"><br>
+      <sub><b>Vinyl</b><br>唱片</sub>
+    </td>
+    <td align="center">
+      <img src="assets/trumpet.svg" width="80" alt="Trumpet"><br>
+      <sub><b>Trumpet</b><br>小号</sub>
+    </td>
+    <td align="center">
+      <img src="assets/drum.svg" width="80" alt="Drum"><br>
+      <sub><b>Drum</b><br>鼓</sub>
+    </td>
+  </tr>
+</table>
+
+## 🎉 Holidays & Celebration · 节日庆祝
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/gift-box.svg" width="80" alt="Gift Box"><br>
+      <sub><b>Gift Box</b><br>礼物</sub>
+    </td>
+    <td align="center">
+      <img src="assets/birthday-cake.svg" width="80" alt="Birthday Cake"><br>
+      <sub><b>Birthday Cake</b><br>生日蛋糕</sub>
+    </td>
+    <td align="center">
+      <img src="assets/firework.svg" width="80" alt="Firework"><br>
+      <sub><b>Firework</b><br>烟花</sub>
+    </td>
+    <td align="center">
+      <img src="assets/christmas-tree.svg" width="80" alt="Christmas Tree"><br>
+      <sub><b>Christmas Tree</b><br>圣诞树</sub>
+    </td>
+    <td align="center">
+      <img src="assets/balloon.svg" width="80" alt="Balloon"><br>
+      <sub><b>Balloon</b><br>气球</sub>
+    </td>
+    <td align="center">
+      <img src="assets/party-hat.svg" width="80" alt="Party Hat"><br>
+      <sub><b>Party Hat</b><br>派对帽</sub>
     </td>
   </tr>
 </table>
