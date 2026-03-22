@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pixel Art Collection</title>
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: #0a0a0f; color: #ccc; font-family: system-ui; padding: 32px; min-height: 100vh; }
+  h1 { font-weight: 200; font-size: 24px; letter-spacing: 4px; margin-bottom: 32px; color: #D97757; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .card { background: #111; border-radius: 8px; padding: 20px; text-align: center; }
+  .card:hover { background: #161616; }
+  .card h3 { font-size: 11px; font-weight: 400; color: #555; margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase; }
+  .preview { display: flex; align-items: center; justify-content: center; gap: 16px; }
+  img { image-rendering: pixelated; image-rendering: crisp-edges; }
+  .sm { opacity: 0.6; }
+</style>
+</head>
+<body>
+<h1>PIXEL ART</h1>
+<div class="grid">
+  <div class="card">
+    <h3>Heart</h3>
+    <div class="preview">
+      <img src="assets/heart.svg" width="32" class="sm">
+      <img src="assets/heart.svg" width="128">
+    </div>
+  </div>
+  <div class="card">
+    <h3>Gem</h3>
+    <div class="preview">
+      <img src="assets/gem.svg" width="32" class="sm">
+      <img src="assets/gem.svg" width="128">
+    </div>
+  </div>
+  <div class="card">
+    <h3>Star</h3>
+    <div class="preview">
+      <img src="assets/star.svg" width="32" class="sm">
+      <img src="assets/star.svg" width="128">
+    </div>
+  </div>
+  <div class="card">
+    <h3>Tree</h3>
+    <div class="preview">
+      <img src="assets/tree.svg" width="32" class="sm">
+      <img src="assets/tree.svg" width="128">
+    </div>
+  </div>
+  <div class="card">
+    <h3>Mushroom</h3>
+    <div class="preview">
+      <img src="assets/mushroom.svg" width="32" class="sm">
+      <img src="assets/mushroom.svg" width="128">
+    </div>
+  </div>
+  <div class="card">
+    <h3>Ghost</h3>
+    <div class="preview">
+      <img src="assets/ghost.svg" width="32" class="sm">
+      <img src="assets/ghost.svg" width="128">
+    </div>
+  </div>
+</div>
+</body>
+</html>
