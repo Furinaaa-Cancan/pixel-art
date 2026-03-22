@@ -9,7 +9,7 @@
 <br>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![Assets](https://img.shields.io/badge/assets-190-ff6480?style=flat-square)](#gallery)
+[![Assets](https://img.shields.io/badge/assets-244-ff6480?style=flat-square)](#gallery)
 [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette)
 [![Grid](https://img.shields.io/badge/grid-16×16%20%7C%2032×32-ffd93d?style=flat-square)](#gallery)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -37,6 +37,11 @@
     <td align="center"><img src="assets/bunny.svg" width="80" alt="Bunny"><br><sub><b>Bunny</b><br>兔子</sub></td>
     <td align="center"><img src="assets/owl.svg" width="80" alt="Owl"><br><sub><b>Owl</b><br>猫头鹰</sub></td>
     <td align="center"><img src="assets/fox.svg" width="80" alt="Fox"><br><sub><b>Fox</b><br>狐狸</sub></td>
+    <td align="center"><img src="assets/pirate.svg" width="80" alt="Pirate"><br><sub><b>Pirate</b><br>海盗</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/astronaut.svg" width="80" alt="Astronaut"><br><sub><b>Astronaut</b><br>宇航员</sub></td>
+    <td align="center"><img src="assets/knight.svg" width="80" alt="Knight"><br><sub><b>Knight</b><br>骑士</sub></td>
   </tr>
 </table>
 
@@ -56,6 +61,11 @@
     <td align="center"><img src="assets/hedgehog.svg" width="80" alt="Hedgehog"><br><sub><b>Hedgehog</b><br>刺猬</sub></td>
     <td align="center"><img src="assets/frog.svg" width="80" alt="Frog"><br><sub><b>Frog</b><br>青蛙</sub></td>
     <td align="center"><img src="assets/shiba-inu.svg" width="80" alt="Shiba Inu"><br><sub><b>Shiba Inu</b><br>柴犬</sub></td>
+    <td align="center"><img src="assets/cat-black.svg" width="80" alt="Black Cat"><br><sub><b>Black Cat</b><br>黑猫</sub></td>
+    <td align="center"><img src="assets/corgi.svg" width="80" alt="Corgi"><br><sub><b>Corgi</b><br>柯基</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/parrot.svg" width="80" alt="Parrot"><br><sub><b>Parrot</b><br>鹦鹉</sub></td>
   </tr>
 </table>
 
@@ -74,6 +84,9 @@
     <td align="center"><img src="assets/sea-turtle.svg" width="80" alt="Sea Turtle"><br><sub><b>Sea Turtle</b><br>海龟</sub></td>
     <td align="center"><img src="assets/dolphin.svg" width="80" alt="Dolphin"><br><sub><b>Dolphin</b><br>海豚</sub></td>
     <td align="center"><img src="assets/clownfish.svg" width="80" alt="Clownfish"><br><sub><b>Clownfish</b><br>小丑鱼</sub></td>
+    <td align="center"><img src="assets/starfish.svg" width="80" alt="Starfish"><br><sub><b>Starfish</b><br>海星</sub></td>
+    <td align="center"><img src="assets/pufferfish.svg" width="80" alt="Pufferfish"><br><sub><b>Pufferfish</b><br>河豚</sub></td>
+    <td align="center"><img src="assets/anglerfish.svg" width="80" alt="Anglerfish"><br><sub><b>Anglerfish</b><br>鮟鱇鱼</sub></td>
   </tr>
 </table>
 
@@ -92,6 +105,9 @@
     <td align="center"><img src="assets/submarine.svg" width="80" alt="Submarine"><br><sub><b>Submarine</b><br>潜水艇</sub></td>
     <td align="center"><img src="assets/hot-air-balloon.svg" width="80" alt="Balloon"><br><sub><b>Balloon</b><br>热气球</sub></td>
     <td align="center"><img src="assets/scooter.svg" width="80" alt="Scooter"><br><sub><b>Scooter</b><br>踏板车</sub></td>
+    <td align="center"><img src="assets/spaceship.svg" width="80" alt="Spaceship"><br><sub><b>Spaceship</b><br>飞船</sub></td>
+    <td align="center"><img src="assets/horse-carriage.svg" width="80" alt="Carriage"><br><sub><b>Carriage</b><br>马车</sub></td>
+    <td align="center"><img src="assets/ufo-vehicle.svg" width="80" alt="UFO"><br><sub><b>UFO</b><br>飞碟车</sub></td>
   </tr>
 </table>
 
@@ -110,6 +126,9 @@
     <td align="center"><img src="assets/tennis-racket.svg" width="80" alt="Tennis"><br><sub><b>Tennis</b><br>网球</sub></td>
     <td align="center"><img src="assets/bowling.svg" width="80" alt="Bowling"><br><sub><b>Bowling</b><br>保龄球</sub></td>
     <td align="center"><img src="assets/medal.svg" width="80" alt="Medal"><br><sub><b>Medal</b><br>奖牌</sub></td>
+    <td align="center"><img src="assets/baseball.svg" width="80" alt="Baseball"><br><sub><b>Baseball</b><br>棒球</sub></td>
+    <td align="center"><img src="assets/ping-pong.svg" width="80" alt="Ping Pong"><br><sub><b>Ping Pong</b><br>乒乓</sub></td>
+    <td align="center"><img src="assets/swimming.svg" width="80" alt="Swimming"><br><sub><b>Swimming</b><br>游泳</sub></td>
   </tr>
 </table>
 
@@ -130,6 +149,11 @@
     <td align="center"><img src="assets/shield.svg" width="80" alt="Shield"><br><sub><b>Shield</b><br>盾牌</sub></td>
     <td align="center"><img src="assets/scroll.svg" width="80" alt="Scroll"><br><sub><b>Scroll</b><br>卷轴</sub></td>
     <td align="center"><img src="assets/hourglass.svg" width="80" alt="Hourglass"><br><sub><b>Hourglass</b><br>沙漏</sub></td>
+    <td align="center"><img src="assets/compass.svg" width="80" alt="Compass"><br><sub><b>Compass</b><br>指南针</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/telescope.svg" width="80" alt="Telescope"><br><sub><b>Telescope</b><br>望远镜</sub></td>
+    <td align="center"><img src="assets/music-box.svg" width="80" alt="Music Box"><br><sub><b>Music Box</b><br>音乐盒</sub></td>
   </tr>
 </table>
 
@@ -148,6 +172,9 @@
     <td align="center"><img src="assets/pizza.svg" width="80" alt="Pizza"><br><sub><b>Pizza</b><br>披萨</sub></td>
     <td align="center"><img src="assets/taco.svg" width="80" alt="Taco"><br><sub><b>Taco</b><br>卷饼</sub></td>
     <td align="center"><img src="assets/dumpling.svg" width="80" alt="Dumpling"><br><sub><b>Dumpling</b><br>饺子</sub></td>
+    <td align="center"><img src="assets/waffle.svg" width="80" alt="Waffle"><br><sub><b>Waffle</b><br>华夫饼</sub></td>
+    <td align="center"><img src="assets/hotdog.svg" width="80" alt="Hotdog"><br><sub><b>Hotdog</b><br>热狗</sub></td>
+    <td align="center"><img src="assets/egg-fried.svg" width="80" alt="Fried Egg"><br><sub><b>Fried Egg</b><br>煎蛋</sub></td>
   </tr>
 </table>
 
@@ -166,6 +193,9 @@
     <td align="center"><img src="assets/macaron.svg" width="80" alt="Macaron"><br><sub><b>Macaron</b><br>马卡龙</sub></td>
     <td align="center"><img src="assets/chocolate.svg" width="80" alt="Chocolate"><br><sub><b>Chocolate</b><br>巧克力</sub></td>
     <td align="center"><img src="assets/bubble-tea.svg" width="80" alt="Bubble Tea"><br><sub><b>Bubble Tea</b><br>芋泥奶茶</sub></td>
+    <td align="center"><img src="assets/popsicle.svg" width="80" alt="Popsicle"><br><sub><b>Popsicle</b><br>冰棍</sub></td>
+    <td align="center"><img src="assets/cotton-candy.svg" width="80" alt="Cotton Candy"><br><sub><b>Cotton Candy</b><br>棉花糖</sub></td>
+    <td align="center"><img src="assets/honey-jar.svg" width="80" alt="Honey Jar"><br><sub><b>Honey Jar</b><br>蜂蜜罐</sub></td>
   </tr>
 </table>
 
@@ -184,6 +214,9 @@
     <td align="center"><img src="assets/tornado.svg" width="80" alt="Tornado"><br><sub><b>Tornado</b><br>龙卷风</sub></td>
     <td align="center"><img src="assets/cherry-blossom.svg" width="80" alt="Cherry Blossom"><br><sub><b>Cherry Blossom</b><br>樱花</sub></td>
     <td align="center"><img src="assets/lightning.svg" width="80" alt="Lightning"><br><sub><b>Lightning</b><br>闪电</sub></td>
+    <td align="center"><img src="assets/cloud-sleep.svg" width="80" alt="Sleepy Cloud"><br><sub><b>Sleepy Cloud</b><br>困困云</sub></td>
+    <td align="center"><img src="assets/wind.svg" width="80" alt="Wind"><br><sub><b>Wind</b><br>风精灵</sub></td>
+    <td align="center"><img src="assets/puddle.svg" width="80" alt="Puddle"><br><sub><b>Puddle</b><br>水坑</sub></td>
   </tr>
 </table>
 
@@ -223,6 +256,11 @@
     <td align="center"><img src="assets/waterfall.svg" width="80" alt="Waterfall"><br><sub><b>Waterfall</b><br>瀑布</sub></td>
     <td align="center"><img src="assets/volcano.svg" width="80" alt="Volcano"><br><sub><b>Volcano</b><br>火山</sub></td>
     <td align="center"><img src="assets/lighthouse.svg" width="80" alt="Lighthouse"><br><sub><b>Lighthouse</b><br>灯塔</sub></td>
+    <td align="center"><img src="assets/coral-reef.svg" width="80" alt="Coral Reef"><br><sub><b>Coral Reef</b><br>珊瑚礁</sub></td>
+    <td align="center"><img src="assets/northern-lights.svg" width="80" alt="Aurora"><br><sub><b>Aurora</b><br>极光</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/bamboo-forest.svg" width="80" alt="Bamboo Forest"><br><sub><b>Bamboo Forest</b><br>竹林</sub></td>
   </tr>
 </table>
 
@@ -241,6 +279,9 @@
     <td align="center"><img src="assets/violin.svg" width="80" alt="Violin"><br><sub><b>Violin</b><br>小提琴</sub></td>
     <td align="center"><img src="assets/saxophone.svg" width="80" alt="Saxophone"><br><sub><b>Saxophone</b><br>萨克斯</sub></td>
     <td align="center"><img src="assets/microphone.svg" width="80" alt="Microphone"><br><sub><b>Microphone</b><br>麦克风</sub></td>
+    <td align="center"><img src="assets/harp.svg" width="80" alt="Harp"><br><sub><b>Harp</b><br>竖琴</sub></td>
+    <td align="center"><img src="assets/accordion.svg" width="80" alt="Accordion"><br><sub><b>Accordion</b><br>手风琴</sub></td>
+    <td align="center"><img src="assets/xylophone.svg" width="80" alt="Xylophone"><br><sub><b>Xylophone</b><br>木琴</sub></td>
   </tr>
 </table>
 
@@ -254,6 +295,11 @@
     <td align="center"><img src="assets/christmas-tree.svg" width="80" alt="Christmas Tree"><br><sub><b>Christmas Tree</b><br>圣诞树</sub></td>
     <td align="center"><img src="assets/balloon.svg" width="80" alt="Balloon"><br><sub><b>Balloon</b><br>气球</sub></td>
     <td align="center"><img src="assets/party-hat.svg" width="80" alt="Party Hat"><br><sub><b>Party Hat</b><br>派对帽</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/jack-o-lantern.svg" width="80" alt="Jack-o-Lantern"><br><sub><b>Jack-o-Lantern</b><br>南瓜灯</sub></td>
+    <td align="center"><img src="assets/easter-egg.svg" width="80" alt="Easter Egg"><br><sub><b>Easter Egg</b><br>彩蛋</sub></td>
+    <td align="center"><img src="assets/valentine-heart.svg" width="80" alt="Valentine"><br><sub><b>Valentine</b><br>情人心</sub></td>
   </tr>
 </table>
 
@@ -272,6 +318,9 @@
     <td align="center"><img src="assets/daisy.svg" width="80" alt="Daisy"><br><sub><b>Daisy</b><br>雏菊</sub></td>
     <td align="center"><img src="assets/bamboo.svg" width="80" alt="Bamboo"><br><sub><b>Bamboo</b><br>竹子</sub></td>
     <td align="center"><img src="assets/cherry.svg" width="80" alt="Cherry"><br><sub><b>Cherry</b><br>樱桃</sub></td>
+    <td align="center"><img src="assets/lavender.svg" width="80" alt="Lavender"><br><sub><b>Lavender</b><br>薰衣草</sub></td>
+    <td align="center"><img src="assets/maple-leaf.svg" width="80" alt="Maple Leaf"><br><sub><b>Maple Leaf</b><br>枫叶</sub></td>
+    <td align="center"><img src="assets/venus-flytrap.svg" width="80" alt="Venus Flytrap"><br><sub><b>Venus Flytrap</b><br>捕蝇草</sub></td>
   </tr>
 </table>
 
@@ -285,6 +334,11 @@
     <td align="center"><img src="assets/mermaid.svg" width="80" alt="Mermaid"><br><sub><b>Mermaid</b><br>美人鱼</sub></td>
     <td align="center"><img src="assets/mushroom-house.svg" width="80" alt="Mushroom House"><br><sub><b>Mushroom House</b><br>蘑菇屋</sub></td>
     <td align="center"><img src="assets/crystal.svg" width="80" alt="Crystal"><br><sub><b>Crystal</b><br>水晶</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/dragon-egg.svg" width="80" alt="Dragon Egg"><br><sub><b>Dragon Egg</b><br>龙蛋</sub></td>
+    <td align="center"><img src="assets/fairy-mushroom.svg" width="80" alt="Fairy Mushroom"><br><sub><b>Fairy Mushroom</b><br>发光蘑菇</sub></td>
+    <td align="center"><img src="assets/treasure-pile.svg" width="80" alt="Treasure Pile"><br><sub><b>Treasure Pile</b><br>宝藏堆</sub></td>
   </tr>
 </table>
 
@@ -301,6 +355,9 @@
   </tr>
   <tr>
     <td align="center"><img src="assets/moon-rabbit.svg" width="80" alt="Moon Rabbit"><br><sub><b>Moon Rabbit</b><br>月兔</sub></td>
+    <td align="center"><img src="assets/astronaut-cat.svg" width="80" alt="Space Cat"><br><sub><b>Space Cat</b><br>太空猫</sub></td>
+    <td align="center"><img src="assets/magic-potion-bubble.svg" width="80" alt="Potion Bubble"><br><sub><b>Potion Bubble</b><br>魔法泡泡</sub></td>
+    <td align="center"><img src="assets/constellation.svg" width="80" alt="Constellation"><br><sub><b>Constellation</b><br>星座</sub></td>
   </tr>
 </table>
 
@@ -314,6 +371,11 @@
     <td align="center"><img src="assets/paper-fan.svg" width="80" alt="Paper Fan"><br><sub><b>Paper Fan</b><br>折扇</sub></td>
     <td align="center"><img src="assets/mooncake.svg" width="80" alt="Mooncake"><br><sub><b>Mooncake</b><br>月饼</sub></td>
     <td align="center"><img src="assets/tang-suit.svg" width="80" alt="Tang Suit"><br><sub><b>Tang Suit</b><br>唐装</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/chinese-lantern.svg" width="80" alt="Lantern"><br><sub><b>Lantern</b><br>灯笼</sub></td>
+    <td align="center"><img src="assets/tea-ceremony.svg" width="80" alt="Tea Set"><br><sub><b>Tea Set</b><br>茶具</sub></td>
+    <td align="center"><img src="assets/fireworks-cny.svg" width="80" alt="Firecrackers"><br><sub><b>Firecrackers</b><br>鞭炮</sub></td>
   </tr>
 </table>
 
@@ -331,6 +393,9 @@
   <tr>
     <td align="center"><img src="assets/taiyaki.svg" width="80" alt="Taiyaki"><br><sub><b>Taiyaki</b><br>鲷鱼烧</sub></td>
     <td align="center"><img src="assets/matcha.svg" width="80" alt="Matcha"><br><sub><b>Matcha</b><br>抹茶</sub></td>
+    <td align="center"><img src="assets/sakura-branch.svg" width="80" alt="Sakura Branch"><br><sub><b>Sakura Branch</b><br>樱花枝</sub></td>
+    <td align="center"><img src="assets/ramen-bowl.svg" width="80" alt="Ramen Bowl"><br><sub><b>Ramen Bowl</b><br>拉面碗</sub></td>
+    <td align="center"><img src="assets/lucky-cat-wave.svg" width="80" alt="Lucky Cat"><br><sub><b>Lucky Cat</b><br>招财猫挥手</sub></td>
   </tr>
 </table>
 
@@ -344,6 +409,11 @@
     <td align="center"><img src="assets/pharaoh.svg" width="80" alt="Pharaoh"><br><sub><b>Pharaoh</b><br>法老</sub></td>
     <td align="center"><img src="assets/scarab.svg" width="80" alt="Scarab"><br><sub><b>Scarab</b><br>圣甲虫</sub></td>
     <td align="center"><img src="assets/eye-of-horus.svg" width="80" alt="Eye of Horus"><br><sub><b>Eye of Horus</b><br>荷鲁斯眼</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/mummy.svg" width="80" alt="Mummy"><br><sub><b>Mummy</b><br>木乃伊</sub></td>
+    <td align="center"><img src="assets/cleopatra.svg" width="80" alt="Cleopatra"><br><sub><b>Cleopatra</b><br>埃及艳后</sub></td>
+    <td align="center"><img src="assets/canopic-jar.svg" width="80" alt="Canopic Jar"><br><sub><b>Canopic Jar</b><br>卡诺皮克罐</sub></td>
   </tr>
 </table>
 
