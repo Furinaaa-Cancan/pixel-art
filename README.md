@@ -9,7 +9,7 @@
 <br>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![Assets](https://img.shields.io/badge/assets-22-ff6480?style=flat-square)](#gallery)
+[![Assets](https://img.shields.io/badge/assets-34-ff6480?style=flat-square)](#gallery)
 [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette)
 [![Grid](https://img.shields.io/badge/grid-16×16%20%7C%2032×32-ffd93d?style=flat-square)](#gallery)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -44,6 +44,18 @@
       <img src="assets/ghost.svg" width="64" alt="Ghost"><br>
       <sub><b>Ghost</b><br>幽灵</sub>
     </td>
+    <td align="center">
+      <img src="assets/bunny.svg" width="80" alt="Bunny"><br>
+      <sub><b>Bunny</b><br>兔子</sub>
+    </td>
+    <td align="center">
+      <img src="assets/owl.svg" width="80" alt="Owl"><br>
+      <sub><b>Owl</b><br>猫头鹰</sub>
+    </td>
+    <td align="center">
+      <img src="assets/fox.svg" width="80" alt="Fox"><br>
+      <sub><b>Fox</b><br>狐狸</sub>
+    </td>
   </tr>
 </table>
 
@@ -75,6 +87,45 @@
       <img src="assets/lantern.svg" width="80" alt="Lantern"><br>
       <sub><b>Lantern</b><br>灯笼</sub>
     </td>
+    <td align="center">
+      <img src="assets/magic-book.svg" width="80" alt="Magic Book"><br>
+      <sub><b>Magic Book</b><br>魔法书</sub>
+    </td>
+    <td align="center">
+      <img src="assets/key.svg" width="80" alt="Key"><br>
+      <sub><b>Key</b><br>钥匙</sub>
+    </td>
+  </tr>
+</table>
+
+## 🍡 Kawaii Food · 可爱美食
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/boba-tea.svg" width="80" alt="Boba Tea"><br>
+      <sub><b>Boba Tea</b><br>珍珠奶茶</sub>
+    </td>
+    <td align="center">
+      <img src="assets/sushi.svg" width="80" alt="Sushi"><br>
+      <sub><b>Sushi</b><br>寿司</sub>
+    </td>
+    <td align="center">
+      <img src="assets/cake.svg" width="80" alt="Cake"><br>
+      <sub><b>Cake</b><br>蛋糕</sub>
+    </td>
+    <td align="center">
+      <img src="assets/ramen.svg" width="80" alt="Ramen"><br>
+      <sub><b>Ramen</b><br>拉面</sub>
+    </td>
+    <td align="center">
+      <img src="assets/ice-cream.svg" width="80" alt="Ice Cream"><br>
+      <sub><b>Ice Cream</b><br>冰淇淋</sub>
+    </td>
+    <td align="center">
+      <img src="assets/donut.svg" width="80" alt="Donut"><br>
+      <sub><b>Donut</b><br>甜甜圈</sub>
+    </td>
   </tr>
 </table>
 
@@ -105,6 +156,10 @@
     <td align="center">
       <img src="assets/ocean-wave.svg" width="80" alt="Ocean Wave"><br>
       <sub><b>Ocean Wave</b><br>海浪</sub>
+    </td>
+    <td align="center">
+      <img src="assets/galaxy.svg" width="80" alt="Galaxy"><br>
+      <sub><b>Galaxy</b><br>银河</sub>
     </td>
   </tr>
 </table>
