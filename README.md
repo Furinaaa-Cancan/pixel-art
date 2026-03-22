@@ -590,7 +590,7 @@
 
 <a id="mini-icons"></a>
 
-## ✨ Mini Icons · 迷你图标 <sub>16×16</sub>
+## ✨ Mini Icons · 迷你图标 <sub>16×16 · (5)</sub>
 
 <table>
   <tr>
