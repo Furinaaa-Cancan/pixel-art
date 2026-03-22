@@ -9,7 +9,7 @@
 <br>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![Assets](https://img.shields.io/badge/assets-124-ff6480?style=flat-square)](#gallery)
+[![Assets](https://img.shields.io/badge/assets-142-ff6480?style=flat-square)](#gallery)
 [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette)
 [![Grid](https://img.shields.io/badge/grid-16×16%20%7C%2032×32-ffd93d?style=flat-square)](#gallery)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -473,6 +473,66 @@
     <td align="center"><img src="assets/viking-helmet.svg" width="80" alt="Viking Helmet"><br><sub><b>Viking Helmet</b><br>维京盔</sub></td>
     <td align="center"><img src="assets/rune-stone.svg" width="80" alt="Rune Stone"><br><sub><b>Rune Stone</b><br>符文石</sub></td>
     <td align="center"><img src="assets/longship.svg" width="80" alt="Longship"><br><sub><b>Longship</b><br>维京船</sub></td>
+  </tr>
+</table>
+
+## 🇰🇷 Korean Culture · 韩国文化
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/hanbok.svg" width="80" alt="Hanbok"><br><sub><b>Hanbok</b><br>韩服</sub></td>
+    <td align="center"><img src="assets/kimchi-jar.svg" width="80" alt="Kimchi Jar"><br><sub><b>Kimchi Jar</b><br>泡菜坛</sub></td>
+    <td align="center"><img src="assets/tteok.svg" width="80" alt="Tteok"><br><sub><b>Tteok</b><br>年糕</sub></td>
+  </tr>
+</table>
+
+## 🇮🇳 Indian Culture · 印度文化
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/taj-mahal.svg" width="80" alt="Taj Mahal"><br><sub><b>Taj Mahal</b><br>泰姬陵</sub></td>
+    <td align="center"><img src="assets/elephant.svg" width="80" alt="Elephant"><br><sub><b>Elephant</b><br>大象</sub></td>
+    <td align="center"><img src="assets/diya.svg" width="80" alt="Diya"><br><sub><b>Diya</b><br>排灯</sub></td>
+  </tr>
+</table>
+
+## 🏛️ Greek Culture · 希腊文化
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/greek-column.svg" width="80" alt="Greek Column"><br><sub><b>Column</b><br>希腊柱</sub></td>
+    <td align="center"><img src="assets/trident.svg" width="80" alt="Trident"><br><sub><b>Trident</b><br>三叉戟</sub></td>
+    <td align="center"><img src="assets/olive-wreath.svg" width="80" alt="Olive Wreath"><br><sub><b>Olive Wreath</b><br>橄榄环</sub></td>
+  </tr>
+</table>
+
+## 🇧🇷 Brazilian Culture · 巴西文化
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/toucan.svg" width="80" alt="Toucan"><br><sub><b>Toucan</b><br>巨嘴鸟</sub></td>
+    <td align="center"><img src="assets/carnival-mask.svg" width="80" alt="Carnival Mask"><br><sub><b>Carnival Mask</b><br>面具</sub></td>
+    <td align="center"><img src="assets/samba-drum.svg" width="80" alt="Samba Drum"><br><sub><b>Samba Drum</b><br>桑巴鼓</sub></td>
+  </tr>
+</table>
+
+## 🇬🇧 British Culture · 英国文化
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/teacup-british.svg" width="80" alt="Tea Cup"><br><sub><b>Tea Cup</b><br>英式茶</sub></td>
+    <td align="center"><img src="assets/london-bus.svg" width="80" alt="London Bus"><br><sub><b>London Bus</b><br>双层巴士</sub></td>
+    <td align="center"><img src="assets/guard-hat.svg" width="80" alt="Guard Hat"><br><sub><b>Guard</b><br>皇家卫兵</sub></td>
+  </tr>
+</table>
+
+## 🍵 Japanese Extras · 日本追加
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/taiyaki.svg" width="80" alt="Taiyaki"><br><sub><b>Taiyaki</b><br>鲷鱼烧</sub></td>
+    <td align="center"><img src="assets/matcha.svg" width="80" alt="Matcha"><br><sub><b>Matcha</b><br>抹茶拿铁</sub></td>
+    <td align="center"><img src="assets/shiba-inu.svg" width="80" alt="Shiba Inu"><br><sub><b>Shiba Inu</b><br>柴犬</sub></td>
   </tr>
 </table>
 
