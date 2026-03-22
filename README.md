@@ -5,12 +5,12 @@
 **手工打造的像素风 SVG 素材库 · A handcrafted pixel-art SVG asset library**
 
 <p>
-<img src="assets/cat.svg" width="48" alt="" /> <img src="assets/dragon.svg" width="48" alt="" /> <img src="assets/boba-tea.svg" width="48" alt="" /> <img src="assets/unicorn.svg" width="48" alt="" /> <img src="assets/cherry-blossom.svg" width="48" alt="" /> <img src="assets/rocket.svg" width="48" alt="" /> <img src="assets/whale.svg" width="48" alt="" /> <img src="assets/crown.svg" width="48" alt="" /> <img src="assets/sakura.svg" width="48" alt="" /> <img src="assets/guitar.svg" width="48" alt="" /> <img src="assets/snowman.svg" width="48" alt="" /> <img src="assets/pyramid.svg" width="48" alt="" /> 
+<img src="assets/cat.svg" width="48" /> <img src="assets/dragon.svg" width="48" /> <img src="assets/boba-tea.svg" width="48" /> <img src="assets/unicorn.svg" width="48" /> <img src="assets/cherry-blossom.svg" width="48" /> <img src="assets/rocket.svg" width="48" /> <img src="assets/whale.svg" width="48" /> <img src="assets/crown.svg" width="48" /> <img src="assets/sakura.svg" width="48" /> <img src="assets/guitar.svg" width="48" /> <img src="assets/snowman.svg" width="48" /> <img src="assets/pyramid.svg" width="48" /> <img src="assets/t-rex.svg" width="48" /> <img src="assets/bee.svg" width="48" /> <img src="assets/ruby.svg" width="48" /> 
 </p>
 
-[![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-244-ff6480?style=flat-square)](#gallery) [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+[![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-271-ff6480?style=flat-square)](#gallery) [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
-**Quick Nav** · [🐾](#cute-characters) [🐧](#animals) [🐙](#ocean-life) [🍡](#food-drinks) [🗡️](#items-objects) [🌿](#nature-scenes) [🎵](#music) [🌤️](#weather) [🏎️](#vehicles) [⚽](#sports) [🎉](#holidays) [🌸](#flowers-plants) [🦄](#fantasy) [🔮](#space-magic) [🎸](#lifestyle) [🌏](#world-cultures) [✨](#mini-icons)
+**Quick Nav** · [🐾](#cute-characters) [🐧](#animals) [🦕](#dinosaurs) [🐛](#insects) [🐙](#ocean-life) [🍡](#food-drinks) [🗡️](#items) [💎](#gems) [🌿](#nature-scenes) [🏗️](#buildings) [🌤️](#weather) [🏎️](#vehicles) [⚽](#sports) [🎵](#music) [🎉](#holidays) [🌸](#flowers-plants) [🦄](#fantasy) [🔮](#space-magic) [🎸](#lifestyle) [🌏](#world-cultures) [✨](#mini-icons)
 
 </div>
 
@@ -42,6 +42,14 @@
   <tr>
     <td align="center"><img src="assets/astronaut.svg" width="80" alt="Astronaut"><br><sub><b>Astronaut</b><br>宇航员</sub></td>
     <td align="center"><img src="assets/knight.svg" width="80" alt="Knight"><br><sub><b>Knight</b><br>骑士</sub></td>
+    <td align="center"><img src="assets/chef.svg" width="80" alt="Chef"><br><sub><b>Chef</b><br>厨师</sub></td>
+    <td align="center"><img src="assets/scientist.svg" width="80" alt="Scientist"><br><sub><b>Scientist</b><br>科学家</sub></td>
+    <td align="center"><img src="assets/firefighter.svg" width="80" alt="Firefighter"><br><sub><b>Firefighter</b><br>消防员</sub></td>
+    <td align="center"><img src="assets/princess.svg" width="80" alt="Princess"><br><sub><b>Princess</b><br>公主</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/elf.svg" width="80" alt="Elf"><br><sub><b>Elf</b><br>精灵</sub></td>
+    <td align="center"><img src="assets/vampire.svg" width="80" alt="Vampire"><br><sub><b>Vampire</b><br>吸血鬼</sub></td>
   </tr>
 </table>
 
@@ -68,6 +76,33 @@
   </tr>
   <tr>
     <td align="center"><img src="assets/parrot.svg" width="80" alt="Parrot"><br><sub><b>Parrot</b><br>鹦鹉</sub></td>
+    <td align="center"><img src="assets/flamingo.svg" width="80" alt="Flamingo"><br><sub><b>Flamingo</b><br>火烈鸟</sub></td>
+    <td align="center"><img src="assets/eagle.svg" width="80" alt="Eagle"><br><sub><b>Eagle</b><br>鹰</sub></td>
+    <td align="center"><img src="assets/peacock.svg" width="80" alt="Peacock"><br><sub><b>Peacock</b><br>孔雀</sub></td>
+  </tr>
+</table>
+
+<a id="dinosaurs"></a>
+
+## 🦕 Dinosaurs · 恐龙
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/t-rex.svg" width="80" alt="T-Rex"><br><sub><b>T-Rex</b><br>霸王龙</sub></td>
+    <td align="center"><img src="assets/triceratops.svg" width="80" alt="Triceratops"><br><sub><b>Triceratops</b><br>三角龙</sub></td>
+    <td align="center"><img src="assets/pterodactyl.svg" width="80" alt="Pterodactyl"><br><sub><b>Pterodactyl</b><br>翼龙</sub></td>
+  </tr>
+</table>
+
+<a id="insects"></a>
+
+## 🐛 Insects · 昆虫
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/ladybug.svg" width="80" alt="Ladybug"><br><sub><b>Ladybug</b><br>瓢虫</sub></td>
+    <td align="center"><img src="assets/bee.svg" width="80" alt="Bee"><br><sub><b>Bee</b><br>蜜蜂</sub></td>
+    <td align="center"><img src="assets/caterpillar.svg" width="80" alt="Caterpillar"><br><sub><b>Caterpillar</b><br>毛毛虫</sub></td>
   </tr>
 </table>
 
@@ -100,7 +135,7 @@
 
 <table>
   <tr>
-    <td align="center"><img src="assets/boba-tea.svg" width="80" alt="Boba Tea"><br><sub><b>Boba Tea</b><br>珍珠奶茶</sub></td>
+    <td align="center"><img src="assets/boba-tea.svg" width="80" alt="Boba Tea"><br><sub><b>Boba Tea</b><br>奶茶</sub></td>
     <td align="center"><img src="assets/sushi.svg" width="80" alt="Sushi"><br><sub><b>Sushi</b><br>寿司</sub></td>
     <td align="center"><img src="assets/cake.svg" width="80" alt="Cake"><br><sub><b>Cake</b><br>蛋糕</sub></td>
     <td align="center"><img src="assets/ramen.svg" width="80" alt="Ramen"><br><sub><b>Ramen</b><br>拉面</sub></td>
@@ -118,7 +153,7 @@
   <tr>
     <td align="center"><img src="assets/cupcake.svg" width="80" alt="Cupcake"><br><sub><b>Cupcake</b><br>杯子蛋糕</sub></td>
     <td align="center"><img src="assets/candy.svg" width="80" alt="Candy"><br><sub><b>Candy</b><br>棒棒糖</sub></td>
-    <td align="center"><img src="assets/juice-box.svg" width="80" alt="Juice Box"><br><sub><b>Juice Box</b><br>果汁盒</sub></td>
+    <td align="center"><img src="assets/juice-box.svg" width="80" alt="Juice"><br><sub><b>Juice</b><br>果汁盒</sub></td>
     <td align="center"><img src="assets/cookie.svg" width="80" alt="Cookie"><br><sub><b>Cookie</b><br>曲奇</sub></td>
     <td align="center"><img src="assets/milkshake.svg" width="80" alt="Milkshake"><br><sub><b>Milkshake</b><br>奶昔</sub></td>
     <td align="center"><img src="assets/pudding.svg" width="80" alt="Pudding"><br><sub><b>Pudding</b><br>布丁</sub></td>
@@ -137,9 +172,9 @@
   </tr>
 </table>
 
-<a id="items-objects"></a>
+<a id="items"></a>
 
-## 🗡️ Items & Objects · 物品道具
+## 🗡️ Items · 物品道具
 
 <table>
   <tr>
@@ -161,6 +196,18 @@
   <tr>
     <td align="center"><img src="assets/telescope.svg" width="80" alt="Telescope"><br><sub><b>Telescope</b><br>望远镜</sub></td>
     <td align="center"><img src="assets/music-box.svg" width="80" alt="Music Box"><br><sub><b>Music Box</b><br>音乐盒</sub></td>
+  </tr>
+</table>
+
+<a id="gems"></a>
+
+## 💎 Gems · 宝石
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/ruby.svg" width="80" alt="Ruby"><br><sub><b>Ruby</b><br>红宝石</sub></td>
+    <td align="center"><img src="assets/sapphire.svg" width="80" alt="Sapphire"><br><sub><b>Sapphire</b><br>蓝宝石</sub></td>
+    <td align="center"><img src="assets/emerald.svg" width="80" alt="Emerald"><br><sub><b>Emerald</b><br>祖母绿</sub></td>
   </tr>
 </table>
 
@@ -187,29 +234,21 @@
   </tr>
   <tr>
     <td align="center"><img src="assets/bamboo-forest.svg" width="80" alt="Bamboo"><br><sub><b>Bamboo</b><br>竹林</sub></td>
+    <td align="center"><img src="assets/campfire.svg" width="80" alt="Campfire"><br><sub><b>Campfire</b><br>篝火</sub></td>
+    <td align="center"><img src="assets/snow-globe.svg" width="80" alt="Snow Globe"><br><sub><b>Snow Globe</b><br>雪球</sub></td>
+    <td align="center"><img src="assets/cozy-house.svg" width="80" alt="Cozy House"><br><sub><b>Cozy House</b><br>小屋</sub></td>
   </tr>
 </table>
 
-<a id="music"></a>
+<a id="buildings"></a>
 
-## 🎵 Music · 音乐乐器
+## 🏗️ Buildings · 建筑
 
 <table>
   <tr>
-    <td align="center"><img src="assets/guitar.svg" width="80" alt="Guitar"><br><sub><b>Guitar</b><br>吉他</sub></td>
-    <td align="center"><img src="assets/piano-keys.svg" width="80" alt="Piano"><br><sub><b>Piano</b><br>钢琴</sub></td>
-    <td align="center"><img src="assets/headphones.svg" width="80" alt="Headphones"><br><sub><b>Headphones</b><br>耳机</sub></td>
-    <td align="center"><img src="assets/vinyl.svg" width="80" alt="Vinyl"><br><sub><b>Vinyl</b><br>唱片</sub></td>
-    <td align="center"><img src="assets/trumpet.svg" width="80" alt="Trumpet"><br><sub><b>Trumpet</b><br>小号</sub></td>
-    <td align="center"><img src="assets/drum.svg" width="80" alt="Drum"><br><sub><b>Drum</b><br>鼓</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="assets/violin.svg" width="80" alt="Violin"><br><sub><b>Violin</b><br>小提琴</sub></td>
-    <td align="center"><img src="assets/saxophone.svg" width="80" alt="Saxophone"><br><sub><b>Saxophone</b><br>萨克斯</sub></td>
-    <td align="center"><img src="assets/microphone.svg" width="80" alt="Mic"><br><sub><b>Mic</b><br>麦克风</sub></td>
-    <td align="center"><img src="assets/harp.svg" width="80" alt="Harp"><br><sub><b>Harp</b><br>竖琴</sub></td>
-    <td align="center"><img src="assets/accordion.svg" width="80" alt="Accordion"><br><sub><b>Accordion</b><br>手风琴</sub></td>
-    <td align="center"><img src="assets/xylophone.svg" width="80" alt="Xylophone"><br><sub><b>Xylophone</b><br>木琴</sub></td>
+    <td align="center"><img src="assets/windmill.svg" width="80" alt="Windmill"><br><sub><b>Windmill</b><br>风车</sub></td>
+    <td align="center"><img src="assets/pagoda.svg" width="80" alt="Pagoda"><br><sub><b>Pagoda</b><br>宝塔</sub></td>
+    <td align="center"><img src="assets/igloo.svg" width="80" alt="Igloo"><br><sub><b>Igloo</b><br>冰屋</sub></td>
   </tr>
 </table>
 
@@ -242,7 +281,7 @@
 
 <table>
   <tr>
-    <td align="center"><img src="assets/car.svg" width="80" alt="Car"><br><sub><b>Car</b><br>小汽车</sub></td>
+    <td align="center"><img src="assets/car.svg" width="80" alt="Car"><br><sub><b>Car</b><br>汽车</sub></td>
     <td align="center"><img src="assets/bicycle.svg" width="80" alt="Bicycle"><br><sub><b>Bicycle</b><br>自行车</sub></td>
     <td align="center"><img src="assets/airplane.svg" width="80" alt="Airplane"><br><sub><b>Airplane</b><br>飞机</sub></td>
     <td align="center"><img src="assets/sailboat.svg" width="80" alt="Sailboat"><br><sub><b>Sailboat</b><br>帆船</sub></td>
@@ -279,6 +318,29 @@
     <td align="center"><img src="assets/baseball.svg" width="80" alt="Baseball"><br><sub><b>Baseball</b><br>棒球</sub></td>
     <td align="center"><img src="assets/ping-pong.svg" width="80" alt="Ping Pong"><br><sub><b>Ping Pong</b><br>乒乓</sub></td>
     <td align="center"><img src="assets/swimming.svg" width="80" alt="Swimming"><br><sub><b>Swimming</b><br>游泳</sub></td>
+  </tr>
+</table>
+
+<a id="music"></a>
+
+## 🎵 Music · 音乐乐器
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/guitar.svg" width="80" alt="Guitar"><br><sub><b>Guitar</b><br>吉他</sub></td>
+    <td align="center"><img src="assets/piano-keys.svg" width="80" alt="Piano"><br><sub><b>Piano</b><br>钢琴</sub></td>
+    <td align="center"><img src="assets/headphones.svg" width="80" alt="Headphones"><br><sub><b>Headphones</b><br>耳机</sub></td>
+    <td align="center"><img src="assets/vinyl.svg" width="80" alt="Vinyl"><br><sub><b>Vinyl</b><br>唱片</sub></td>
+    <td align="center"><img src="assets/trumpet.svg" width="80" alt="Trumpet"><br><sub><b>Trumpet</b><br>小号</sub></td>
+    <td align="center"><img src="assets/drum.svg" width="80" alt="Drum"><br><sub><b>Drum</b><br>鼓</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/violin.svg" width="80" alt="Violin"><br><sub><b>Violin</b><br>小提琴</sub></td>
+    <td align="center"><img src="assets/saxophone.svg" width="80" alt="Saxophone"><br><sub><b>Saxophone</b><br>萨克斯</sub></td>
+    <td align="center"><img src="assets/microphone.svg" width="80" alt="Mic"><br><sub><b>Mic</b><br>麦克风</sub></td>
+    <td align="center"><img src="assets/harp.svg" width="80" alt="Harp"><br><sub><b>Harp</b><br>竖琴</sub></td>
+    <td align="center"><img src="assets/accordion.svg" width="80" alt="Accordion"><br><sub><b>Accordion</b><br>手风琴</sub></td>
+    <td align="center"><img src="assets/xylophone.svg" width="80" alt="Xylophone"><br><sub><b>Xylophone</b><br>木琴</sub></td>
   </tr>
 </table>
 
@@ -342,6 +404,9 @@
     <td align="center"><img src="assets/dragon-egg.svg" width="80" alt="Dragon Egg"><br><sub><b>Dragon Egg</b><br>龙蛋</sub></td>
     <td align="center"><img src="assets/fairy-mushroom.svg" width="80" alt="Glow Shroom"><br><sub><b>Glow Shroom</b><br>发光蘑菇</sub></td>
     <td align="center"><img src="assets/treasure-pile.svg" width="80" alt="Treasure"><br><sub><b>Treasure</b><br>宝藏堆</sub></td>
+    <td align="center"><img src="assets/cloud-cat.svg" width="80" alt="Cloud Cat"><br><sub><b>Cloud Cat</b><br>云朵猫</sub></td>
+    <td align="center"><img src="assets/moon-bunny.svg" width="80" alt="Moon Bunny"><br><sub><b>Moon Bunny</b><br>月亮兔</sub></td>
+    <td align="center"><img src="assets/leaf-fairy.svg" width="80" alt="Leaf Fairy"><br><sub><b>Leaf Fairy</b><br>叶精灵</sub></td>
   </tr>
 </table>
 
@@ -353,7 +418,7 @@
   <tr>
     <td align="center"><img src="assets/planet.svg" width="80" alt="Planet"><br><sub><b>Planet</b><br>星球</sub></td>
     <td align="center"><img src="assets/ufo.svg" width="80" alt="UFO"><br><sub><b>UFO</b><br>飞碟</sub></td>
-    <td align="center"><img src="assets/wizard-hat.svg" width="80" alt="Wizard Hat"><br><sub><b>Wizard Hat</b><br>巫师帽</sub></td>
+    <td align="center"><img src="assets/wizard-hat.svg" width="80" alt="Wizard"><br><sub><b>Wizard</b><br>巫师帽</sub></td>
     <td align="center"><img src="assets/fairy.svg" width="80" alt="Fairy"><br><sub><b>Fairy</b><br>仙子</sub></td>
     <td align="center"><img src="assets/potion-set.svg" width="80" alt="Potions"><br><sub><b>Potions</b><br>药水组</sub></td>
     <td align="center"><img src="assets/treasure-map.svg" width="80" alt="Map"><br><sub><b>Map</b><br>藏宝图</sub></td>
@@ -451,7 +516,7 @@
 <table>
   <tr>
     <td align="center"><img src="assets/sugar-skull.svg" width="80" alt="Sugar Skull"><br><sub><b>Sugar Skull</b><br>糖骷髅🇲🇽</sub></td>
-    <td align="center"><img src="assets/cactus-sombrero.svg" width="80" alt="Sombrero"><br><sub><b>Sombrero</b><br>戴帽仙人掌🇲🇽</sub></td>
+    <td align="center"><img src="assets/cactus-sombrero.svg" width="80" alt="Sombrero"><br><sub><b>Sombrero</b><br>仙人掌🇲🇽</sub></td>
     <td align="center"><img src="assets/pinata.svg" width="80" alt="Piñata"><br><sub><b>Piñata</b><br>皮纳塔🇲🇽</sub></td>
     <td align="center"><img src="assets/viking-helmet.svg" width="80" alt="Viking"><br><sub><b>Viking</b><br>维京盔⚔️</sub></td>
     <td align="center"><img src="assets/rune-stone.svg" width="80" alt="Rune"><br><sub><b>Rune</b><br>符文石⚔️</sub></td>
@@ -459,7 +524,7 @@
   </tr>
   <tr>
     <td align="center"><img src="assets/hanbok.svg" width="80" alt="Hanbok"><br><sub><b>Hanbok</b><br>韩服🇰🇷</sub></td>
-    <td align="center"><img src="assets/kimchi-jar.svg" width="80" alt="Kimchi"><br><sub><b>Kimchi</b><br>泡菜坛🇰🇷</sub></td>
+    <td align="center"><img src="assets/kimchi-jar.svg" width="80" alt="Kimchi"><br><sub><b>Kimchi</b><br>泡菜🇰🇷</sub></td>
     <td align="center"><img src="assets/tteok.svg" width="80" alt="Tteok"><br><sub><b>Tteok</b><br>年糕🇰🇷</sub></td>
     <td align="center"><img src="assets/taj-mahal.svg" width="80" alt="Taj Mahal"><br><sub><b>Taj Mahal</b><br>泰姬陵🇮🇳</sub></td>
     <td align="center"><img src="assets/elephant.svg" width="80" alt="Elephant"><br><sub><b>Elephant</b><br>大象🇮🇳</sub></td>
@@ -475,7 +540,7 @@
   </tr>
   <tr>
     <td align="center"><img src="assets/teacup-british.svg" width="80" alt="Tea"><br><sub><b>Tea</b><br>英式茶🇬🇧</sub></td>
-    <td align="center"><img src="assets/london-bus.svg" width="80" alt="Bus"><br><sub><b>Bus</b><br>双层巴士🇬🇧</sub></td>
+    <td align="center"><img src="assets/london-bus.svg" width="80" alt="Bus"><br><sub><b>Bus</b><br>巴士🇬🇧</sub></td>
     <td align="center"><img src="assets/guard-hat.svg" width="80" alt="Guard"><br><sub><b>Guard</b><br>卫兵🇬🇧</sub></td>
   </tr>
 </table>
@@ -532,7 +597,6 @@ All assets use **[SWEETIE-16](https://lospec.com/palette-list/sweetie-16)**:
 ```bash
 git clone https://github.com/Furinaaa-Cancan/pixel-art.git
 ```
-
 ```html
 <img src="assets/heart.svg" width="64" style="image-rendering: pixelated">
 ```
@@ -543,13 +607,7 @@ git clone https://github.com/Furinaaa-Cancan/pixel-art.git
 
 **Every pixel placed by algorithm, every color chosen with care.**
 
-每一个像素由算法安放，每一种颜色经精心挑选。
-
-<br>
-
 ⭐ **Star this repo if you like it!** · **喜欢请点 Star！** ⭐
-
-<br>
 
 <sub>MIT License · Built with <a href="https://claude.ai/claude-code">Claude Code</a></sub>
 
