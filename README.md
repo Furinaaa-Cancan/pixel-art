@@ -2,17 +2,19 @@
 
 # 🎮 Pixel Art Collection
 
-**手工打造的像素风 SVG 素材库 · A handcrafted pixel-art SVG asset library**
+**292 handcrafted pixel-art SVG assets — crisp at any size**
+
+**292 个手工像素风 SVG 素材 —— 任意尺寸，始终锐利**
 
 <p>
-<img src="assets/cat.svg" width="42" /> <img src="assets/dragon.svg" width="42" /> <img src="assets/boba-tea.svg" width="42" /> <img src="assets/unicorn.svg" width="42" /> <img src="assets/cherry-blossom.svg" width="42" /> <img src="assets/rocket.svg" width="42" /> <img src="assets/whale.svg" width="42" /> <img src="assets/crown.svg" width="42" /> <img src="assets/sakura.svg" width="42" /> <img src="assets/guitar.svg" width="42" /> <img src="assets/snowman.svg" width="42" /> <img src="assets/pyramid.svg" width="42" /> <img src="assets/t-rex.svg" width="42" /> <img src="assets/bee.svg" width="42" /> <img src="assets/ruby.svg" width="42" /> <img src="assets/face-happy.svg" width="42" /> <img src="assets/saturn.svg" width="42" /> <img src="assets/earth.svg" width="42" /> 
+<img src="assets/cat.svg" width="56" /> <img src="assets/boba-tea.svg" width="56" /> <img src="assets/unicorn.svg" width="56" /> <img src="assets/whale.svg" width="56" /> <img src="assets/sakura.svg" width="56" /> <img src="assets/face-happy.svg" width="56" /> <img src="assets/ruby.svg" width="56" /> <img src="assets/t-rex.svg" width="56" /> <img src="assets/guitar.svg" width="56" /> <img src="assets/snowman.svg" width="56" /> <img src="assets/pyramid.svg" width="56" /> <img src="assets/earth.svg" width="56" /> 
 </p>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-292-ff6480?style=flat-square)](#gallery) [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
-<details><summary><b>📍 Quick Nav · 快速导航</b></summary>
+<details><summary><b>📍 Quick Nav · 快速导航</b></summary><br>
 
-[🐾 Cute Characters](#cute-characters) · [🐧 Animals](#animals) · [🦕 Dinosaurs](#dinosaurs) · [🐛 Insects](#insects) · [🐙 Ocean Life](#ocean-life) · [😊 Emoji Faces](#emoji-faces) · [🍡 Food & Drinks](#food-drinks) · [🗡️ Items](#items) · [💎 Gems](#gems) · [🌿 Nature & Scenes](#nature-scenes) · [🏗️ Buildings](#buildings) · [🔭 Astronomy](#astronomy) · [🌤️ Weather](#weather) · [🏎️ Vehicles](#vehicles) · [⚽ Sports](#sports) · [🎵 Music](#music) · [🎉 Holidays](#holidays) · [🌸 Flowers & Plants](#flowers-plants) · [🦄 Fantasy](#fantasy) · [🔮 Space & Magic](#space-magic) · [🎸 Lifestyle](#lifestyle) · [🌏 Cultures](#world-cultures) · [✨ Mini](#mini-icons)
+🐾 [Cute Characters](#cute-characters) · 🐧 [Animals](#animals) · 🐙 [Ocean Life](#ocean-life) · 😊 [Emoji Faces](#emoji-faces) · 🍡 [Food & Drinks](#food--drinks) · 🗡️ [Items & Gems](#items--gems) · 🌿 [Nature & Scenes](#nature--scenes) · 🌤️ [Weather](#weather) · 🏎️ [Vehicles](#vehicles) · ⚽ [Sports](#sports) · 🎵 [Music](#music) · 🎉 [Holidays](#holidays) · 🌸 [Flowers & Plants](#flowers--plants) · 🦄 [Fantasy](#fantasy) · 🔮 [Space & Magic](#space--magic) · 🎸 [Lifestyle](#lifestyle) · 🌏 [Cultures](#world-cultures) · ✨ [Mini](#mini-icons)
 
 </details>
 
@@ -24,7 +26,7 @@
 
 <a id="cute-characters"></a>
 
-## 🐾 Cute Characters · 可爱角色 <sub>(20)</sub>
+## 🐾 Cute Characters · 可爱角色
 
 <table>
   <tr>
@@ -59,7 +61,7 @@
 
 <a id="animals"></a>
 
-## 🐧 Animals · 动物世界 <sub>(16)</sub>
+## 🐧 Animals · 动物世界
 
 <table>
   <tr>
@@ -83,32 +85,18 @@
     <td align="center"><img src="assets/flamingo.svg" width="80" alt="Flamingo"><br><sub><b>Flamingo</b><br>火烈鸟</sub></td>
     <td align="center"><img src="assets/eagle.svg" width="80" alt="Eagle"><br><sub><b>Eagle</b><br>鹰</sub></td>
     <td align="center"><img src="assets/peacock.svg" width="80" alt="Peacock"><br><sub><b>Peacock</b><br>孔雀</sub></td>
-  </tr>
-</table>
-
-<a id="dinosaurs"></a>
-
-## 🦕 Dinosaurs · 恐龙 <sub>(6)</sub>
-
-<table>
-  <tr>
     <td align="center"><img src="assets/t-rex.svg" width="80" alt="T-Rex"><br><sub><b>T-Rex</b><br>霸王龙</sub></td>
     <td align="center"><img src="assets/triceratops.svg" width="80" alt="Triceratops"><br><sub><b>Triceratops</b><br>三角龙</sub></td>
+  </tr>
+  <tr>
     <td align="center"><img src="assets/pterodactyl.svg" width="80" alt="Pterodactyl"><br><sub><b>Pterodactyl</b><br>翼龙</sub></td>
     <td align="center"><img src="assets/brontosaurus.svg" width="80" alt="Brontosaurus"><br><sub><b>Brontosaurus</b><br>雷龙</sub></td>
     <td align="center"><img src="assets/stegosaurus.svg" width="80" alt="Stegosaurus"><br><sub><b>Stegosaurus</b><br>剑龙</sub></td>
     <td align="center"><img src="assets/dino-egg.svg" width="80" alt="Dino Egg"><br><sub><b>Dino Egg</b><br>恐龙蛋</sub></td>
-  </tr>
-</table>
-
-<a id="insects"></a>
-
-## 🐛 Insects · 昆虫 <sub>(6)</sub>
-
-<table>
-  <tr>
     <td align="center"><img src="assets/ladybug.svg" width="80" alt="Ladybug"><br><sub><b>Ladybug</b><br>瓢虫</sub></td>
     <td align="center"><img src="assets/bee.svg" width="80" alt="Bee"><br><sub><b>Bee</b><br>蜜蜂</sub></td>
+  </tr>
+  <tr>
     <td align="center"><img src="assets/caterpillar.svg" width="80" alt="Caterpillar"><br><sub><b>Caterpillar</b><br>毛毛虫</sub></td>
     <td align="center"><img src="assets/dragonfly.svg" width="80" alt="Dragonfly"><br><sub><b>Dragonfly</b><br>蜻蜓</sub></td>
     <td align="center"><img src="assets/firefly.svg" width="80" alt="Firefly"><br><sub><b>Firefly</b><br>萤火虫</sub></td>
@@ -118,7 +106,7 @@
 
 <a id="ocean-life"></a>
 
-## 🐙 Ocean Life · 海洋生物 <sub>(12)</sub>
+## 🐙 Ocean Life · 海洋生物
 
 <table>
   <tr>
@@ -141,7 +129,7 @@
 
 <a id="emoji-faces"></a>
 
-## 😊 Emoji Faces · 表情包 <sub>(6)</sub>
+## 😊 Emoji Faces · 表情包
 
 <table>
   <tr>
@@ -154,9 +142,9 @@
   </tr>
 </table>
 
-<a id="food-drinks"></a>
+<a id="food--drinks"></a>
 
-## 🍡 Food & Drinks · 美食饮品 <sub>(26)</sub>
+## 🍡 Food & Drinks · 美食饮品
 
 <table>
   <tr>
@@ -197,9 +185,9 @@
   </tr>
 </table>
 
-<a id="items"></a>
+<a id="items--gems"></a>
 
-## 🗡️ Items · 物品道具 <sub>(14)</sub>
+## 🗡️ Items & Gems · 物品宝石
 
 <table>
   <tr>
@@ -221,27 +209,20 @@
   <tr>
     <td align="center"><img src="assets/telescope.svg" width="80" alt="Telescope"><br><sub><b>Telescope</b><br>望远镜</sub></td>
     <td align="center"><img src="assets/music-box.svg" width="80" alt="Music Box"><br><sub><b>Music Box</b><br>音乐盒</sub></td>
-  </tr>
-</table>
-
-<a id="gems"></a>
-
-## 💎 Gems · 宝石 <sub>(6)</sub>
-
-<table>
-  <tr>
     <td align="center"><img src="assets/ruby.svg" width="80" alt="Ruby"><br><sub><b>Ruby</b><br>红宝石</sub></td>
     <td align="center"><img src="assets/sapphire.svg" width="80" alt="Sapphire"><br><sub><b>Sapphire</b><br>蓝宝石</sub></td>
     <td align="center"><img src="assets/emerald.svg" width="80" alt="Emerald"><br><sub><b>Emerald</b><br>祖母绿</sub></td>
     <td align="center"><img src="assets/amethyst.svg" width="80" alt="Amethyst"><br><sub><b>Amethyst</b><br>紫水晶</sub></td>
+  </tr>
+  <tr>
     <td align="center"><img src="assets/diamond.svg" width="80" alt="Diamond"><br><sub><b>Diamond</b><br>钻石</sub></td>
     <td align="center"><img src="assets/opal.svg" width="80" alt="Opal"><br><sub><b>Opal</b><br>蛋白石</sub></td>
   </tr>
 </table>
 
-<a id="nature-scenes"></a>
+<a id="nature--scenes"></a>
 
-## 🌿 Nature & Scenes · 自然场景 <sub>(16)</sub>
+## 🌿 Nature & Scenes · 自然场景
 
 <table>
   <tr>
@@ -265,39 +246,25 @@
     <td align="center"><img src="assets/campfire.svg" width="80" alt="Campfire"><br><sub><b>Campfire</b><br>篝火</sub></td>
     <td align="center"><img src="assets/snow-globe.svg" width="80" alt="Snow Globe"><br><sub><b>Snow Globe</b><br>雪球</sub></td>
     <td align="center"><img src="assets/cozy-house.svg" width="80" alt="Cozy House"><br><sub><b>Cozy House</b><br>小屋</sub></td>
-  </tr>
-</table>
-
-<a id="buildings"></a>
-
-## 🏗️ Buildings · 建筑 <sub>(6)</sub>
-
-<table>
-  <tr>
     <td align="center"><img src="assets/windmill.svg" width="80" alt="Windmill"><br><sub><b>Windmill</b><br>风车</sub></td>
     <td align="center"><img src="assets/pagoda.svg" width="80" alt="Pagoda"><br><sub><b>Pagoda</b><br>宝塔</sub></td>
+  </tr>
+  <tr>
     <td align="center"><img src="assets/igloo.svg" width="80" alt="Igloo"><br><sub><b>Igloo</b><br>冰屋</sub></td>
     <td align="center"><img src="assets/treehouse.svg" width="80" alt="Treehouse"><br><sub><b>Treehouse</b><br>树屋</sub></td>
     <td align="center"><img src="assets/castle-tower.svg" width="80" alt="Tower"><br><sub><b>Tower</b><br>城塔</sub></td>
     <td align="center"><img src="assets/tent.svg" width="80" alt="Tent"><br><sub><b>Tent</b><br>帐篷</sub></td>
-  </tr>
-</table>
-
-<a id="astronomy"></a>
-
-## 🔭 Astronomy · 天文 <sub>(3)</sub>
-
-<table>
-  <tr>
     <td align="center"><img src="assets/saturn.svg" width="80" alt="Saturn"><br><sub><b>Saturn</b><br>土星</sub></td>
-    <td align="center"><img src="assets/shooting-star.svg" width="80" alt="Shooting Star"><br><sub><b>Shooting Star</b><br>流星</sub></td>
+    <td align="center"><img src="assets/shooting-star.svg" width="80" alt="Meteor"><br><sub><b>Meteor</b><br>流星</sub></td>
+  </tr>
+  <tr>
     <td align="center"><img src="assets/earth.svg" width="80" alt="Earth"><br><sub><b>Earth</b><br>地球</sub></td>
   </tr>
 </table>
 
 <a id="weather"></a>
 
-## 🌤️ Weather · 天气季节 <sub>(12)</sub>
+## 🌤️ Weather · 天气季节
 
 <table>
   <tr>
@@ -320,7 +287,7 @@
 
 <a id="vehicles"></a>
 
-## 🏎️ Vehicles · 交通工具 <sub>(12)</sub>
+## 🏎️ Vehicles · 交通工具
 
 <table>
   <tr>
@@ -343,7 +310,7 @@
 
 <a id="sports"></a>
 
-## ⚽ Sports · 运动游戏 <sub>(12)</sub>
+## ⚽ Sports · 运动游戏
 
 <table>
   <tr>
@@ -366,7 +333,7 @@
 
 <a id="music"></a>
 
-## 🎵 Music · 音乐乐器 <sub>(12)</sub>
+## 🎵 Music · 音乐乐器
 
 <table>
   <tr>
@@ -389,7 +356,7 @@
 
 <a id="holidays"></a>
 
-## 🎉 Holidays · 节日庆祝 <sub>(9)</sub>
+## 🎉 Holidays · 节日庆祝
 
 <table>
   <tr>
@@ -407,9 +374,9 @@
   </tr>
 </table>
 
-<a id="flowers-plants"></a>
+<a id="flowers--plants"></a>
 
-## 🌸 Flowers & Plants · 花卉植物 <sub>(12)</sub>
+## 🌸 Flowers & Plants · 花卉植物
 
 <table>
   <tr>
@@ -432,7 +399,7 @@
 
 <a id="fantasy"></a>
 
-## 🦄 Fantasy · 童话幻想 <sub>(12)</sub>
+## 🦄 Fantasy · 童话幻想
 
 <table>
   <tr>
@@ -453,9 +420,9 @@
   </tr>
 </table>
 
-<a id="space-magic"></a>
+<a id="space--magic"></a>
 
-## 🔮 Space & Magic · 太空魔法 <sub>(10)</sub>
+## 🔮 Space & Magic · 太空魔法
 
 <table>
   <tr>
@@ -476,7 +443,7 @@
 
 <a id="lifestyle"></a>
 
-## 🎸 Lifestyle · 生活日常 <sub>(10)</sub>
+## 🎸 Lifestyle · 生活日常
 
 <table>
   <tr>
@@ -499,7 +466,7 @@
 
 ## 🌏 World Cultures · 世界文化
 
-### 🏮 Chinese · 中国 <sub>(9)</sub>
+### 🏮 Chinese · 中国
 
 <table>
   <tr>
@@ -517,7 +484,7 @@
   </tr>
 </table>
 
-### 🏯 Japanese · 日本 <sub>(10)</sub>
+### 🏯 Japanese · 日本
 
 <table>
   <tr>
@@ -536,7 +503,7 @@
   </tr>
 </table>
 
-### 🏺 Egyptian · 埃及 <sub>(9)</sub>
+### 🏺 Egyptian · 埃及
 
 <table>
   <tr>
@@ -554,7 +521,7 @@
   </tr>
 </table>
 
-### 🌍 More Cultures · 更多文化 <sub>(21)</sub>
+### 🌍 More Cultures · 更多文化
 
 <table>
   <tr>
@@ -590,7 +557,7 @@
 
 <a id="mini-icons"></a>
 
-## ✨ Mini Icons · 迷你图标 <sub>16×16 · (5)</sub>
+## ✨ Mini Icons · 迷你图标 <sub>16×16</sub>
 
 <table>
   <tr>
@@ -640,7 +607,16 @@ git clone https://github.com/Furinaaa-Cancan/pixel-art.git
 ```
 
 ```html
+<!-- HTML -->
 <img src="assets/heart.svg" width="64" style="image-rendering: pixelated">
+```
+
+```css
+/* CSS background */
+.icon {
+  background: url("assets/star.svg") no-repeat center/contain;
+  image-rendering: pixelated;
+}
 ```
 
 ---
@@ -649,7 +625,13 @@ git clone https://github.com/Furinaaa-Cancan/pixel-art.git
 
 **Every pixel placed by algorithm, every color chosen with care.**
 
+每一个像素由算法安放，每一种颜色经精心挑选。
+
+<br>
+
 ⭐ **Star this repo if you like it!** · **喜欢请点 Star！** ⭐
+
+<br>
 
 <sub>MIT License · Built with <a href="https://claude.ai/claude-code">Claude Code</a></sub>
 
