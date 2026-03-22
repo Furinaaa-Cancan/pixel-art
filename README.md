@@ -9,7 +9,7 @@
 <br>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![Assets](https://img.shields.io/badge/assets-172-ff6480?style=flat-square)](#gallery)
+[![Assets](https://img.shields.io/badge/assets-190-ff6480?style=flat-square)](#gallery)
 [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette)
 [![Grid](https://img.shields.io/badge/grid-16×16%20%7C%2032×32-ffd93d?style=flat-square)](#gallery)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -74,6 +74,42 @@
     <td align="center"><img src="assets/sea-turtle.svg" width="80" alt="Sea Turtle"><br><sub><b>Sea Turtle</b><br>海龟</sub></td>
     <td align="center"><img src="assets/dolphin.svg" width="80" alt="Dolphin"><br><sub><b>Dolphin</b><br>海豚</sub></td>
     <td align="center"><img src="assets/clownfish.svg" width="80" alt="Clownfish"><br><sub><b>Clownfish</b><br>小丑鱼</sub></td>
+  </tr>
+</table>
+
+## 🏎️ Vehicles · 交通工具
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/car.svg" width="80" alt="Car"><br><sub><b>Car</b><br>小汽车</sub></td>
+    <td align="center"><img src="assets/bicycle.svg" width="80" alt="Bicycle"><br><sub><b>Bicycle</b><br>自行车</sub></td>
+    <td align="center"><img src="assets/airplane.svg" width="80" alt="Airplane"><br><sub><b>Airplane</b><br>飞机</sub></td>
+    <td align="center"><img src="assets/sailboat.svg" width="80" alt="Sailboat"><br><sub><b>Sailboat</b><br>帆船</sub></td>
+    <td align="center"><img src="assets/train.svg" width="80" alt="Train"><br><sub><b>Train</b><br>火车</sub></td>
+    <td align="center"><img src="assets/helicopter.svg" width="80" alt="Helicopter"><br><sub><b>Helicopter</b><br>直升机</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/submarine.svg" width="80" alt="Submarine"><br><sub><b>Submarine</b><br>潜水艇</sub></td>
+    <td align="center"><img src="assets/hot-air-balloon.svg" width="80" alt="Balloon"><br><sub><b>Balloon</b><br>热气球</sub></td>
+    <td align="center"><img src="assets/scooter.svg" width="80" alt="Scooter"><br><sub><b>Scooter</b><br>踏板车</sub></td>
+  </tr>
+</table>
+
+## ⚽ Sports & Games · 运动游戏
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/soccer-ball.svg" width="80" alt="Soccer"><br><sub><b>Soccer</b><br>足球</sub></td>
+    <td align="center"><img src="assets/basketball.svg" width="80" alt="Basketball"><br><sub><b>Basketball</b><br>篮球</sub></td>
+    <td align="center"><img src="assets/trophy-cup.svg" width="80" alt="Trophy"><br><sub><b>Trophy</b><br>奖杯</sub></td>
+    <td align="center"><img src="assets/dice.svg" width="80" alt="Dice"><br><sub><b>Dice</b><br>骰子</sub></td>
+    <td align="center"><img src="assets/chess-piece.svg" width="80" alt="Chess King"><br><sub><b>Chess King</b><br>棋王</sub></td>
+    <td align="center"><img src="assets/skateboard.svg" width="80" alt="Skateboard"><br><sub><b>Skateboard</b><br>滑板</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/tennis-racket.svg" width="80" alt="Tennis"><br><sub><b>Tennis</b><br>网球</sub></td>
+    <td align="center"><img src="assets/bowling.svg" width="80" alt="Bowling"><br><sub><b>Bowling</b><br>保龄球</sub></td>
+    <td align="center"><img src="assets/medal.svg" width="80" alt="Medal"><br><sub><b>Medal</b><br>奖牌</sub></td>
   </tr>
 </table>
 
