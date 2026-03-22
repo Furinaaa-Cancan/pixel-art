@@ -1,0 +1,16 @@
+<!--
+  Clawd v2: 宽扁型 (Wide & Flat)
+  身体 22x10, 32x32 画布
+  设计思路：最宽扁的版本，身体22px宽10px高，比例2.2:1
+  强调横向延展感，腿稍长(3x5)以平衡视觉重心
+  眼睛位置偏外侧，增加呆萌感
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <!-- 身体 主体 #D97757: x5-26, y8-17 (22px宽, 10px高) -->
+  <path d="M5 8h22v10H5z" fill="#D97757"/>
+  <!-- 眼睛 #2A2A2A: 2x2 偏外侧 at (8,10) 和 (22,10) -->
+  <path d="M8 10h2v2H8z M22 10h2v2h-2z" fill="#2A2A2A"/>
+  <!-- 4条腿 #C46A4A: 各3px宽 x 5px高 -->
+  <!-- 左1: x7 左2: x12 右1: x17 右2: x22 -->
+  <path d="M7 17h3v5H7z M12 17h3v5h-3z M17 17h3v5h-3z M22 17h3v5h-3z" fill="#C46A4A"/>
+</svg>

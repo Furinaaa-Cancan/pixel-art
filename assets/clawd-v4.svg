@@ -1,0 +1,16 @@
+<!--
+  Clawd v4: 方块型 (Blocky / Square-ish)
+  身体 16x14, 接近正方形, 32x32 画布
+  设计思路：身体接近正方形(比例1.14:1)，更敦实厚重
+  腿更短(3px高)，显得稳重
+  眼睛2x2，位于上部1/3处
+  整体像一个小方块站着
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <!-- 身体 主体 #D97757: x8-23, y6-19 (16px宽, 14px高) -->
+  <path d="M8 6h16v14H8z" fill="#D97757"/>
+  <!-- 眼睛 #2A2A2A: 2x2 at (11,9) 和 (19,9) - 上部1/3 -->
+  <path d="M11 9h2v2h-2z M19 9h2v2h-2z" fill="#2A2A2A"/>
+  <!-- 4条腿 #C46A4A: 各3px宽 x 3px高, 短粗 -->
+  <path d="M9 19h3v3H9z M14 19h3v3h-3z M17 19h3v3h-3z M21 19h3v3h-3z" fill="#C46A4A"/>
+</svg>

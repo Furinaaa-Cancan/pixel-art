@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" shape-rendering="crispEdges">
+<!-- Claude 小动物 开心 32x32 -->
+<!-- 基于 basic 版本，眼睛变弯眯眼 + 张嘴笑 -->
+
+<!-- ===== 轮廓 #9B5238 ===== -->
+<path fill="#9B5238" d="
+  M7 5h18v1H7z
+  M6 6h1v1H6z
+  M25 6h1v1h-1z
+  M5 7h1v11H5z
+  M26 7h1v11h-1z
+  M6 18h20v1H6z
+"/>
+
+<!-- 转角AA #C06E45 -->
+<path fill="#C06E45" d="
+  M7 6h1v1H7z
+  M24 6h1v1h-1z
+  M6 17h1v1H6z
+  M25 17h1v1h-1z
+"/>
+
+<!-- 高光带 #E8A878 -->
+<path fill="#E8A878" d="
+  M8 6h16v1H8z
+  M6 7h2v1H6z
+  M7 7h1v2H7z
+"/>
+
+<!-- 主体 #D4835B -->
+<path fill="#D4835B" d="
+  M8 7h17v1H8z
+  M7 8h1v1H7z
+  M8 8h17v7H8z
+  M7 9h1v6H7z
+"/>
+
+<!-- 中间阴影 #C06E45 -->
+<path fill="#C06E45" d="
+  M7 15h18v1H7z
+  M7 16h18v1H7z
+  M25 8h1v9h-1z
+"/>
+
+<!-- 暗影 #A85A38 -->
+<path fill="#A85A38" d="
+  M6 17h1v1H6z
+  M7 17h18v1H7z
+  M25 17h1v1h-1z
+"/>
+
+<!-- ===== 眯眼（开心弯眼）#2A2A2A ===== -->
+<!-- 左眼：弯弧形 -->
+<path fill="#2A2A2A" d="
+  M9 10h1v1H9z
+  M10 9h2v1h-2z
+  M12 10h1v1h-1z
+"/>
+<!-- 右眼：弯弧形 -->
+<path fill="#2A2A2A" d="
+  M19 10h1v1h-1z
+  M20 9h2v1h-2z
+  M22 10h1v1h-1z
+"/>
+
+<!-- ===== 张嘴笑 ===== -->
+<!-- 嘴巴外框 #9B5238 -->
+<path fill="#9B5238" d="
+  M13 13h1v1h-1z
+  M14 12h4v1h-4z
+  M18 13h1v1h-1z
+  M13 14h6v1h-6z
+"/>
+<!-- 嘴巴内部 #C0483A -->
+<path fill="#C0483A" d="
+  M14 13h4v1h-4z
+"/>
+
+<!-- ===== 腿 ===== -->
+<path fill="#9B5238" d="
+  M7 18h1v6H7z
+  M10 18h1v6h-1z
+  M12 18h1v6h-1z
+  M15 18h1v6h-1z
+  M17 18h1v6h-1z
+  M20 18h1v6h-1z
+  M22 18h1v6h-1z
+  M25 18h1v6h-1z
+  M7 24h4v1H7z
+  M12 24h4v1h-4z
+  M17 24h4v1h-4z
+  M22 24h4v1h-4z
+"/>
+<path fill="#C06E45" d="
+  M8 18h2v5H8z
+  M13 18h2v5h-2z
+  M18 18h2v5h-2z
+  M23 18h2v5h-2z
+"/>
+<path fill="#D4835B" d="
+  M8 18h1v4H8z
+  M13 18h1v4h-1z
+  M18 18h1v4h-1z
+  M23 18h1v4h-1z
+"/>
+<path fill="#9B5238" d="
+  M8 23h2v1H8z
+  M13 23h2v1h-2z
+  M18 23h2v1h-2z
+  M23 23h2v1h-2z
+"/>
+
+</svg>

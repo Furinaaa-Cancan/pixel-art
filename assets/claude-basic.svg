@@ -1,121 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" shape-rendering="crispEdges">
-<!-- Claude 小动物 基础站立 32x32 — 专业像素画技法 -->
-<!-- 技法: selout轮廓 + 单光源(左上) + 眼睛高光 + 转角AA -->
-<!-- 色板(6色):
-  轮廓: #9B5238
-  高光: #E8A878
-  主体: #D4835B
-  中影: #C06E45
-  暗影: #A85A38
-  眼睛: #2A2A2A
-  眼高光: #FFFFFF
--->
+<!-- Clawd 像素吉祥物 基础站立 32x32 -->
+<!-- 临摹官方像素画：极简纯色方块，不加多余装饰 -->
+<!-- 只用3色：主体#D97757 腿#C46A4A 眼睛#2A2A2A -->
 
-<!-- ===== 轮廓 #9B5238 ===== -->
-<!-- 顶部轮廓（含AA圆角） -->
-<path fill="#9B5238" d="
-  M7 5h18v1H7z
-  M6 6h1v1H6z
-  M25 6h1v1h-1z
-"/>
-<!-- 左侧轮廓 -->
-<path fill="#9B5238" d="M5 7h1v11H5z"/>
-<!-- 右侧轮廓 -->
-<path fill="#9B5238" d="M26 7h1v11h-1z"/>
-<!-- 底部身体轮廓 -->
-<path fill="#9B5238" d="M6 18h20v1H6z"/>
+<!-- 身体：纯色大方块 (22x12) -->
+<path fill="#D97757" d="M5 5h22v12H5z"/>
 
-<!-- ===== 转角AA像素 #C06E45 ===== -->
-<path fill="#C06E45" d="
-  M7 6h1v1H7z
-  M24 6h1v1h-1z
-  M6 17h1v1H6z
-  M25 17h1v1h-1z
+<!-- 眼睛：2个小黑块 1x2，贴近顶部，偏外侧 -->
+<path fill="#2A2A2A" d="
+  M9 8h1v2H9z
+  M22 8h1v2h-1z
 "/>
 
-<!-- ===== 高光带(顶部2行) #E8A878 ===== -->
-<path fill="#E8A878" d="
-  M8 6h16v1H8z
-  M6 7h2v1H6z
-  M7 7h1v2H7z
-"/>
+<!-- 嘴：极小横线 -->
+<path fill="#C46A4A" d="M14 14h4v1h-4z"/>
 
-<!-- ===== 主体 #D4835B ===== -->
-<path fill="#D4835B" d="
-  M8 7h17v1H8z
-  M7 8h1v1H7z
-  M8 8h17v7H8z
-  M7 9h1v6H7z
-"/>
-
-<!-- ===== 中间阴影(下部) #C06E45 ===== -->
-<path fill="#C06E45" d="
-  M7 15h18v1H7z
-  M7 16h18v1H7z
-  M25 8h1v9h-1z
-"/>
-
-<!-- ===== 暗影(底行) #A85A38 ===== -->
-<path fill="#A85A38" d="
-  M6 17h1v1H6z
-  M7 17h18v1H7z
-  M25 17h1v1h-1z
-"/>
-
-<!-- ===== 眼睛 #2A2A2A ===== -->
-<!-- 左眼 2x3 (更有表情) -->
-<path fill="#2A2A2A" d="M10 9h2v3h-2z"/>
-<!-- 右眼 2x3 -->
-<path fill="#2A2A2A" d="M20 9h2v3h-2z"/>
-
-<!-- ===== 眼睛高光 #FFFFFF (让眼睛活起来) ===== -->
-<path fill="#FFFFFF" d="
-  M10 9h1v1h-1z
-  M20 9h1v1h-1z
-"/>
-
-<!-- ===== 嘴巴 #A85A38 ===== -->
-<path fill="#A85A38" d="M14 14h4v1h-4z"/>
-
-<!-- ===== 腿 ===== -->
-<!-- 腿轮廓 #9B5238 -->
-<path fill="#9B5238" d="
-  M7 18h1v6H7z
-  M10 18h1v6h-1z
-  M12 18h1v6h-1z
-  M15 18h1v6h-1z
-  M17 18h1v6h-1z
-  M20 18h1v6h-1z
-  M22 18h1v6h-1z
-  M25 18h1v6h-1z
-  M7 24h4v1H7z
-  M12 24h4v1h-4z
-  M17 24h4v1h-4z
-  M22 24h4v1h-4z
-"/>
-
-<!-- 腿填充 #C06E45 -->
-<path fill="#C06E45" d="
-  M8 18h2v5H8z
-  M13 18h2v5h-2z
-  M18 18h2v5h-2z
-  M23 18h2v5h-2z
-"/>
-
-<!-- 腿高光(左侧面) #D4835B -->
-<path fill="#D4835B" d="
-  M8 18h1v4H8z
-  M13 18h1v4h-1z
-  M18 18h1v4h-1z
-  M23 18h1v4h-1z
-"/>
-
-<!-- 腿阴影(底面) #9B5238 -->
-<path fill="#9B5238" d="
-  M8 23h2v1H8z
-  M13 23h2v1h-2z
-  M18 23h2v1h-2z
-  M23 23h2v1h-2z
+<!-- 4条腿：各3px宽 5px高，均匀分布 -->
+<path fill="#C46A4A" d="
+  M6 17h3v5H6z
+  M12 17h3v5h-3z
+  M17 17h3v5h-3z
+  M23 17h3v5h-3z
 "/>
 
 </svg>
