@@ -9,7 +9,7 @@
 <br>
 
 [![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG)
-[![Assets](https://img.shields.io/badge/assets-34-ff6480?style=flat-square)](#gallery)
+[![Assets](https://img.shields.io/badge/assets-46-ff6480?style=flat-square)](#gallery)
 [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette)
 [![Grid](https://img.shields.io/badge/grid-16×16%20%7C%2032×32-ffd93d?style=flat-square)](#gallery)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -129,6 +129,68 @@
   </tr>
 </table>
 
+## 🌤️ Weather & Seasons · 天气季节
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/sun.svg" width="80" alt="Sun"><br>
+      <sub><b>Sun</b><br>太阳</sub>
+    </td>
+    <td align="center">
+      <img src="assets/rainbow.svg" width="80" alt="Rainbow"><br>
+      <sub><b>Rainbow</b><br>彩虹</sub>
+    </td>
+    <td align="center">
+      <img src="assets/rain-cloud.svg" width="80" alt="Rain Cloud"><br>
+      <sub><b>Rain Cloud</b><br>雨云</sub>
+    </td>
+    <td align="center">
+      <img src="assets/snowman.svg" width="80" alt="Snowman"><br>
+      <sub><b>Snowman</b><br>雪人</sub>
+    </td>
+    <td align="center">
+      <img src="assets/snowflake.svg" width="80" alt="Snowflake"><br>
+      <sub><b>Snowflake</b><br>雪花</sub>
+    </td>
+    <td align="center">
+      <img src="assets/autumn-leaf.svg" width="80" alt="Autumn Leaf"><br>
+      <sub><b>Autumn Leaf</b><br>秋叶</sub>
+    </td>
+  </tr>
+</table>
+
+## 🎸 Life & Fun · 生活趣味
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/coffee.svg" width="80" alt="Coffee"><br>
+      <sub><b>Coffee</b><br>咖啡</sub>
+    </td>
+    <td align="center">
+      <img src="assets/gameboy.svg" width="80" alt="Game Boy"><br>
+      <sub><b>Game Boy</b><br>游戏机</sub>
+    </td>
+    <td align="center">
+      <img src="assets/music-note.svg" width="80" alt="Music Note"><br>
+      <sub><b>Music Note</b><br>音符</sub>
+    </td>
+    <td align="center">
+      <img src="assets/rocket.svg" width="80" alt="Rocket"><br>
+      <sub><b>Rocket</b><br>火箭</sub>
+    </td>
+    <td align="center">
+      <img src="assets/cactus.svg" width="80" alt="Cactus"><br>
+      <sub><b>Cactus</b><br>仙人掌</sub>
+    </td>
+    <td align="center">
+      <img src="assets/envelope.svg" width="80" alt="Envelope"><br>
+      <sub><b>Envelope</b><br>情书</sub>
+    </td>
+  </tr>
+</table>
+
 ## 🌿 Nature & Scenes · 自然场景
 
 <table>
@@ -157,6 +219,8 @@
       <img src="assets/ocean-wave.svg" width="80" alt="Ocean Wave"><br>
       <sub><b>Ocean Wave</b><br>海浪</sub>
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <img src="assets/galaxy.svg" width="80" alt="Galaxy"><br>
       <sub><b>Galaxy</b><br>银河</sub>
