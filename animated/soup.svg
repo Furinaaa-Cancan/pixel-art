@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 汤碗动画：蒸汽升腾 -->
+<style>
+.s1{animation:steam1 2s ease-in-out infinite}
+.s2{animation:steam2 2.5s ease-in-out 0.5s infinite}
+.s3{animation:steam3 2s ease-in-out 1s infinite}
+@keyframes steam1{0%,100%{transform:translateY(0);opacity:0.8}50%{transform:translateY(-2px);opacity:0}}
+@keyframes steam2{0%,100%{transform:translateY(0);opacity:0.6}50%{transform:translateY(-3px);opacity:0}}
+@keyframes steam3{0%,100%{transform:translateY(0);opacity:0.7}50%{transform:translateY(-2px);opacity:0}}
+</style>
+<path class="s1" fill="#94b0c2" d="M6 2h1v1h-1z"/>
+<path class="s2" fill="#94b0c2" d="M8 1h1v1h-1z"/>
+<path class="s3" fill="#94b0c2" d="M10 2h1v1h-1z"/>
+<path fill="#1a1c2c" d="M3 4h10v1h-10zM2 5h1v1h-1zM13 5h1v1h-1zM2 6h1v1h-1zM13 6h1v1h-1zM2 7h1v1h-1zM13 7h1v1h-1zM3 8h1v1h-1zM12 8h1v1h-1zM4 9h1v1h-1zM11 9h1v1h-1zM5 10h6v1h-6z"/>
+<path fill="#f4f4f4" d="M3 5h10v1h-10zM3 6h1v1h-1zM12 6h1v1h-1z"/>
+<path fill="#ef7d57" d="M4 6h8v1h-8zM3 7h10v1h-10zM4 8h8v1h-8zM5 9h6v1h-6z"/>
+<path fill="#ffcd75" d="M4 6h2v1h-2zM3 7h2v1h-2z"/>
+<path fill="#b13e53" d="M10 7h3v1h-3zM10 8h2v1h-2z"/>
+<path fill="#f4f4f4" d="M5 7h1v1h-1z"/>
+</svg>

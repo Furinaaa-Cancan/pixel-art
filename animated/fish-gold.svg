@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 金鱼动画：游泳摆尾 -->
+<style>
+.fish{animation:swim 2s ease-in-out infinite}
+.tail{animation:wag 0.6s ease-in-out infinite alternate}
+@keyframes swim{0%,100%{transform:translateX(0)}50%{transform:translateX(1px)}}
+@keyframes wag{0%{transform:translateX(0)}100%{transform:translateX(-1px)}}
+</style>
+<g class="tail">
+<path fill="#1a1c2c" d="M2 4h2v1h-2zM1 5h1v1h-1zM4 5h1v1h-1zM1 6h1v1h-1zM1 7h1v1h-1zM1 8h1v1h-1zM1 9h1v1h-1zM1 10h1v1h-1zM4 10h1v1h-1zM2 11h2v1h-2z"/>
+<path fill="#ef7d57" d="M2 5h2v1h-2zM2 6h3v1h-3zM2 7h3v1h-3zM2 8h3v1h-3zM2 9h3v1h-3zM2 10h2v1h-2z"/>
+</g>
+<g class="fish">
+<path fill="#1a1c2c" d="M5 6h1v1h-1zM12 6h1v1h-1zM13 7h1v1h-1zM13 8h1v1h-1zM5 9h1v1h-1zM12 9h1v1h-1z"/>
+<path fill="#ffcd75" d="M5 7h8v1h-8zM5 8h8v1h-8zM6 6h6v1h-6zM6 9h6v1h-6z"/>
+<path fill="#ef7d57" d="M8 5h3v1h-3zM8 10h3v1h-3z"/>
+<path fill="#1a1c2c" d="M8 5h3v1h-3zM1 6h1v1h-1zM8 10h3v1h-3z">
+<animate attributeName="fill" values="#1a1c2c;#1a1c2c" dur="1s" repeatCount="indefinite"/>
+</path>
+<path fill="#f4f4f4" d="M6 7h1v1h-1zM7 7h1v1h-1z"/>
+<path fill="#d4a56a" d="M11 8h1v1h-1zM10 9h2v1h-2z"/>
+<path fill="#1a1c2c" d="M10 7h1v1h-1z"/>
+<path fill="#f4f4f4" d="M11 6h1v1h-1z">
+<animate attributeName="fill" values="#f4f4f4;#73eff7;#f4f4f4" dur="3s" repeatCount="indefinite"/>
+</path>
+</g>
+</svg>

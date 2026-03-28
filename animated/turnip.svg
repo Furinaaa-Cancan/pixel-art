@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 萝卜动画：叶子摇摆 + 拔出弹跳 -->
+<style>
+.body{animation:pop 3s ease-in-out infinite}
+.leaves{animation:leaf 2s ease-in-out infinite}
+@keyframes pop{0%,85%,100%{transform:translateY(0)}90%{transform:translateY(-2px)}95%{transform:translateY(0)}}
+@keyframes leaf{0%,100%{transform:rotate(0deg);transform-origin:7.5px 3px}25%{transform:rotate(3deg)}75%{transform:rotate(-3deg)}}
+</style>
+<g class="body">
+<path fill="#1a1c2c" d="M7 0h2v1h-2zM6 1h1v1h-1zM9 1h1v1h-1zM6 2h1v1h-1zM9 2h1v1h-1zM5 3h1v1h-1zM10 3h1v1h-1zM4 4h1v1h-1zM11 4h1v1h-1zM3 5h1v1h-1zM12 5h1v1h-1zM3 6h1v1h-1zM12 6h1v1h-1zM3 7h1v1h-1zM12 7h1v1h-1zM4 8h1v1h-1zM11 8h1v1h-1zM5 9h1v1h-1zM10 9h1v1h-1zM6 10h1v1h-1zM9 10h1v1h-1zM7 11h2v1h-2z"/>
+<path fill="#f4f4f4" d="M5 4h6v1h-6zM4 5h2v1h-2zM7 5h5v1h-5zM4 6h7v1h-7zM4 7h6v1h-6zM5 8h4v1h-4zM6 9h2v1h-2z"/>
+<path fill="#f4f4f4" d="M6 5h1v1h-1z"/>
+<path fill="#d4a56a" d="M11 6h1v1h-1zM10 7h2v1h-2zM9 8h2v1h-2zM8 9h2v1h-2z"/>
+<path fill="#b13e53" d="M7 10h2v1h-2z"/>
+<path fill="#4a5e3b" d="M6 3h2v1h-2z"/>
+<path fill="#38b764" d="M8 3h2v1h-2z"/>
+<g class="leaves">
+<path fill="#38b764" d="M7 1h1v1h-1zM7 2h1v1h-1z"/>
+<path fill="#a7f070" d="M8 1h1v1h-1zM8 2h1v1h-1z"/>
+</g>
+</g>
+</svg>

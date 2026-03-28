@@ -10,7 +10,7 @@
 <img src="assets/turnip.svg" width="56" /> <img src="assets/apple-red.svg" width="56" /> <img src="assets/cat.svg" width="56" /> <img src="assets/egg.svg" width="56" /> <img src="assets/axe-wood.svg" width="56" /> <img src="assets/fish-gold.svg" width="56" /> <img src="assets/watering-can.svg" width="56" /> <img src="assets/strawberry.svg" width="56" /> <img src="assets/potion.svg" width="56" /> <img src="assets/flame.svg" width="56" /> <img src="assets/heart.svg" width="56" /> <img src="assets/ghost.svg" width="56" />
 </p>
 
-[![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-349+-ff6480?style=flat-square)](#gallery) [![Animated](https://img.shields.io/badge/animated-12-ffcd75?style=flat-square)](#animated) [![Palette](https://img.shields.io/badge/palette-HARVEST--20-a8775e?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+[![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-349+-ff6480?style=flat-square)](#gallery) [![Animated](https://img.shields.io/badge/animated-24-ffcd75?style=flat-square)](#animated) [![Palette](https://img.shields.io/badge/palette-HARVEST--20-a8775e?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
 <details><summary><b>📍 Quick Nav</b></summary><br>
 
@@ -24,7 +24,7 @@
 
 <a id="animated"></a>
 
-## 🔥 Animated Icons · 会动的像素画 <sub>12 icons</sub>
+## 🔥 Animated Icons · 会动的像素画 <sub>24 icons</sub>
 
 > 开源领域首个**动画像素风 SVG** 资源库。纯 CSS/SVG 动画，零 JS 依赖，单文件即用。
 >
@@ -46,6 +46,22 @@
     <td align="center"><img src="animated/firefly.svg" width="64" alt="Firefly"><br><sub><b>Firefly</b><br>萤火虫</sub></td>
     <td align="center"><img src="animated/crystal.svg" width="64" alt="Crystal"><br><sub><b>Crystal</b><br>水晶闪烁</sub></td>
     <td align="center"><img src="animated/hourglass.svg" width="64" alt="Hourglass"><br><sub><b>Hourglass</b><br>沙漏流沙</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="animated/turnip.svg" width="64" alt="Turnip"><br><sub><b>Turnip</b><br>萝卜弹跳</sub></td>
+    <td align="center"><img src="animated/pumpkin.svg" width="64" alt="Pumpkin"><br><sub><b>Pumpkin</b><br>南瓜脉动</sub></td>
+    <td align="center"><img src="animated/chicken.svg" width="64" alt="Chicken"><br><sub><b>Chicken</b><br>小鸡啄食</sub></td>
+    <td align="center"><img src="animated/cow.svg" width="64" alt="Cow"><br><sub><b>Cow</b><br>奶牛嚼草</sub></td>
+    <td align="center"><img src="animated/fish-gold.svg" width="64" alt="Fish"><br><sub><b>Golden Fish</b><br>金鱼摆尾</sub></td>
+    <td align="center"><img src="animated/spring-flower.svg" width="64" alt="Flower"><br><sub><b>Spring Flower</b><br>春花摇曳</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="animated/watering-can.svg" width="64" alt="Can"><br><sub><b>Watering Can</b><br>浇水滴落</sub></td>
+    <td align="center"><img src="animated/pickaxe.svg" width="64" alt="Pickaxe"><br><sub><b>Pickaxe</b><br>镐头闪光</sub></td>
+    <td align="center"><img src="animated/copper-ore.svg" width="64" alt="Ore"><br><sub><b>Copper Ore</b><br>铜脉闪烁</sub></td>
+    <td align="center"><img src="animated/soup.svg" width="64" alt="Soup"><br><sub><b>Soup</b><br>热汤蒸汽</sub></td>
+    <td align="center"><img src="animated/acorn.svg" width="64" alt="Acorn"><br><sub><b>Acorn</b><br>橡果晃动</sub></td>
+    <td align="center"><img src="animated/well.svg" width="64" alt="Well"><br><sub><b>Well</b><br>水井波光</sub></td>
   </tr>
 </table>
 
