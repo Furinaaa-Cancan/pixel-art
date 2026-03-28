@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 鸡蛋 — Cozy Pixel 新风格 -->
+<path fill="#1a1c2c" d="M6 2h4v1h-4zM5 3h1v1h-1zM10 3h1v1h-1zM4 4h1v1h-1zM11 4h1v1h-1zM4 5h1v1h-1zM11 5h1v1h-1zM3 6h1v1h-1zM12 6h1v1h-1zM3 7h1v1h-1zM12 7h1v1h-1zM3 8h1v1h-1zM12 8h1v1h-1zM3 9h1v1h-1zM12 9h1v1h-1zM4 10h1v1h-1zM11 10h1v1h-1zM4 11h1v1h-1zM11 11h1v1h-1zM5 12h6v1h-6z"/>
+<!-- 蛋壳主体 -->
+<path fill="#f4f4f4" d="M6 3h4v1h-4zM5 4h6v1h-6zM5 5h6v1h-6zM4 6h8v1h-8zM4 7h8v1h-8zM4 8h8v1h-8zM4 9h7v1h-7zM5 10h5v1h-5zM5 11h5v1h-5z"/>
+<!-- 暖色阴影 -->
+<path fill="#d4a56a" d="M11 9h1v1h-1zM10 10h1v1h-1zM10 11h1v1h-1z"/>
+<!-- 魔法微光 -->
+<path fill="#73eff7" d="M5 4h1v1h-1zM5 5h1v1h-1z"/>
+</svg>

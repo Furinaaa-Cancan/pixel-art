@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 金鱼 — Cozy Pixel 新风格 -->
+<path fill="#1a1c2c" d="M2 4h2v1h-2zM1 5h1v1h-1zM4 5h1v1h-1zM1 6h1v1h-1zM5 6h1v1h-1zM12 6h1v1h-1zM1 7h1v1h-1zM13 7h1v1h-1zM1 8h1v1h-1zM13 8h1v1h-1zM1 9h1v1h-1zM5 9h1v1h-1zM12 9h1v1h-1zM1 10h1v1h-1zM4 10h1v1h-1zM2 11h2v1h-2z"/>
+<!-- 尾鳍 -->
+<path fill="#ef7d57" d="M2 5h2v1h-2zM2 6h3v1h-3zM2 7h3v1h-3zM2 8h3v1h-3zM2 9h3v1h-3zM2 10h2v1h-2z"/>
+<!-- 身体（金黄） -->
+<path fill="#ffcd75" d="M5 7h8v1h-8zM5 8h8v1h-8zM6 6h6v1h-6zM6 9h6v1h-6zM5 7h1v1h-1z"/>
+<!-- 背鳍+腹鳍 -->
+<path fill="#ef7d57" d="M8 5h3v1h-3zM8 10h3v1h-3z"/>
+<!-- 高光 -->
+<path fill="#f4f4f4" d="M6 7h1v1h-1zM7 7h1v1h-1z"/>
+<!-- 暗面 -->
+<path fill="#d4a56a" d="M11 8h1v1h-1zM10 9h2v1h-2z"/>
+<!-- 眼睛 -->
+<path fill="#1a1c2c" d="M10 7h1v1h-1z"/>
+<path fill="#f4f4f4" d="M11 6h1v1h-1z"/>
+</svg>

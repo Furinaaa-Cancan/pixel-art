@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cozy Pixel — 新风格预览</title>
+<style>
+  *{margin:0;box-sizing:border-box}
+  body{background:#1a1520;color:#ccc;font-family:system-ui;padding:40px;max-width:1200px;margin:0 auto}
+  h1{font-weight:300;font-size:32px;letter-spacing:2px;margin-bottom:4px;color:#ffcd75}
+  .sub{font-size:13px;color:#666;margin-bottom:40px}
+  h2{font-size:16px;font-weight:400;color:#ef7d57;letter-spacing:2px;margin:32px 0 16px;text-transform:uppercase}
+
+  .palette{display:flex;gap:4px;margin-bottom:32px;flex-wrap:wrap}
+  .swatch{width:40px;height:40px;border-radius:6px;position:relative;cursor:pointer;border:2px solid transparent;transition:all .2s}
+  .swatch:hover{border-color:#fff;transform:scale(1.1)}
+  .swatch .label{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:8px;color:#555;white-space:nowrap}
+  .swatch.new{box-shadow:0 0 0 2px #ffcd75}
+  .divider{width:2px;background:#333;margin:0 8px;border-radius:1px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+  .card{background:#0f0a14;border-radius:12px;padding:20px;text-align:center;border:1px solid #2a2035}
+  .card h3{font-size:11px;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+  .card .zh{font-size:11px;color:#555;margin-bottom:16px}
+  .sizes{display:flex;align-items:end;justify-content:center;gap:16px}
+  .size-label{font-size:9px;color:#444;margin-top:4px;text-align:center}
+  img{image-rendering:pixelated;image-rendering:crisp-edges}
+
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px}
+  .compare-box{background:#0f0a14;border-radius:12px;padding:24px;border:1px solid #2a2035}
+  .compare-box h3{font-size:12px;color:#888;letter-spacing:2px;margin-bottom:16px}
+  .compare-items{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+
+  .tag{display:inline-block;padding:3px 10px;border-radius:4px;font-size:10px;letter-spacing:1px;margin-left:8px}
+  .tag-new{background:#ffcd7520;color:#ffcd75}
+  .tag-old{background:#55555520;color:#666}
+
+  .rules{background:#0f0a14;border-radius:12px;padding:24px;border:1px solid #2a2035;margin-bottom:32px}
+  .rules li{font-size:13px;color:#888;margin-bottom:8px;line-height:1.6}
+  .rules strong{color:#ccc}
+
+  hr{border:none;border-top:1px solid #2a2035;margin:40px 0}
+</style>
+</head>
+<body>
+
+<h1>Cozy Pixel</h1>
+<p class="sub">舒适像素 — 星露谷温暖感 × 我们的魔法微光</p>
+
+<h2>🎨 HARVEST-20 调色板</h2>
+<div class="palette">
+  <div class="swatch" style="background:#1a1c2c"><span class="label">墨黑</span></div>
+  <div class="swatch" style="background:#333c57"><span class="label">夜蓝</span></div>
+  <div class="swatch" style="background:#566c86"><span class="label">石板</span></div>
+  <div class="swatch" style="background:#94b0c2"><span class="label">雾灰</span></div>
+  <div class="swatch" style="background:#f4f4f4"><span class="label">雪白</span></div>
+  <div class="swatch" style="background:#ffcd75"><span class="label">金黄</span></div>
+  <div class="swatch" style="background:#ef7d57"><span class="label">橘色</span></div>
+  <div class="swatch" style="background:#b13e53"><span class="label">玫瑰</span></div>
+  <div class="swatch" style="background:#5d275d"><span class="label">梅紫</span></div>
+  <div class="swatch" style="background:#a7f070"><span class="label">嫩芽</span></div>
+  <div class="swatch" style="background:#38b764"><span class="label">三叶草</span></div>
+  <div class="swatch" style="background:#257179"><span class="label">青色</span></div>
+  <div class="swatch" style="background:#29366f"><span class="label">深海</span></div>
+  <div class="swatch" style="background:#3b5dc9"><span class="label">海洋</span></div>
+  <div class="swatch" style="background:#41a6f6"><span class="label">天空</span></div>
+  <div class="swatch" style="background:#73eff7"><span class="label">冰蓝</span></div>
+  <div class="divider"></div>
+  <div class="swatch new" style="background:#6b3e2e"><span class="label">树皮✨</span></div>
+  <div class="swatch new" style="background:#a8775e"><span class="label">木纹✨</span></div>
+  <div class="swatch new" style="background:#d4a56a"><span class="label">麦穗✨</span></div>
+  <div class="swatch new" style="background:#4a5e3b"><span class="label">松针✨</span></div>
+</div>
+
+<hr>
+
+<h2>✨ 新风格示例（COZY PIXEL）</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Turnip</h3><div class="zh">萝卜</div>
+    <div class="sizes">
+      <div><img src="assets/turnip.svg" width="32"><div class="size-label">2x</div></div>
+      <div><img src="assets/turnip.svg" width="64"><div class="size-label">4x</div></div>
+      <div><img src="assets/turnip.svg" width="128"><div class="size-label">8x</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Red Apple</h3><div class="zh">红苹果</div>
+    <div class="sizes">
+      <div><img src="assets/apple-red.svg" width="32"><div class="size-label">2x</div></div>
+      <div><img src="assets/apple-red.svg" width="64"><div class="size-label">4x</div></div>
+      <div><img src="assets/apple-red.svg" width="128"><div class="size-label">8x</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Egg</h3><div class="zh">鸡蛋</div>
+    <div class="sizes">
+      <div><img src="assets/egg.svg" width="32"><div class="size-label">2x</div></div>
+      <div><img src="assets/egg.svg" width="64"><div class="size-label">4x</div></div>
+      <div><img src="assets/egg.svg" width="128"><div class="size-label">8x</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Axe</h3><div class="zh">斧头</div>
+    <div class="sizes">
+      <div><img src="assets/axe-wood.svg" width="32"><div class="size-label">2x</div></div>
+      <div><img src="assets/axe-wood.svg" width="64"><div class="size-label">4x</div></div>
+      <div><img src="assets/axe-wood.svg" width="128"><div class="size-label">8x</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Watering Can</h3><div class="zh">浇水壶</div>
+    <div class="sizes">
+      <div><img src="assets/watering-can.svg" width="32"><div class="size-label">2x</div></div>
+      <div><img src="assets/watering-can.svg" width="64"><div class="size-label">4x</div></div>
+      <div><img src="assets/watering-can.svg" width="128"><div class="size-label">8x</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Golden Fish</h3><div class="zh">金鱼</div>
+    <div class="sizes">
+      <div><img src="assets/fish-gold.svg" width="32"><div class="size-label">2x</div></div>
+      <div><img src="assets/fish-gold.svg" width="64"><div class="size-label">4x</div></div>
+      <div><img src="assets/fish-gold.svg" width="128"><div class="size-label">8x</div></div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h2>📐 新旧风格对比</h2>
+<div class="compare">
+  <div class="compare-box">
+    <h3>旧风格 <span class="tag tag-old">SWEETIE-16</span></h3>
+    <div class="compare-items">
+      <div><img src="assets/strawberry.svg" width="96"><div class="size-label">草莓 32×32</div></div>
+      <div><img src="assets/heart.svg" width="96"><div class="size-label">心 16×16</div></div>
+      <div><img src="assets/gem.svg" width="96"><div class="size-label">宝石 16×16</div></div>
+    </div>
+    <div style="margin-top:16px;font-size:11px;color:#555;line-height:1.6">
+      特点：无轮廓线 / 糖果色调 / 可爱卡通风<br>
+      缺点：缺棕色 / 不够温暖 / 无统一光影方向
+    </div>
+  </div>
+  <div class="compare-box">
+    <h3>新风格 <span class="tag tag-new">HARVEST-20</span></h3>
+    <div class="compare-items">
+      <div><img src="assets/turnip.svg" width="96"><div class="size-label">萝卜 16×16</div></div>
+      <div><img src="assets/apple-red.svg" width="96"><div class="size-label">苹果 16×16</div></div>
+      <div><img src="assets/egg.svg" width="96"><div class="size-label">鸡蛋 16×16</div></div>
+    </div>
+    <div style="margin-top:16px;font-size:11px;color:#ffcd75;line-height:1.6">
+      特点：1px暗色轮廓 / 左上高光 / 温暖泥土色<br>
+      独有：魔法微光点 / 可动画 / 限定20色调色板
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h2>📋 风格规则速查</h2>
+<div class="rules">
+<ul>
+  <li><strong>轮廓线：</strong>所有物品必须有 1px #1a1c2c 轮廓，是物品最外层像素</li>
+  <li><strong>光源：</strong>固定左上 45°，高光在左上 1-2px，暗影在右下 1-2px</li>
+  <li><strong>尺寸：</strong>物品/道具 16×16，角色/场景 32×32</li>
+  <li><strong>魔法微光：</strong>每个物品有 1px #f4f4f4 或 #73eff7 高光点（我们的视觉签名）</li>
+  <li><strong>造型：</strong>偏圆润，比 SV 略萌，食物/果实有膨胀感</li>
+  <li><strong>调色板：</strong>严格限定 HARVEST-20，不引入调色板外的颜色</li>
+</ul>
+</div>
+
+</body>
+</html>

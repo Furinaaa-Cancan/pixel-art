@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 斧头 — Cozy Pixel 新风格 -->
+<!-- 金属斧刃 + 木柄 -->
+<path fill="#1a1c2c" d="M8 0h3v1h-3zM7 1h1v1h-1zM11 1h2v1h-2zM6 2h1v1h-1zM12 2h1v1h-1zM6 3h1v1h-1zM12 3h1v1h-1zM7 4h1v1h-1zM11 4h1v1h-1zM7 5h1v1h-1zM10 5h1v1h-1zM7 6h1v1h-1zM9 6h1v1h-1zM7 7h1v1h-1zM9 7h1v1h-1zM7 8h1v1h-1zM9 8h1v1h-1zM7 9h1v1h-1zM9 9h1v1h-1zM7 10h1v1h-1zM9 10h1v1h-1zM7 11h1v1h-1zM9 11h1v1h-1zM6 12h1v1h-1zM10 12h1v1h-1zM6 13h5v1h-5z"/>
+<!-- 斧刃（金属灰） -->
+<path fill="#94b0c2" d="M8 0h2v1h-2zM8 1h3v1h-3zM7 2h5v1h-5zM7 3h5v1h-5zM8 4h3v1h-3z"/>
+<!-- 斧刃高光 -->
+<path fill="#f4f4f4" d="M10 0h1v1h-1zM11 1h1v1h-1zM11 2h1v1h-1z"/>
+<!-- 斧刃暗面 -->
+<path fill="#566c86" d="M7 3h1v1h-1zM7 2h1v1h-1z"/>
+<!-- 木柄 -->
+<path fill="#a8775e" d="M8 5h2v1h-2zM8 6h1v1h-1zM8 7h1v1h-1zM8 8h1v1h-1zM8 9h1v1h-1zM8 10h1v1h-1zM8 11h1v1h-1z"/>
+<!-- 木柄暗面 -->
+<path fill="#6b3e2e" d="M8 4h1v1h-1z"/>
+<!-- 柄尾 -->
+<path fill="#d4a56a" d="M7 12h3v1h-3z"/>
+</svg>
