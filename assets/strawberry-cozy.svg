@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 草莓（Cozy风格） -->
+<path fill="#1a1c2c" d="M6 0h1v1h-1zM8 0h2v1h-2zM5 1h1v1h-1zM10 1h1v1h-1zM4 2h1v1h-1zM11 2h1v1h-1zM3 3h1v1h-1zM12 3h1v1h-1zM3 4h1v1h-1zM12 4h1v1h-1zM3 5h1v1h-1zM12 5h1v1h-1zM4 6h1v1h-1zM11 6h1v1h-1zM4 7h1v1h-1zM11 7h1v1h-1zM5 8h1v1h-1zM10 8h1v1h-1zM6 9h1v1h-1zM9 9h1v1h-1zM7 10h2v1h-2z"/>
+<path fill="#38b764" d="M6 1h2v1h-2zM7 0h1v1h-1z"/>
+<path fill="#a7f070" d="M8 1h2v1h-2z"/>
+<path fill="#b13e53" d="M5 2h6v1h-6zM4 3h8v1h-8zM4 4h8v1h-8zM4 5h8v1h-8zM5 6h6v1h-6zM5 7h6v1h-6zM6 8h4v1h-4zM7 9h2v1h-2z"/>
+<path fill="#ef7d57" d="M5 2h2v1h-2zM4 3h2v1h-2zM4 4h1v1h-1z"/>
+<path fill="#f4f4f4" d="M5 3h1v1h-1z"/>
+<path fill="#ffcd75" d="M7 4h1v1h-1zM5 5h1v1h-1zM9 5h1v1h-1zM7 6h1v1h-1zM6 7h1v1h-1zM8 8h1v1h-1z"/>
+<path fill="#5d275d" d="M10 6h1v1h-1zM9 7h2v1h-2zM9 8h1v1h-1z"/>
+</svg>

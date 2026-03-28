@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 木头 -->
+<path fill="#1a1c2c" d="M3 3h3v1h-3zM2 4h1v1h-1zM6 4h1v1h-1zM2 5h1v1h-1zM6 5h1v1h-1zM2 6h1v1h-1zM6 6h1v1h-1zM3 7h3v1h-3zM5 7h8v1h-8zM4 8h1v1h-1zM13 8h1v1h-1zM4 9h1v1h-1zM13 9h1v1h-1zM4 10h1v1h-1zM13 10h1v1h-1zM5 11h8v1h-8z"/>
+<path fill="#d4a56a" d="M3 4h3v1h-3zM3 5h3v1h-3zM3 6h3v1h-3z"/>
+<path fill="#ffcd75" d="M3 4h1v1h-1zM3 5h1v1h-1z"/>
+<path fill="#a8775e" d="M4 5h1v1h-1zM4 6h1v1h-1z"/>
+<path fill="#a8775e" d="M5 8h8v1h-8zM5 9h8v1h-8zM5 10h8v1h-8z"/>
+<path fill="#d4a56a" d="M5 8h2v1h-2zM5 9h1v1h-1z"/>
+<path fill="#6b3e2e" d="M11 9h2v1h-2zM11 10h2v1h-2z"/>
+</svg>

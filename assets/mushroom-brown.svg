@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 棕蘑菇 -->
+<path fill="#1a1c2c" d="M5 2h6v1h-6zM3 3h2v1h-2zM11 3h2v1h-2zM2 4h1v1h-1zM13 4h1v1h-1zM2 5h1v1h-1zM13 5h1v1h-1zM3 6h1v1h-1zM12 6h1v1h-1zM4 7h2v1h-2zM10 7h2v1h-2zM6 8h1v1h-1zM9 8h1v1h-1zM6 9h1v1h-1zM9 9h1v1h-1zM6 10h4v1h-4z"/>
+<path fill="#a8775e" d="M5 3h6v1h-6zM3 4h10v1h-10zM3 5h10v1h-10zM4 6h8v1h-8z"/>
+<path fill="#d4a56a" d="M5 3h2v1h-2zM3 4h3v1h-3zM3 5h2v1h-2z"/>
+<path fill="#6b3e2e" d="M10 5h3v1h-3zM9 6h3v1h-3z"/>
+<path fill="#f4f4f4" d="M4 4h1v1h-1zM7 7h3v1h-3zM7 8h2v1h-2zM7 9h2v1h-2z"/>
+<path fill="#d4a56a" d="M6 7h1v1h-1z"/>
+<path fill="#94b0c2" d="M8 8h1v1h-1zM8 9h1v1h-1z"/>
+</svg>
