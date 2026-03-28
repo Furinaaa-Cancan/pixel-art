@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 蓝鱼 -->
+<path fill="#1a1c2c" d="M2 4h2v1h-2zM1 5h1v1h-1zM4 5h1v1h-1zM1 6h1v1h-1zM5 6h1v1h-1zM12 6h1v1h-1zM1 7h1v1h-1zM13 7h1v1h-1zM1 8h1v1h-1zM13 8h1v1h-1zM1 9h1v1h-1zM5 9h1v1h-1zM12 9h1v1h-1zM1 10h1v1h-1zM4 10h1v1h-1zM2 11h2v1h-2z"/>
+<path fill="#3b5dc9" d="M2 5h2v1h-2zM2 6h3v1h-3zM2 7h3v1h-3zM2 8h3v1h-3zM2 9h3v1h-3zM2 10h2v1h-2z"/>
+<path fill="#41a6f6" d="M6 6h6v1h-6zM5 7h8v1h-8zM5 8h8v1h-8zM6 9h6v1h-6zM5 10h6v1h-6z"/>
+<path fill="#73eff7" d="M6 7h2v1h-2zM5 8h2v1h-2z"/>
+<path fill="#29366f" d="M11 8h1v1h-1zM10 9h2v1h-2z"/>
+<path fill="#1a1c2c" d="M11 7h1v1h-1z"/>
+<path fill="#f4f4f4" d="M12 7h1v1h-1z"/>
+<path fill="#ef7d57" d="M8 6h1v1h-1zM8 9h1v1h-1z"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 三文鱼 -->
+<path fill="#1a1c2c" d="M1 5h2v1h-2zM1 6h1v1h-1zM3 6h1v1h-1zM1 7h1v1h-1zM4 7h1v1h-1zM12 7h1v1h-1zM1 8h1v1h-1zM13 8h1v1h-1zM1 9h1v1h-1zM4 9h1v1h-1zM12 9h1v1h-1zM1 10h1v1h-1zM3 10h1v1h-1zM1 11h2v1h-2z"/>
+<path fill="#b13e53" d="M2 6h1v1h-1zM2 7h2v1h-2zM2 8h2v1h-2zM2 9h2v1h-2zM2 10h1v1h-1z"/>
+<path fill="#ef7d57" d="M4 6h7v1h-7zM5 7h7v1h-7zM4 8h9v1h-9zM5 9h7v1h-7zM4 10h7v1h-7z"/>
+<path fill="#ffcd75" d="M5 7h2v1h-2zM4 8h2v1h-2z"/>
+<path fill="#5d275d" d="M10 8h2v1h-2zM10 9h2v1h-2z"/>
+<path fill="#1a1c2c" d="M10 8h1v1h-1z"/>
+<path fill="#f4f4f4" d="M11 7h1v1h-1z"/>
+<path fill="#d4a56a" d="M2 5h1v1h-1z"/>
+</svg>

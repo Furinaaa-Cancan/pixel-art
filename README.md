@@ -10,7 +10,7 @@
 <img src="assets/turnip.svg" width="56" /> <img src="assets/apple-red.svg" width="56" /> <img src="assets/cat.svg" width="56" /> <img src="assets/egg.svg" width="56" /> <img src="assets/axe-wood.svg" width="56" /> <img src="assets/fish-gold.svg" width="56" /> <img src="assets/watering-can.svg" width="56" /> <img src="assets/strawberry.svg" width="56" /> <img src="assets/potion.svg" width="56" /> <img src="assets/flame.svg" width="56" /> <img src="assets/heart.svg" width="56" /> <img src="assets/ghost.svg" width="56" />
 </p>
 
-[![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-337+-ff6480?style=flat-square)](#gallery) [![Animated](https://img.shields.io/badge/animated-12-ffcd75?style=flat-square)](#animated) [![Palette](https://img.shields.io/badge/palette-HARVEST--20-a8775e?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+[![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-349+-ff6480?style=flat-square)](#gallery) [![Animated](https://img.shields.io/badge/animated-12-ffcd75?style=flat-square)](#animated) [![Palette](https://img.shields.io/badge/palette-HARVEST--20-a8775e?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
 <details><summary><b>📍 Quick Nav</b></summary><br>
 
@@ -83,6 +83,22 @@
     <td align="center"><img src="assets/copper-ore.svg" width="80" alt="Copper"><br><sub><b>Copper Ore</b><br>铜矿石</sub></td>
     <td align="center"><img src="assets/iron-ore.svg" width="80" alt="Iron"><br><sub><b>Iron Ore</b><br>铁矿石</sub></td>
     <td align="center"><img src="assets/gold-ore.svg" width="80" alt="Gold"><br><sub><b>Gold Ore</b><br>金矿石</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/fried-egg.svg" width="80" alt="Fried Egg"><br><sub><b>Fried Egg</b><br>煎蛋</sub></td>
+    <td align="center"><img src="assets/bread.svg" width="80" alt="Bread"><br><sub><b>Bread</b><br>面包</sub></td>
+    <td align="center"><img src="assets/cheese.svg" width="80" alt="Cheese"><br><sub><b>Cheese</b><br>奶酪</sub></td>
+    <td align="center"><img src="assets/pie.svg" width="80" alt="Pie"><br><sub><b>Pie</b><br>派</sub></td>
+    <td align="center"><img src="assets/salmon.svg" width="80" alt="Salmon"><br><sub><b>Salmon</b><br>三文鱼</sub></td>
+    <td align="center"><img src="assets/bluefish.svg" width="80" alt="Bluefish"><br><sub><b>Bluefish</b><br>蓝鱼</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/chicken.svg" width="80" alt="Chicken"><br><sub><b>Chicken</b><br>小鸡</sub></td>
+    <td align="center"><img src="assets/cow.svg" width="80" alt="Cow"><br><sub><b>Cow</b><br>奶牛</sub></td>
+    <td align="center"><img src="assets/sheep.svg" width="80" alt="Sheep"><br><sub><b>Sheep</b><br>绵羊</sub></td>
+    <td align="center"><img src="assets/spring-flower.svg" width="80" alt="Spring Flower"><br><sub><b>Spring Flower</b><br>春花</sub></td>
+    <td align="center"><img src="assets/acorn.svg" width="80" alt="Acorn"><br><sub><b>Acorn</b><br>橡果</sub></td>
+    <td align="center"><img src="assets/maple-syrup.svg" width="80" alt="Maple Syrup"><br><sub><b>Maple Syrup</b><br>枫糖浆</sub></td>
   </tr>
 </table>
 
