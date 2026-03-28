@@ -1,24 +1,76 @@
 <div align="center">
 
-# 🎮 Pixel Art Collection
+# Cozy Pixel
 
-**319 handcrafted pixel-art SVG assets — crisp at any size**
+**温暖像素世界 — 星露谷田园感 × 魔法微光**
 
-**319 个手工像素风 SVG 素材 —— 任意尺寸，始终锐利**
+**Warm pixel art SVG collection — Stardew Valley vibes with a touch of magic**
 
 <p>
-<img src="assets/cat.svg" width="56" /> <img src="assets/boba-tea.svg" width="56" /> <img src="assets/unicorn.svg" width="56" /> <img src="assets/whale.svg" width="56" /> <img src="assets/sakura.svg" width="56" /> <img src="assets/face-happy.svg" width="56" /> <img src="assets/ruby.svg" width="56" /> <img src="assets/strawberry.svg" width="56" /> <img src="assets/axolotl.svg" width="56" /> <img src="assets/narwhal.svg" width="56" /> <img src="assets/pegasus.svg" width="56" /> <img src="assets/puppy.svg" width="56" /> 
+<img src="assets/turnip.svg" width="56" /> <img src="assets/apple-red.svg" width="56" /> <img src="assets/cat.svg" width="56" /> <img src="assets/egg.svg" width="56" /> <img src="assets/axe-wood.svg" width="56" /> <img src="assets/fish-gold.svg" width="56" /> <img src="assets/watering-can.svg" width="56" /> <img src="assets/strawberry.svg" width="56" /> <img src="assets/potion.svg" width="56" /> <img src="assets/flame.svg" width="56" /> <img src="assets/heart.svg" width="56" /> <img src="assets/ghost.svg" width="56" />
 </p>
 
-[![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-319-ff6480?style=flat-square)](#gallery) [![Palette](https://img.shields.io/badge/palette-SWEETIE--16-a8e6cf?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+[![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-325+-ff6480?style=flat-square)](#gallery) [![Animated](https://img.shields.io/badge/animated-12-ffcd75?style=flat-square)](#animated) [![Palette](https://img.shields.io/badge/palette-HARVEST--20-a8775e?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
 <details><summary><b>📍 Quick Nav</b></summary><br>
 
-🐾 [Cute Characters](#cute-characters) · 🐧 [Animals](#animals) · 🐙 [Ocean Life](#ocean-life) · 😊 [Emoji Faces](#emoji-faces) · 🍓 [Fruits](#fruits) · 🍡 [Food & Drinks](#food--drinks) · 🗡️ [Items & Gems](#items--gems) · 🌿 [Nature & Scenes](#nature--scenes) · 🌤️ [Weather](#weather) · 🏎️ [Vehicles](#vehicles) · ⚽ [Sports](#sports) · 🎵 [Music](#music) · 🎉 [Holidays](#holidays) · 🌸 [Flowers & Plants](#flowers--plants) · 🦄 [Fantasy](#fantasy) · 🔮 [Space & Magic](#space--magic) · 🎸 [Lifestyle](#lifestyle) · 🌏 [Cultures](#world-cultures) · ✨ [Mini](#mini-icons)
+🔥 [Animated Icons](#animated) · 🌾 [Cozy Pixel Style](#cozy-style) · 🐾 [Cute Characters](#cute-characters) · 🐧 [Animals](#animals) · 🐙 [Ocean Life](#ocean-life) · 😊 [Emoji Faces](#emoji-faces) · 🍓 [Fruits](#fruits) · 🍡 [Food & Drinks](#food--drinks) · 🗡️ [Items & Gems](#items--gems) · 🌿 [Nature & Scenes](#nature--scenes) · 🌤️ [Weather](#weather) · 🏎️ [Vehicles](#vehicles) · ⚽ [Sports](#sports) · 🎵 [Music](#music) · 🎉 [Holidays](#holidays) · 🌸 [Flowers & Plants](#flowers--plants) · 🦄 [Fantasy](#fantasy) · 🔮 [Space & Magic](#space--magic) · 🎸 [Lifestyle](#lifestyle) · 🌏 [Cultures](#world-cultures) · ✨ [Mini](#mini-icons) · 🎨 [Palette](#palette)
 
 </details>
 
 </div>
+
+---
+
+<a id="animated"></a>
+
+## 🔥 Animated Icons · 会动的像素画 <sub>12 icons</sub>
+
+> 开源领域首个**动画像素风 SVG** 资源库。纯 CSS/SVG 动画，零 JS 依赖，单文件即用。
+>
+> The first open-source **animated pixel art SVG** library. Pure CSS/SVG animation, zero JS, self-contained.
+
+<table>
+  <tr>
+    <td align="center"><img src="animated/heart.svg" width="64" alt="Heart"><br><sub><b>Heart</b><br>心跳脉冲</sub></td>
+    <td align="center"><img src="animated/flame.svg" width="64" alt="Flame"><br><sub><b>Flame</b><br>火焰闪烁</sub></td>
+    <td align="center"><img src="animated/ghost.svg" width="64" alt="Ghost"><br><sub><b>Ghost</b><br>幽灵飘浮</sub></td>
+    <td align="center"><img src="animated/potion.svg" width="64" alt="Potion"><br><sub><b>Potion</b><br>药水冒泡</sub></td>
+    <td align="center"><img src="animated/cat.svg" width="64" alt="Cat"><br><sub><b>Cat</b><br>猫咪眨眼</sub></td>
+    <td align="center"><img src="animated/star.svg" width="64" alt="Star"><br><sub><b>Star</b><br>星星闪烁</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="animated/gem.svg" width="64" alt="Gem"><br><sub><b>Gem</b><br>宝石闪光</sub></td>
+    <td align="center"><img src="animated/jellyfish.svg" width="64" alt="Jellyfish"><br><sub><b>Jellyfish</b><br>水母脉动</sub></td>
+    <td align="center"><img src="animated/shooting-star.svg" width="64" alt="Star"><br><sub><b>Shooting Star</b><br>流星划过</sub></td>
+    <td align="center"><img src="animated/firefly.svg" width="64" alt="Firefly"><br><sub><b>Firefly</b><br>萤火虫</sub></td>
+    <td align="center"><img src="animated/crystal.svg" width="64" alt="Crystal"><br><sub><b>Crystal</b><br>水晶闪烁</sub></td>
+    <td align="center"><img src="animated/hourglass.svg" width="64" alt="Hourglass"><br><sub><b>Hourglass</b><br>沙漏流沙</sub></td>
+  </tr>
+</table>
+
+> **Note:** 动画在 `<object>` 或直接打开 SVG 文件时播放。GitHub README 的 `<img>` 标签会禁止动画，请用 `animated-preview.html` 在线预览完整动画效果。
+
+<a id="cozy-style"></a>
+
+## 🌾 Cozy Pixel Style · 舒适像素风 <sub>NEW</sub>
+
+> **星露谷温暖感 + 魔法微光** — 1px 暗色轮廓 / 左上高光 / HARVEST-20 限定调色板 / 每个物品一颗微光
+>
+> Stardew Valley warmth + magic sparkle. Dark outlines, top-left highlights, 20-color palette.
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/turnip.svg" width="80" alt="Turnip"><br><sub><b>Turnip</b><br>萝卜</sub></td>
+    <td align="center"><img src="assets/apple-red.svg" width="80" alt="Apple"><br><sub><b>Apple</b><br>红苹果</sub></td>
+    <td align="center"><img src="assets/egg.svg" width="80" alt="Egg"><br><sub><b>Egg</b><br>鸡蛋</sub></td>
+    <td align="center"><img src="assets/axe-wood.svg" width="80" alt="Axe"><br><sub><b>Axe</b><br>斧头</sub></td>
+    <td align="center"><img src="assets/watering-can.svg" width="80" alt="Watering Can"><br><sub><b>Watering Can</b><br>浇水壶</sub></td>
+    <td align="center"><img src="assets/fish-gold.svg" width="80" alt="Fish"><br><sub><b>Golden Fish</b><br>金鱼</sub></td>
+  </tr>
+</table>
+
+> 完整风格规则见 [STYLE-GUIDE.md](STYLE-GUIDE.md) · 新旧对比见 `style-compare.html`
 
 ---
 
@@ -617,30 +669,45 @@
 
 <a id="palette"></a>
 
-## 🎨 Palette · SWEETIE-16
+<a id="palette"></a>
+
+## 🎨 Palette · HARVEST-20
+
+> SWEETIE-16 基础 + 4 个暖色调 = 温暖田园感的限定调色板
+
+**SWEETIE-16 Core**
 
 <table>
   <tr>
-    <td align="center"><img src="assets/palette-1a1c2c.svg" width="28" height="28"><br><sub><code>#1a1c2c</code></sub></td>
-    <td align="center"><img src="assets/palette-5d275d.svg" width="28" height="28"><br><sub><code>#5d275d</code></sub></td>
-    <td align="center"><img src="assets/palette-b13e53.svg" width="28" height="28"><br><sub><code>#b13e53</code></sub></td>
-    <td align="center"><img src="assets/palette-ef7d57.svg" width="28" height="28"><br><sub><code>#ef7d57</code></sub></td>
-    <td align="center"><img src="assets/palette-ffcd75.svg" width="28" height="28"><br><sub><code>#ffcd75</code></sub></td>
-    <td align="center"><img src="assets/palette-a7f070.svg" width="28" height="28"><br><sub><code>#a7f070</code></sub></td>
-    <td align="center"><img src="assets/palette-38b764.svg" width="28" height="28"><br><sub><code>#38b764</code></sub></td>
-    <td align="center"><img src="assets/palette-257179.svg" width="28" height="28"><br><sub><code>#257179</code></sub></td>
+    <td align="center"><img src="assets/palette-1a1c2c.svg" width="28" height="28"><br><sub><code>#1a1c2c</code><br>墨黑</sub></td>
+    <td align="center"><img src="assets/palette-5d275d.svg" width="28" height="28"><br><sub><code>#5d275d</code><br>梅紫</sub></td>
+    <td align="center"><img src="assets/palette-b13e53.svg" width="28" height="28"><br><sub><code>#b13e53</code><br>玫瑰</sub></td>
+    <td align="center"><img src="assets/palette-ef7d57.svg" width="28" height="28"><br><sub><code>#ef7d57</code><br>橘色</sub></td>
+    <td align="center"><img src="assets/palette-ffcd75.svg" width="28" height="28"><br><sub><code>#ffcd75</code><br>金黄</sub></td>
+    <td align="center"><img src="assets/palette-a7f070.svg" width="28" height="28"><br><sub><code>#a7f070</code><br>嫩芽</sub></td>
+    <td align="center"><img src="assets/palette-38b764.svg" width="28" height="28"><br><sub><code>#38b764</code><br>三叶草</sub></td>
+    <td align="center"><img src="assets/palette-257179.svg" width="28" height="28"><br><sub><code>#257179</code><br>青色</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="assets/palette-29366f.svg" width="28" height="28"><br><sub><code>#29366f</code></sub></td>
-    <td align="center"><img src="assets/palette-3b5dc9.svg" width="28" height="28"><br><sub><code>#3b5dc9</code></sub></td>
-    <td align="center"><img src="assets/palette-41a6f6.svg" width="28" height="28"><br><sub><code>#41a6f6</code></sub></td>
-    <td align="center"><img src="assets/palette-73eff7.svg" width="28" height="28"><br><sub><code>#73eff7</code></sub></td>
-    <td align="center"><img src="assets/palette-f4f4f4.svg" width="28" height="28"><br><sub><code>#f4f4f4</code></sub></td>
-    <td align="center"><img src="assets/palette-94b0c2.svg" width="28" height="28"><br><sub><code>#94b0c2</code></sub></td>
-    <td align="center"><img src="assets/palette-566c86.svg" width="28" height="28"><br><sub><code>#566c86</code></sub></td>
-    <td align="center"><img src="assets/palette-333c57.svg" width="28" height="28"><br><sub><code>#333c57</code></sub></td>
+    <td align="center"><img src="assets/palette-29366f.svg" width="28" height="28"><br><sub><code>#29366f</code><br>深海</sub></td>
+    <td align="center"><img src="assets/palette-3b5dc9.svg" width="28" height="28"><br><sub><code>#3b5dc9</code><br>海洋</sub></td>
+    <td align="center"><img src="assets/palette-41a6f6.svg" width="28" height="28"><br><sub><code>#41a6f6</code><br>天空</sub></td>
+    <td align="center"><img src="assets/palette-73eff7.svg" width="28" height="28"><br><sub><code>#73eff7</code><br>冰蓝</sub></td>
+    <td align="center"><img src="assets/palette-f4f4f4.svg" width="28" height="28"><br><sub><code>#f4f4f4</code><br>雪白</sub></td>
+    <td align="center"><img src="assets/palette-94b0c2.svg" width="28" height="28"><br><sub><code>#94b0c2</code><br>雾灰</sub></td>
+    <td align="center"><img src="assets/palette-566c86.svg" width="28" height="28"><br><sub><code>#566c86</code><br>石板</sub></td>
+    <td align="center"><img src="assets/palette-333c57.svg" width="28" height="28"><br><sub><code>#333c57</code><br>夜蓝</sub></td>
   </tr>
 </table>
+
+**+ 4 Warm Additions**
+
+| 色块 | 色号 | 名称 | 用途 |
+|:----:|------|------|------|
+| ![#6b3e2e](https://via.placeholder.com/16/6b3e2e/6b3e2e.png) | `#6b3e2e` | 树皮 Bark | 木柄、泥土、树干 |
+| ![#a8775e](https://via.placeholder.com/16/a8775e/a8775e.png) | `#a8775e` | 木纹 Wood | 工具柄、篱笆、木板 |
+| ![#d4a56a](https://via.placeholder.com/16/d4a56a/d4a56a.png) | `#d4a56a` | 麦穗 Wheat | 谷物、干草、暖阴影 |
+| ![#4a5e3b](https://via.placeholder.com/16/4a5e3b/4a5e3b.png) | `#4a5e3b` | 松针 Pine | 深色树叶、暗处草地 |
 
 ---
 
@@ -649,15 +716,24 @@
 ```bash
 git clone https://github.com/Furinaaa-Cancan/pixel-art.git
 ```
+
+**静态图标**
 ```html
-<img src="assets/heart.svg" width="64" style="image-rendering: pixelated">
+<img src="assets/turnip.svg" width="64" style="image-rendering: pixelated">
+```
+
+**动画图标**（需用 `<object>` 标签才能播放动画）
+```html
+<object type="image/svg+xml" data="animated/heart.svg" width="64" height="64"></object>
 ```
 
 ---
 
 <div align="center">
 
-**Every pixel placed by algorithm, every color chosen with care.**
+**Cozy Pixel — 每一颗像素都有温度，每一帧动画都有灵魂。**
+
+**Every pixel has warmth, every animation has soul.**
 
 ⭐ **Star this repo if you like it!** · **喜欢请点 Star！** ⭐
 
