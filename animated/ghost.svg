@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 幽灵飘浮动画：上下浮动 + 透明度呼吸 -->
+<style>
+.fl{animation:float 2.5s ease-in-out infinite}
+.br{animation:breathe 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes breathe{0%,100%{opacity:1}50%{opacity:0.7}}
+</style>
+<g class="fl">
+<path class="br" fill="#f4f4f4" d="M5 1h6v1h-6zM4 2h6v1h-6zM3 3h8v1h-8zM3 4h9v1h-9zM3 5h3v1h-3zM7 5h4v1h-4zM3 6h1v1h-1zM7 6h2v1h-2zM3 7h1v1h-1zM7 7h2v1h-2zM3 8h9v1h-9zM3 9h1v1h-1zM6 9h1v1h-1zM9 9h1v1h-1zM3 10h4v1h-4zM9 10h2v1h-2zM3 11h8v1h-8zM3 12h10v1h-10zM3 13h2v1h-2zM7 13h2v1h-2zM11 13h2v1h-2zM5 14h1v1h-1zM9 14h1v1h-1z"/>
+<path fill="#94b0c2" d="M10 2h2v1h-2zM11 3h2v1h-2zM12 4h1v1h-1zM12 5h1v1h-1zM12 6h1v1h-1zM12 7h1v1h-1zM12 8h1v1h-1zM12 9h1v1h-1zM11 10h2v1h-2zM11 11h2v1h-2z"/>
+<path fill="#1a1c2c" d="M6 5h1v1h-1zM11 5h1v1h-1zM4 6h3v1h-3zM9 6h3v1h-3zM4 7h3v1h-3zM9 7h3v1h-3zM7 9h2v1h-2zM7 10h2v1h-2z"/>
+<path fill="#b13e53" d="M4 9h2v1h-2zM10 9h2v1h-2z"/>
+</g>
+</svg>

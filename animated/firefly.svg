@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+<!-- 萤火虫动画：虫体发光脉冲 + 光点闪烁 -->
+<style>
+.glow{animation:pulse 1.8s ease-in-out infinite alternate}
+.stars{animation:twink 3s ease-in-out infinite}
+.bug-glow{animation:bg 1.2s ease-in-out infinite alternate}
+@keyframes pulse{0%{fill:#ffcd75}100%{fill:#a7f070}}
+@keyframes twink{0%,100%{opacity:1}50%{opacity:0.2}}
+@keyframes bg{0%{fill:#a7f070;opacity:1}100%{fill:#ffcd75;opacity:0.6}}
+</style>
+<!-- 夜空 -->
+<path fill="#29366f" d="M0,0h32v1h-32ZM0,1h14v1h-14ZM15,1h17v1h-17ZM0,2h3v1h-3ZM4,2h28v1h-28ZM0,3h18v1h-18ZM19,3h6v1h-6ZM26,3h6v1h-6ZM0,4h32v1h-32ZM0,5h7v1h-7ZM8,5h24v1h-24ZM0,6h20v1h-20ZM21,6h11v1h-11ZM0,7h28v1h-28ZM29,7h3v1h-3ZM0,8h4v1h-4ZM5,8h27v1h-27ZM0,9h32v1h-32ZM0,10h7v1h-7ZM8,10h5v1h-5ZM19,10h7v1h-7ZM27,10h5v1h-5ZM0,11h8v1h-8ZM9,11h3v1h-3ZM13,11h1v1h-1ZM20,11h12v1h-12ZM0,12h2v1h-2ZM3,12h6v1h-6ZM10,12h1v1h-1ZM12,12h2v1h-2ZM21,12h11v1h-11ZM0,13h12v1h-12ZM20,13h12v1h-12ZM0,14h8v1h-8ZM19,14h1v1h-1ZM22,14h10v1h-10ZM0,15h7v1h-7ZM22,15h1v1h-1ZM24,15h6v1h-6ZM31,15h1v1h-1ZM0,16h7v1h-7ZM23,16h9v1h-9ZM0,17h8v1h-8ZM22,17h1v1h-1ZM24,17h8v1h-8ZM0,18h3v1h-3ZM4,18h7v1h-7ZM19,18h13v1h-13ZM0,19h11v1h-11ZM12,19h2v1h-2ZM15,19h2v1h-2ZM18,19h1v1h-1ZM23,19h9v1h-9ZM0,20h5v1h-5ZM6,20h5v1h-5ZM12,20h2v1h-2ZM15,20h2v1h-2ZM18,20h10v1h-10ZM29,20h3v1h-3ZM0,21h32v1h-32ZM0,22h27v1h-27ZM28,22h4v1h-4ZM0,23h32v1h-32ZM0,24h32v1h-32ZM0,25h8v1h-8ZM9,25h23v1h-23ZM0,26h15v1h-15ZM16,26h16v1h-16ZM0,27h1v1h-1ZM2,27h30v1h-30ZM0,28h22v1h-22ZM23,28h7v1h-7ZM31,28h1v1h-1ZM0,29h32v1h-32ZM0,30h32v1h-32ZM0,31h32v1h-32Z"/>
+<!-- 星光点（闪烁） -->
+<path class="stars" fill="#ffcd75" d="M14,1h1v1h-1ZM3,2h1v1h-1ZM18,3h1v1h-1ZM25,3h1v1h-1ZM7,5h1v1h-1ZM20,6h1v1h-1ZM28,7h1v1h-1ZM4,8h1v1h-1ZM26,10h1v1h-1ZM2,12h1v1h-1z"/>
+<!-- 萤火虫发光区域（脉冲） -->
+<path class="glow" fill="#ffcd75" d="M18,14h1v1h-1ZM21,14h1v1h-1ZM19,15h3v1h-3ZM23,15h1v1h-1ZM30,15h1v1h-1ZM19,16h3v1h-3ZM19,17h3v1h-3ZM23,17h1v1h-1ZM3,18h1v1h-1ZM19,19h1v1h-1ZM22,19h1v1h-1ZM5,20h1v1h-1ZM28,20h1v1h-1ZM27,22h1v1h-1ZM8,25h1v1h-1ZM15,26h1v1h-1ZM1,27h1v1h-1ZM22,28h1v1h-1ZM30,28h1v1h-1z"/>
+<!-- 萤火虫身体 -->
+<path fill="#333c57" d="M7,10h1v1h-1ZM13,10h1v1h-1ZM8,11h1v1h-1ZM12,11h1v1h-1ZM9,12h1v1h-1ZM11,12h1v1h-1ZM12,13h2v1h-2ZM8,14h3v1h-3ZM7,15h1v1h-1ZM10,15h9v1h-9ZM7,16h12v1h-12ZM8,17h11v1h-11ZM11,19h1v1h-1ZM14,19h1v1h-1ZM17,19h1v1h-1ZM11,20h1v1h-1ZM14,20h1v1h-1ZM17,20h1v1h-1z"/>
+<!-- 翅膀（半透明光泽） -->
+<path fill="#94b0c2" d="M14,10h5v1h-5ZM14,11h6v1h-6ZM14,12h7v1h-7ZM14,13h6v1h-6ZM14,14h4v1h-4z"/>
+<!-- 眼睛 -->
+<path fill="#1a1c2c" d="M11,14h3v1h-3ZM9,15h1v1h-1ZM11,18h8v1h-8z"/>
+<path fill="#f4f4f4" d="M8,15h1v1h-1z"/>
+<!-- 萤火虫腹部发光（绿色脉冲） -->
+<path class="bug-glow" fill="#a7f070" d="M20,14h1v1h-1ZM22,16h1v1h-1ZM20,19h2v1h-2z"/>
+</svg>

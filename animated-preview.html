@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Animated Pixel Art Preview</title>
+<style>
+  *{margin:0;box-sizing:border-box}
+  body{background:#0a0a0f;color:#ccc;font-family:system-ui;padding:32px}
+  h1{font-weight:200;font-size:28px;letter-spacing:6px;margin-bottom:4px;color:#ef7d57}
+  .sub{font-size:12px;color:#555;margin-bottom:32px;letter-spacing:2px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-bottom:32px}
+  .card{background:#111;border-radius:12px;padding:24px;text-align:center;transition:all .3s;border:1px solid #1a1a1a}
+  .card:hover{background:#181818;border-color:#333;transform:translateY(-2px)}
+  .card h3{font-size:12px;font-weight:400;color:#888;margin-bottom:4px;letter-spacing:2px;text-transform:uppercase}
+  .card .zh{font-size:11px;color:#555;margin-bottom:16px}
+  .sizes{display:flex;align-items:center;justify-content:center;gap:20px}
+  .size-label{font-size:9px;color:#333;text-align:center}
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px;margin-bottom:32px}
+  .compare-card{background:#111;border-radius:12px;padding:24px;text-align:center;border:1px solid #1a1a1a}
+  .compare-card h4{font-size:11px;color:#555;letter-spacing:2px;margin-bottom:16px;text-transform:uppercase}
+  .compare-row{display:flex;align-items:center;justify-content:center;gap:24px}
+  .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;letter-spacing:1px}
+  .tag-anim{background:#ef7d5720;color:#ef7d57}
+  .tag-static{background:#55555520;color:#555}
+  img,object{image-rendering:pixelated;image-rendering:crisp-edges}
+  hr{border:none;border-top:1px solid #1a1a1a;margin:32px 0}
+  .section{font-size:13px;color:#ef7d57;letter-spacing:3px;margin-bottom:20px;text-transform:uppercase}
+  .note{font-size:11px;color:#333;margin-top:32px;line-height:1.8;letter-spacing:0.5px}
+  .note code{background:#1a1a1a;padding:2px 6px;border-radius:3px;color:#555}
+</style>
+</head>
+<body>
+
+<h1>ANIMATED PIXEL ART</h1>
+<p class="sub">SVG ANIMATION PREVIEW — 12 ICONS</p>
+
+<div class="section">✨ Animated vs Static 对比</div>
+<div class="compare">
+  <div class="compare-card">
+    <h4><span class="tag tag-anim">ANIMATED</span> Heart 心跳</h4>
+    <div class="compare-row">
+      <object type="image/svg+xml" data="animated/heart.svg" width="64" height="64"></object>
+      <object type="image/svg+xml" data="animated/heart.svg" width="128" height="128"></object>
+    </div>
+  </div>
+  <div class="compare-card">
+    <h4><span class="tag tag-static">STATIC</span> Heart 心</h4>
+    <div class="compare-row">
+      <img src="assets/heart.svg" width="64" height="64">
+      <img src="assets/heart.svg" width="128" height="128">
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="section">🔥 全部动画预览</div>
+<div class="grid">
+  <div class="card">
+    <h3>Heart</h3><div class="zh">心跳脉冲</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/heart.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/heart.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/heart.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Ghost</h3><div class="zh">幽灵飘浮</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/ghost.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/ghost.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/ghost.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Flame</h3><div class="zh">火焰闪烁</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/flame.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/flame.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/flame.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Potion</h3><div class="zh">药水冒泡</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/potion.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/potion.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/potion.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Cat</h3><div class="zh">猫咪眨眼</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/cat.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/cat.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/cat.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Star</h3><div class="zh">星星闪烁</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/star.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/star.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/star.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Gem</h3><div class="zh">宝石闪光</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/gem.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/gem.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/gem.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Shooting Star</h3><div class="zh">流星划过</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/shooting-star.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/shooting-star.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/shooting-star.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Jellyfish</h3><div class="zh">水母脉动</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/jellyfish.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/jellyfish.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/jellyfish.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Firefly</h3><div class="zh">萤火虫发光</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/firefly.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/firefly.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/firefly.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Crystal</h3><div class="zh">水晶闪烁</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/crystal.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/crystal.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/crystal.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Hourglass</h3><div class="zh">沙漏流沙</div>
+    <div class="sizes">
+      <div><object type="image/svg+xml" data="animated/hourglass.svg" width="48" height="48"></object><div class="size-label">48px</div></div>
+      <div><object type="image/svg+xml" data="animated/hourglass.svg" width="96" height="96"></object><div class="size-label">96px</div></div>
+      <div><object type="image/svg+xml" data="animated/hourglass.svg" width="160" height="160"></object><div class="size-label">160px</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <p>动画技术说明：</p>
+  <p>• 使用 CSS <code>@keyframes</code> + SVG <code>&lt;animate&gt;</code>，零 JavaScript 依赖</p>
+  <p>• 需使用 <code>&lt;object&gt;</code> 或 <code>&lt;iframe&gt;</code> 嵌入才能播放动画，<code>&lt;img&gt;</code> 标签会禁止动画</p>
+  <p>• 所有动画保持 SWEETIE-16 调色板一致性</p>
+</div>
+
+</body>
+</html>

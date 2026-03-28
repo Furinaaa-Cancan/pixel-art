@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 心跳动画：缩放脉冲 + 颜色闪烁 -->
+<style>
+.hb{animation:pulse 1.2s ease-in-out infinite;transform-origin:7px 8px}
+@keyframes pulse{0%,100%{transform:scale(1)}14%{transform:scale(1.15)}28%{transform:scale(0.97)}42%{transform:scale(1.08)}56%{transform:scale(1)}}
+</style>
+<g class="hb">
+<path fill="#b13e53" d="M2 2h4v1h-4zM8 2h4v1h-4zM1 3h2v1h-2zM5 3h8v1h-8zM1 4h1v1h-1zM4 4h9v1h-9zM1 5h1v1h-1zM3 5h10v1h-10zM2 6h11v1h-11zM2 7h10v1h-10zM3 8h9v1h-9zM3 9h8v1h-8zM4 10h7v1h-7zM5 11h5v1h-5zM6 12h3v1h-3zM7 13h1v1h-1z">
+<animate attributeName="fill" values="#b13e53;#ef7d57;#b13e53" keyTimes="0;0.14;0.56" dur="1.2s" repeatCount="indefinite"/>
+</path>
+<path fill="#f4f4f4" d="M3 3h2v1h-2zM2 4h2v1h-2zM2 5h1v1h-1z"/>
+<path fill="#5d275d" d="M13 4h1v1h-1zM13 5h1v1h-1zM13 6h1v1h-1zM12 7h1v1h-1zM12 8h1v1h-1zM11 9h1v1h-1zM11 10h1v1h-1zM10 11h1v1h-1zM9 12h1v1h-1zM8 13h1v1h-1z"/>
+</g>
+</svg>

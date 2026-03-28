@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 宝石闪光动画：光芒扫过 + 颜色脉动 -->
+<style>
+.sparkle{animation:sp 2s ease-in-out infinite}
+.shimmer{animation:sh 3s ease-in-out infinite alternate}
+@keyframes sp{0%,80%,100%{fill:#f4f4f4;opacity:1}85%{fill:#73eff7;opacity:0.6}90%{fill:#f4f4f4;opacity:1}}
+@keyframes sh{0%{fill:#73eff7}50%{fill:#41a6f6}100%{fill:#73eff7}}
+</style>
+<!-- 高光面（闪光扫过） -->
+<path class="sparkle" fill="#f4f4f4" d="M5 1h1v1h-1zM4 2h1v1h-1zM6 2h3v1h-3zM5 3h1v1h-1zM7 3h1v1h-1zM7 4h1v1h-1zM7 5h1v1h-1zM7 6h1v1h-1z"/>
+<!-- 亮面（青色脉动） -->
+<path class="shimmer" fill="#73eff7" d="M6 3h1v1h-1zM8 3h2v1h-2zM6 4h1v1h-1zM8 4h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM6 6h1v1h-1z"/>
+<!-- 中层蓝 -->
+<path fill="#41a6f6" d="M5 4h1v1h-1zM9 4h2v1h-2zM4 5h2v1h-2zM9 5h1v1h-1zM4 6h2v1h-2zM8 6h2v1h-2zM5 7h2v1h-2zM8 7h1v1h-1zM6 8h1v1h-1z">
+<animate attributeName="fill" values="#41a6f6;#3b5dc9;#41a6f6" dur="2.5s" repeatCount="indefinite"/>
+</path>
+<!-- 深蓝 -->
+<path fill="#3b5dc9" d="M10 5h2v1h-2zM3 6h1v1h-1zM10 6h2v1h-2zM3 7h2v1h-2zM9 7h2v1h-2zM4 8h2v1h-2zM8 8h2v1h-2zM5 9h3v1h-3zM7 10h1v1h-1z"/>
+<!-- 暗面 -->
+<path fill="#29366f" d="M12 6h1v1h-1zM11 7h2v1h-2zM10 8h2v1h-2zM8 9h3v1h-3zM6 10h1v1h-1zM8 10h2v1h-2zM7 11h2v1h-2z"/>
+<!-- 灰色反光带 -->
+<path fill="#94b0c2" d="M7 7h1v1h-1zM7 8h1v1h-1z"/>
+<!-- 底部暗点 -->
+<path fill="#257179" d="M7 12h1v1h-1z"/>
+</svg>

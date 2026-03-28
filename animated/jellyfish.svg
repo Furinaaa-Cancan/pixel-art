@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+<!-- 水母动画：身体脉动 + 触须摇摆 + 整体浮动 -->
+<style>
+.body{animation:bob 3s ease-in-out infinite}
+.tent{animation:wave 2s ease-in-out infinite}
+.glow{animation:glo 2s ease-in-out infinite alternate}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes wave{0%,100%{transform:translateY(0)}25%{transform:translateY(1px)}75%{transform:translateY(-1px)}}
+@keyframes glo{0%{fill:#73eff7}100%{fill:#b8f0fa}}
+</style>
+<g class="body">
+<!-- 装饰性光点 -->
+<path fill="#f4f4f4" d="M6,2h1v1h-1ZM26,2h1v1h-1ZM28,4h1v1h-1ZM5,5h1v1h-1ZM27,7h1v1h-1ZM4,8h1v1h-1ZM28,10h1v1h-1ZM3,14h1v1h-1z">
+<animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
+</path>
+<!-- 身体外层（青色） -->
+<path class="glow" fill="#73eff7" d="M16,3h1v1h-1ZM13,4h7v1h-7ZM11,5h11v1h-11ZM3,6h1v1h-1ZM10,6h6v1h-6ZM17,6h6v1h-6ZM28,6h1v1h-1ZM9,7h4v1h-4ZM20,7h4v1h-4ZM8,8h4v1h-4ZM21,8h4v1h-4ZM8,9h3v1h-3ZM22,9h3v1h-3ZM7,10h3v1h-3ZM23,10h3v1h-3ZM7,11h3v1h-3ZM23,11h3v1h-3ZM5,12h1v1h-1ZM7,12h3v1h-3ZM23,12h3v1h-3ZM7,13h3v1h-3ZM12,13h2v1h-2ZM18,13h3v1h-3ZM23,13h3v1h-3ZM7,14h19v1h-19z"/>
+<!-- 身体中层（蓝色） -->
+<path fill="#41a6f6" d="M16,6h1v1h-1ZM13,7h3v1h-3ZM17,7h3v1h-3ZM12,8h2v1h-2ZM19,8h2v1h-2ZM11,9h2v1h-2ZM20,9h2v1h-2ZM10,10h2v1h-2ZM21,10h2v1h-2ZM10,11h2v1h-2ZM21,11h2v1h-2ZM22,12h1v1h-1ZM10,13h2v1h-2ZM21,13h2v1h-2z"/>
+<!-- 身体内层（亮青） -->
+<path fill="#b8f0fa" d="M16,7h1v1h-1ZM14,8h5v1h-5ZM13,9h7v1h-7ZM12,10h1v1h-1ZM14,10h5v1h-5ZM20,10h1v1h-1ZM13,11h1v1h-1ZM15,11h3v1h-3ZM19,11h1v1h-1ZM12,12h8v1h-8z"/>
+<!-- 眼睛 -->
+<path fill="#333c57" d="M13,10h1v1h-1ZM19,10h1v1h-1ZM12,11h1v1h-1ZM14,11h1v1h-1ZM18,11h1v1h-1ZM20,11h1v1h-1ZM14,13h4v1h-4z"/>
+<!-- 腮红 -->
+<path fill="#ff9eb7" d="M10,12h2v1h-2ZM20,12h2v1h-2z"/>
+<!-- 裙边 -->
+<path fill="#41a6f6" d="M6,15h21v1h-21z"/>
+<!-- 触须组（带摇摆动画） -->
+<g class="tent">
+<!-- 触须第一层 -->
+<path fill="#73eff7" d="M8,16h1v1h-1ZM11,16h1v1h-1ZM14,16h1v1h-1ZM18,16h1v1h-1ZM21,16h1v1h-1ZM24,16h1v1h-1z"/>
+<path fill="#41a6f6" d="M9,17h2v1h-2ZM15,17h1v1h-1ZM17,17h1v1h-1ZM22,17h2v1h-2z"/>
+<path fill="#73eff7" d="M8,18h1v1h-1ZM11,18h1v1h-1ZM14,18h1v1h-1ZM18,18h1v1h-1ZM21,18h1v1h-1ZM24,18h1v1h-1z"/>
+<path fill="#41a6f6" d="M7,19h1v1h-1ZM12,19h2v1h-2ZM19,19h2v1h-2ZM25,19h1v1h-1z"/>
+<path fill="#41a6f6" d="M8,20h1v1h-1ZM11,20h1v1h-1ZM14,20h1v1h-1ZM18,20h1v1h-1ZM21,20h1v1h-1ZM24,20h1v1h-1z"/>
+<path fill="#41a6f6" d="M9,21h2v1h-2ZM15,21h1v1h-1ZM17,21h1v1h-1ZM22,21h2v1h-2z"/>
+<path fill="#73eff7" d="M8,22h1v1h-1ZM11,22h1v1h-1ZM14,22h1v1h-1ZM18,22h1v1h-1ZM21,22h1v1h-1ZM24,22h1v1h-1z"/>
+</g>
+<!-- 触须末端（更细、更透明的延伸） -->
+<path fill="#94b0c2" d="M7,23h1v1h-1ZM12,23h2v1h-2ZM19,23h2v1h-2ZM25,23h1v1h-1ZM8,24h1v1h-1ZM11,24h1v1h-1ZM14,24h1v1h-1ZM18,24h1v1h-1ZM21,24h1v1h-1ZM24,24h1v1h-1ZM9,25h2v1h-2ZM15,25h1v1h-1ZM17,25h1v1h-1ZM22,25h2v1h-2z">
+<animate attributeName="opacity" values="1;0.5;1" dur="2.5s" repeatCount="indefinite"/>
+</path>
+</g>
+</svg>
