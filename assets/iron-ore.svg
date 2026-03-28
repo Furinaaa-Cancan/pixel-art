@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 铁矿石 -->
+<path fill="#1a1c2c" d="M4 2h5v1h-5zM3 3h1v1h-1zM9 3h2v1h-2zM2 4h1v1h-1zM11 4h1v1h-1zM2 5h1v1h-1zM12 5h1v1h-1zM2 6h1v1h-1zM12 6h1v1h-1zM2 7h1v1h-1zM12 7h1v1h-1zM3 8h1v1h-1zM12 8h1v1h-1zM3 9h1v1h-1zM11 9h1v1h-1zM4 10h7v1h-7z"/>
+<path fill="#566c86" d="M4 3h5v1h-5zM3 4h8v1h-8zM3 5h9v1h-9zM3 6h9v1h-9zM3 7h9v1h-9zM4 8h8v1h-8zM4 9h7v1h-7z"/>
+<path fill="#94b0c2" d="M4 4h2v1h-2zM3 5h2v1h-2zM3 6h1v1h-1z"/>
+<path fill="#333c57" d="M8 5h3v1h-3zM7 6h4v1h-4zM6 7h4v1h-4zM7 8h3v1h-3z"/>
+<path fill="#f4f4f4" d="M9 5h1v1h-1zM9 6h1v1h-1zM8 7h1v1h-1z"/>
+<path fill="#94b0c2" d="M10 8h1v1h-1zM9 9h1v1h-1z"/>
+</svg>

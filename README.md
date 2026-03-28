@@ -10,7 +10,7 @@
 <img src="assets/turnip.svg" width="56" /> <img src="assets/apple-red.svg" width="56" /> <img src="assets/cat.svg" width="56" /> <img src="assets/egg.svg" width="56" /> <img src="assets/axe-wood.svg" width="56" /> <img src="assets/fish-gold.svg" width="56" /> <img src="assets/watering-can.svg" width="56" /> <img src="assets/strawberry.svg" width="56" /> <img src="assets/potion.svg" width="56" /> <img src="assets/flame.svg" width="56" /> <img src="assets/heart.svg" width="56" /> <img src="assets/ghost.svg" width="56" />
 </p>
 
-[![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-325+-ff6480?style=flat-square)](#gallery) [![Animated](https://img.shields.io/badge/animated-12-ffcd75?style=flat-square)](#animated) [![Palette](https://img.shields.io/badge/palette-HARVEST--20-a8775e?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+[![SVG](https://img.shields.io/badge/format-SVG-blue?style=flat-square&logo=svg)](https://developer.mozilla.org/en-US/docs/Web/SVG) [![Assets](https://img.shields.io/badge/assets-337+-ff6480?style=flat-square)](#gallery) [![Animated](https://img.shields.io/badge/animated-12-ffcd75?style=flat-square)](#animated) [![Palette](https://img.shields.io/badge/palette-HARVEST--20-a8775e?style=flat-square)](#palette) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
 <details><summary><b>📍 Quick Nav</b></summary><br>
 
@@ -62,11 +62,27 @@
 <table>
   <tr>
     <td align="center"><img src="assets/turnip.svg" width="80" alt="Turnip"><br><sub><b>Turnip</b><br>萝卜</sub></td>
+    <td align="center"><img src="assets/carrot.svg" width="80" alt="Carrot"><br><sub><b>Carrot</b><br>胡萝卜</sub></td>
+    <td align="center"><img src="assets/corn.svg" width="80" alt="Corn"><br><sub><b>Corn</b><br>玉米</sub></td>
+    <td align="center"><img src="assets/pumpkin.svg" width="80" alt="Pumpkin"><br><sub><b>Pumpkin</b><br>南瓜</sub></td>
+    <td align="center"><img src="assets/potato.svg" width="80" alt="Potato"><br><sub><b>Potato</b><br>土豆</sub></td>
+    <td align="center"><img src="assets/wheat-bundle.svg" width="80" alt="Wheat"><br><sub><b>Wheat</b><br>麦束</sub></td>
+  </tr>
+  <tr>
     <td align="center"><img src="assets/apple-red.svg" width="80" alt="Apple"><br><sub><b>Apple</b><br>红苹果</sub></td>
     <td align="center"><img src="assets/egg.svg" width="80" alt="Egg"><br><sub><b>Egg</b><br>鸡蛋</sub></td>
+    <td align="center"><img src="assets/milk-bottle.svg" width="80" alt="Milk"><br><sub><b>Milk</b><br>牛奶</sub></td>
+    <td align="center"><img src="assets/fish-gold.svg" width="80" alt="Fish"><br><sub><b>Golden Fish</b><br>金鱼</sub></td>
     <td align="center"><img src="assets/axe-wood.svg" width="80" alt="Axe"><br><sub><b>Axe</b><br>斧头</sub></td>
     <td align="center"><img src="assets/watering-can.svg" width="80" alt="Watering Can"><br><sub><b>Watering Can</b><br>浇水壶</sub></td>
-    <td align="center"><img src="assets/fish-gold.svg" width="80" alt="Fish"><br><sub><b>Golden Fish</b><br>金鱼</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/pickaxe.svg" width="80" alt="Pickaxe"><br><sub><b>Pickaxe</b><br>镐</sub></td>
+    <td align="center"><img src="assets/hoe.svg" width="80" alt="Hoe"><br><sub><b>Hoe</b><br>锄头</sub></td>
+    <td align="center"><img src="assets/fishing-rod.svg" width="80" alt="Rod"><br><sub><b>Fishing Rod</b><br>钓竿</sub></td>
+    <td align="center"><img src="assets/copper-ore.svg" width="80" alt="Copper"><br><sub><b>Copper Ore</b><br>铜矿石</sub></td>
+    <td align="center"><img src="assets/iron-ore.svg" width="80" alt="Iron"><br><sub><b>Iron Ore</b><br>铁矿石</sub></td>
+    <td align="center"><img src="assets/gold-ore.svg" width="80" alt="Gold"><br><sub><b>Gold Ore</b><br>金矿石</sub></td>
   </tr>
 </table>
 

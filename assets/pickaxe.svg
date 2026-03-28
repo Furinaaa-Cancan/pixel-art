@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 镐 -->
+<path fill="#1a1c2c" d="M2 1h4v1h-4zM1 2h1v1h-1zM6 2h2v1h-2zM1 3h1v1h-1zM7 3h1v1h-1zM2 4h1v1h-1zM7 4h1v1h-1zM7 5h1v1h-1zM9 5h1v1h-1zM7 6h1v1h-1zM9 6h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1zM8 8h1v1h-1zM10 8h1v1h-1zM9 9h1v1h-1zM11 9h1v1h-1zM9 10h1v1h-1zM11 10h1v1h-1zM10 11h1v1h-1zM12 11h1v1h-1zM11 12h2v1h-2z"/>
+<path fill="#94b0c2" d="M2 2h4v1h-4zM2 3h5v1h-5z"/>
+<path fill="#f4f4f4" d="M2 1h3v1h-3z"/>
+<path fill="#566c86" d="M3 4h4v1h-4z"/>
+<path fill="#a8775e" d="M8 5h1v1h-1zM8 6h1v1h-1zM9 7h1v1h-1zM9 8h1v1h-1zM10 9h1v1h-1zM10 10h1v1h-1zM11 11h1v1h-1z"/>
+<path fill="#6b3e2e" d="M8 7h1v1h-1z"/>
+<path fill="#d4a56a" d="M9 5h1v1h-1z"/>
+</svg>

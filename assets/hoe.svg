@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+<!-- 锄头 -->
+<path fill="#1a1c2c" d="M3 1h5v1h-5zM2 2h1v1h-1zM8 2h1v1h-1zM2 3h1v1h-1zM8 3h1v1h-1zM3 4h1v1h-1zM8 4h1v1h-1zM8 5h1v1h-1zM10 5h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM9 7h1v1h-1zM11 7h1v1h-1zM9 8h1v1h-1zM11 8h1v1h-1zM10 9h1v1h-1zM12 9h1v1h-1zM11 10h1v1h-1zM13 10h1v1h-1zM12 11h2v1h-2z"/>
+<path fill="#94b0c2" d="M3 2h5v1h-5zM3 3h5v1h-5z"/>
+<path fill="#f4f4f4" d="M3 1h4v1h-4z"/>
+<path fill="#566c86" d="M4 4h4v1h-4z"/>
+<path fill="#a8775e" d="M9 5h1v1h-1zM9 6h1v1h-1zM10 7h1v1h-1zM10 8h1v1h-1zM11 9h1v1h-1zM12 10h1v1h-1z"/>
+<path fill="#6b3e2e" d="M9 7h1v1h-1z"/>
+</svg>
