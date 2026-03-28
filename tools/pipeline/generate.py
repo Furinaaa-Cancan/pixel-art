@@ -1,58 +1,56 @@
-"""AI 像素画生成器 — 本地 SDXL + Replicate 双后端"""
+"""AI 像素画生成器 — 本地 SDXL + LoRA"""
 
 import os
 import io
 import torch
 from PIL import Image
 
-# 延迟导入避免无 GPU 环境报错
 _pipe = None
 
 
 def _get_local_pipe():
-    """延迟加载本地 SDXL 管线（首次调用下载 ~6GB 模型）"""
+    """加载 SDXL base + pixel-art-xl LoRA"""
     global _pipe
     if _pipe is not None:
         return _pipe
 
-    from diffusers import StableDiffusionXLPipeline
+    from diffusers import DiffusionPipeline
 
-    print("加载 pixel-art-xl 模型（首次需下载 ~6GB）...")
-    _pipe = StableDiffusionXLPipeline.from_pretrained(
-        "nerijs/pixel-art-xl",
+    print("加载 SDXL base 模型（首次需下载 ~6.5GB）...")
+    _pipe = DiffusionPipeline.from_pretrained(
+        "stabilityai/stable-diffusion-xl-base-1.0",
         torch_dtype=torch.float16,
         variant="fp16",
     )
+
+    print("加载 pixel-art-xl LoRA 权重...")
+    _pipe.load_lora_weights(
+        "nerijs/pixel-art-xl",
+        weight_name="pixel-art-xl.safetensors",
+        adapter_name="pixel",
+    )
+    _pipe.set_adapters(["pixel"], adapter_weights=[1.2])
+
     _pipe.to("mps")
-    # 降低显存峰值
     _pipe.enable_attention_slicing()
     print("模型加载完成。")
     return _pipe
 
 
 PROMPT_TEMPLATE = (
-    "pixel art, {item}, 16x16 sprite, game item icon, single item centered, "
-    "transparent background, clean pixel edges, limited color palette, "
-    "stardew valley style, cozy warm colors, top-left lighting, dark outline, "
-    "no text, no watermark, no frame"
+    "pixel art, {item}, game item icon, single item centered, "
+    "clean pixel edges, limited color palette, warm cozy colors, "
+    "top-left lighting, dark outline"
 )
 
 NEGATIVE_PROMPT = (
     "blurry, anti-aliased, gradient, photorealistic, 3d render, text, watermark, "
-    "multiple items, busy background, smooth edges, noise, high detail, "
-    "border, frame, ui elements"
+    "multiple items, busy background, smooth edges, noise, frame, border"
 )
 
 
 def generate_local(item_name, description=None, seed=None, size=512, steps=30):
-    """用本地 pixel-art-xl 模型生成像素画
-
-    Args:
-        item_name: 物品名（英文）
-        description: 额外描述（可选）
-        seed: 随机种子（可选，用于可复现性）
-        size: 生成尺寸（默认 512）
-        steps: 推理步数（默认 30）
+    """用本地 SDXL + pixel-art-xl LoRA 生成像素画
 
     Returns:
         PIL.Image (RGBA, size x size)
@@ -77,15 +75,17 @@ def generate_local(item_name, description=None, seed=None, size=512, steps=30):
     )
 
     image = result.images[0]
-    return image.convert("RGBA")
+
+    # 按 LoRA 作者建议：缩小 8 倍得到像素完美的图
+    # 512 / 8 = 64, 这是中间态，后续再缩到 16
+    pixel_size = size // 8
+    pixel_img = image.resize((pixel_size, pixel_size), Image.NEAREST)
+
+    return pixel_img.convert("RGBA")
 
 
 def generate_replicate(item_name, description=None, seed=None, size=512):
-    """用 Replicate API 生成像素画（需要 REPLICATE_API_TOKEN 环境变量）
-
-    Returns:
-        PIL.Image (RGBA, size x size)
-    """
+    """用 Replicate API 生成（备选）"""
     import replicate
     import requests
 
@@ -107,15 +107,19 @@ def generate_replicate(item_name, description=None, seed=None, size=512):
         input=input_params,
     )
 
-    # output 是 URL 列表
     url = output[0] if isinstance(output, list) else str(output)
     response = requests.get(url)
     image = Image.open(io.BytesIO(response.content))
-    return image.convert("RGBA")
+
+    # 缩小 8 倍
+    pixel_size = size // 8
+    pixel_img = image.resize((pixel_size, pixel_size), Image.NEAREST)
+
+    return pixel_img.convert("RGBA")
 
 
 def generate(item_name, description=None, seed=None, backend="local", size=512):
-    """统一生成入口"""
+    """统一入口"""
     if backend == "local":
         return generate_local(item_name, description, seed, size)
     elif backend == "replicate":

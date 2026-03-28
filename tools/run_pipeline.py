@@ -148,7 +148,11 @@ def process_item(name, description, backend, output_dirs, retries=3):
 
         print(f"  重试...")
 
-    return score, False
+    # 全部重试失败
+    try:
+        return score, False
+    except UnboundLocalError:
+        return 0.0, False
 
 
 def main():
