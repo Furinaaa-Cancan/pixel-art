@@ -1,0 +1,6 @@
+# 测试物品（5个）
+red-potion | a small red healing potion bottle with cork, glowing
+golden-sword | a short golden sword with jewel handle
+blue-berry | a round plump blueberry fruit
+campfire-cozy | a small campfire with logs and warm flames
+green-slime | a cute green slime monster with eyes
